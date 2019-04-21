@@ -1,0 +1,351 @@
+
+%Dades estil capçalera 
+%\pagestyle{fancy}
+%\rhead{\textbf{ CDVO  \\ 2n. Grau en  Matemàtiques}}
+%\lhead{\textbf{Nom: }Marc G******* Ricardo \\ \textbf{NIU: }*****471}
+%Perquè capiguen les coses a la capçalera 
+%\setlength{\headheight}{25pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                                              %%%
+%%%            %El més bàsic i alguns paquest%                   %%%
+%%%                                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Declarem la classe de document i dimensions
+\documentclass[10pt]{proc}
+
+%Paquets d'idioma i codificació de caràcters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[catalan]{babel}
+
+%Paquets d'escriptura matemàtica
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+
+%Definicions,exemples,observacions...
+\newtheorem{def:}{{\color{green}$\blacksquare$} Definició}
+\newtheorem{ex:}{{\color{blue}$\blacksquare$} Exemple}
+\newtheorem{obs:}{{\color{olive}$\blacksquare$} Observació}
+\newtheorem{prop:}{{\color{orange} $\blacksquare$} Proposició}
+\newtheorem{th:}{{\color{red}$\blacksquare$} Teorema}
+\newtheorem{col:}{{\color{green}$\blacksquare$} Corol·lari}
+\newtheorem{not:}{{\color{black}$\blacksquare$} Notació} 
+
+%Modificacions i noves comandes
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\B}{\ensuremath{\mathcal{B}}}
+\newcommand{\esp}{\text{ }}
+
+%Canviem el símbol de demostració final  de un quadrat en blanc a QED 
+\renewcommand\qedsymbol{QED} 
+%Serveix per recordar alguna cosa que s'ha de fer però en el moment fa mandrà
+\newcommand{\nehh}[1]{\color{magenta} (* {#1} *) \normalcolor }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                                              %%%
+%%%                   %Altres paquets%                           %%%
+%%%                                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Serveix per tenir més colors disponibles
+\usepackage[svgnames]{xcolor}
+
+%Serveix per agrupar files i columnes
+\usepackage{multirow} 
+
+%Serveix per introduir imatges
+\usepackage{graphicx}
+
+%Serveix per ficar url's 
+\usepackage{url}
+
+%Serveix per que totes les referències que apareguin en el document pdf clicant-hi amb el ratolí, el visor pdf saltarà a la posició referenciada
+\usepackage{hyperref} 
+
+%Serveix per ampliar les possibilitats dels entorns de llistes
+\usepackage{enumerate,paralist}
+
+%Serveix per poder generat subfigures.
+\usepackage{subfigure} 
+
+%Paquets per a dibuixos amb GeoGebra
+\usepackage{pstricks-add} 
+
+%Serveix taxar coses bé com per exemple $\longrightarrow$ i $\exists$
+\usepackage{centernot} 
+
+%Serveix per ficar colors a les taules
+\usepackage{colortbl} 
+
+%Serveix per fer el estil de capselera
+\usepackage{fancyhdr}
+
+%Serveix per fotre coses a dalt i a baix
+\usepackage{stackrel} 
+
+%Serveix per afegir poemes \begin{poem}
+\usepackage{poemscol} 
+
+% Serveix per ficar caixes
+\usepackage{tcolorbox}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                                              %%%
+%%%                   %Utilitats visuals%                        %%%
+%%%                                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Dades pael títol del nostre document
+\title{\emph{\color{redviolet!75!black} Lorem ipsum dolor sit amet.  Pla Docent {(PD)}}}
+\author{ Taller de modelització \\ 2n. Grau en  Matemàtiques \\ Universitat Autònoma de Barcelona \\ Equip 15 (Grup A)\\ }
+\date{Versió: \today}
+
+%Serveix per peus de pàgina i més
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Pla Docent}
+\fancyhead[RE,LO]{I need coffee}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%Serveix perquè el nombre de secció sigui més bonic.
+\def\thesection{\textbf{$\mathit{\arabic{section}}$}}
+
+%Serveix per lletra inicial més elegant i vanitosa 
+\usepackage{erewhon}
+\usepackage{lipsum}
+\usepackage{lettrine}
+\usepackage{GoudyIn}
+\definecolor{redviolet}{RGB}{52,47,75}
+\usepackage{xcolor} 
+\renewcommand{\LettrineFontHook}{\color{redviolet}\GoudyInfamily{}}
+\setcounter{DefaultLines}{3}%
+\usepackage{listings}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+\usepackage{tikz}
+\usepackage{varwidth}
+\usepackage{linegoal}
+\usepackage[explicit]{titlesec}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[Lenny]{fncychap}
+\ChNameVar{\fontsize{14}{16}\usefont{OT1}{phv}{m}{n}\selectfont}
+\ChNumVar{\fontsize{60}{62}\usefont{OT1}{ptm}{m}{n}\selectfont}
+\ChTitleVar{\Huge\bfseries\rm}
+\ChRuleWidth{1pt}
+\newcommand{\cod}[1]{{ \color{redviolet}\texttt{#1}}}
+\newtcolorbox{box1}[1]{
+	colback=gray!5!white,
+	colframe=gray!75!black,
+	title={\Large #1}
+}
+\newtcolorbox{box2}[1]{
+	colback=gray!5!white,
+	colframe=redviolet!75!black,
+	title={\Large #1}
+}
+\usepackage[nameinlink, capitalise, noabbrev]{cleveref}
+\begin{document}
+	\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                              %%
+%%                    Estudi del enunciat                       %%
+%%                                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
+\section{Anàlisis del problema}
+\end{tcolorbox}
+\lettrine{F}em una lectura del enunciat que descriu el problema plantejat. 
+
+\vspace{5mm}
+
+\begin{tcolorbox}[colback=black!1,title=\textbf{Enunciat del problema},coltitle=black,colbacktitle=black!10]
+\textit{
+Un departament d'una universitat té diferents tasques docents assignades, que s'han de repartir entre els seus professors. Actualment es distribueixen segons les hores de classe de cada tasca. Se suposa que el nombre d'hores mesura l'esforç associat a una tasca, però en la pràctica això no és prou realista, la qual cosa genera desequilibris. Es tracta de trobar un mètode més equilibrat per valorar les tasques docents, que tingui en compte la demanda per cada tasca per part dels diferents professors. Es podria expressar aquesta demanda a través d'una mena de subhasta. S'haurien de tenir en compte algunes restriccions, com per exemple, que tothom faci la mateixa quantitat de docència o la restricció que hi hagi a cada departament.
+}
+\end{tcolorbox}
+Influenciats per la lectura de \cite{tah} indexem el enunciat de forma conceptual mitjançant color i nombres\footnote{Únicament com a eina visual, eliminant la seva possible ambigüitat amb nombres enters}. Alternem el color de la font per facilitar la lectura. 
+\newline
+\begin{tcolorbox}[colback=black!1,title=\textbf{Enunciat del problema},coltitle=black,colbacktitle=black!10]
+
+\textit{{\color{cyan!60}$\blacksquare$}$^{(01)}${\color{black!80}Un departament d'una universitat té diferents tasques docents assignades, que s'han de repartir entre els seus professors.}}
+ 
+\textit{{\color{blue!60}$\blacksquare$}$^{(02)}$ Actualment es distribueixen segons les hores de classe de cada tasca. Se suposa que el nombre d'hores mesura l'esforç associat a una tasca, però en la pràctica això no és prou realista, la qual cosa genera desequilibris.}
+
+\textit{{\color{green!60}$\blacksquare$}$^{(03)}$ {\color{black!80}Es tracta de trobar un mètode més equilibrat per valorar les tasques docents, que tingui en compte la demanda per cada tasca per part dels diferents professors.}}
+ 
+\textit{{\color{purple!60}$\blacksquare$}$^{(04)}$Es podria expressar aquesta demanda a través d'una mena de subhasta.}
+ 
+\textit{{\color{violet!60}$\blacksquare$}$^{(05)}${\color{black!80}S'haurien de tenir en compte algunes restriccions, com per exemple, que tothom faci la mateixa quantitat de docència o la restricció que hi hagi a cada departament.}}
+
+\end{tcolorbox}
+Fem el anàlisis o interpretació per blocs, mantenint el mateix codi d'indexació. Les paraules en negreta únicament tenen la finalitat de recordar els tecnicismes de \textit{investigació operativa} que ens faciliten l'abstracció del problema plantejat per l'enunciat.
+\begin{itemize}
+\item[{ \color{cyan!60} \underline{\underline{\normalcolor (01)}}}] El problema abstracte consisteix en una tasca de repartiment o assignació. Concretament, els \textbf{objectes a repartir} són les tasques docents que han de ser repartides entre  el professorat, cada possible assignació s'anomenara \textbf{pla docent} o \textbf{solució} de forma anàloga en funció del context.\\
+\item[{ \color{blue!60} \underline{\underline{\normalcolor (02)}}}] Acceptem que el \textit{Model actual} genera solucions \textbf{subòptimes} i això ho  justificarem amb els mateixos arguments del enunciat.\\
+\item[{ \color{green!60} \underline{\underline{\normalcolor (03)}}}] És requereix { \color{green!60} \underline{\normalcolor mètode}} per { \color{green!60} \underline{\normalcolor valorar}} i { \color{green!60} \underline{\normalcolor repartir}} tasca docent en funció de la demanda del professorat. A més ha de poder aportar una solució millor \footnote{Equivalentment menys desequilibrada.}. 
+\item[{ \color{purple!60} \underline{\underline{\normalcolor (04)}}}] Es proposa com a \textbf{alternativa}  desenvolupar un  { \color{purple!60} \underline{\normalcolor mètode basat en subhasta}}.
+\item[{ \color{violet!60} \underline{\underline{\normalcolor (05)}}}] S'expressa anticipadament que el \textbf{model/mètode} ha de tenir \textbf{restriccions}  i s'expliciten dos de necessàries. El volum del treball ha de ser \textit{homogeni}\footnote{Entesa com la qualitat de: quantitat de docències semblants entre el professorat}. El mètode ha de contemplar la possibilitat de restriccions pròpies del departament. 
+\end{itemize}
+Analitzat i desglossat el enunciat, passem a concretar o tipificar els objectius del treball.
+\begin{tcolorbox}[colback=black!1,title=\textbf{0bjectius},coltitle=black,colbacktitle=black!10]
+	\begin{enumerate}
+	\item Elaborar \textbf{Mètode} per generar plans docents universitaris{\color{cyan!80} $^{(01)}$}. Aquest estarà basat en un repartiment de les tasques docents multivariable (dependrà de més d'una \textbf{variable decidible}) per a mesurar l'esforç{\color{blue!80} $^{(02)}$}{\color{green!80} $^{(03)}$} de cada tasca. El mètode haurà d'evitar desequilibris tipificats{\color{blue!80} $^{(02)}$}(documentats o previsibles) i estarà subjecte a un volum de \textbf{restriccions}{\color{violet!60} $^{(05)}$} variables. El mètode serà estructurat en base a la demanada del professorat com és requereix.
+	\item S'estudiara l'idea de fer un model  basat en les subhastes.{\color{purple!80} $^{(04)}$} 
+	\item S'aplicara el mètode en un cas concret per tal de comprovar la seva viable implementació i competència. El cas concret serà el \textit{Departament de Matemàtiques} de la pròpia Universitat Autònoma de Barcelona.
+	\end{enumerate}
+\end{tcolorbox}
+\lipsum{10}
+\\
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                              %%
+%%                    Estudi Model Actual                       %%
+%%                                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
+\section{Estudi del model Actual}
+\end{tcolorbox}
+\lettrine{A}questa secció és una aproximació intuïtiva al \textbf{model actual}. Repetidament fem i farem servir el nom de \textit{Model actual}  per referir-nos al model/mètode\footnote{Actualment, 2019.} que s'utilitza per repartir les tasques docents entre el professorat\footnote{En el Departament de Matemàtiques de l'universitat.}
+
+Els objectius de la secció a  part d'obtenir una visió aproximada del \textit{cas particular} de major interès, tenen intenció d'extreure i prendre constància dels desequilibris i restriccions, de la secció anterior,({\color{blue!60}$\blacksquare$}$^{(02)}$) i ({\color{violet!60}$\blacksquare$}$^{(05)}$)  respectivament. 
+\\
+
+\subsection{Dades obtingudes de la Web del Departament}
+Algunes de les dades del model actual les podem trobar a la Web del Departament \nehh{}.
+
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=black!1,title=\textbf{Dades publiques a la web},coltitle=black,colbacktitle=black!10]
+\textbf{Docència de Grau}\\
+El Departament de Matemàtiques és responsable principal de tres graus:
+	\begin{enumerate}
+		\item Grau de Matemàtiques
+		\item Grau d'Estadística Aplicada
+		\item Grau de Matemàtica Computacional i Analítica de Dades
+		\item A banda, el Departament té assignada docència de gran varietat d'assignatures de vint-i-sis titulacions diferents.
+	\end{enumerate}
+	\textbf{Estructura}\\
+	El Departament està constituït per cinc unitats, que es corresponen amb les àrees de coneixement que té adscrites:
+	\begin{enumerate}
+		\item Àlgebra
+		\item Anàlisi Matemàtica
+		\item Estadística i Investigació Operativa
+		\item Geometria i Topologia
+		\item Matemàtica Aplicada
+	\end{enumerate}
+\end{tcolorbox}
+	%\url{https://www.uab.cat/web/departament-de-matematiques\\-1194422425366.html}
+	%\end{box2}
+	%\begin{box1}{Model actual {\footnotesize (A.Ruiz)}}
+\subsection{Dades facilitades pel Secretari del departament}\footnote{Actualment, càrrec ocupat pel Doctor Albert Ruiz Cirera.}
+Donat que les dades publiques de la web són limitades i insuficients per tenir un primer contacte amb el \textit{problema}, s'ens ofereix la possibilitat de concretar una entrevista amb el actual secretari del departament. D'aquesta obtenim un nou esquema que resumeix prou bé la tasca a la qual ha de fer front el mètode que és objectiu del treball.
+\vspace{3mm}
+
+\begin{tcolorbox}[colback=black!1,title=\textbf{Dades del funcionament intern del \textit{model actual}},coltitle=black,colbacktitle=black!10]
+	\textbf{Titulacions que demanen docència}
+	\begin{itemize}
+		\item Horari fixat
+		\item Nombre d'alumnes fixat.
+		\item Hores i tipologia fixada (Això vol dir: Teo, Semin, Probl).
+	\end{itemize}
+	En total unes 500 sol·licituds $\approx$ 150 assignatures, assignatura: (3h de teoria), (1 hora de problemes), (2 hores seminaris).
+	\\
+	\textbf{Professorat}
+	\begin{itemize}
+		\item 90 hores/any.
+		\item $\vdots$
+		\item 240 hores/any.
+		\item (60 hores/any els estudiants de doctorat) $\approx$ \textit{soroll}.
+	\end{itemize}
+	Podem estimar que hi ha uns 100 professors.\\
+	\textbf{Algunes de les normes que s'apliquen}
+	\begin{itemize}
+		\item Si un professor a fet una assignatura un any  té preferència per repetir-la.
+		\item 3 anys com a màxim en assignatures dels 3 graus.
+		\item 4 anys la resta d'aquestes.
+		\item També hi ha altres càrrecs 
+	\end{itemize}
+	\textbf{Actualment s'intenta minimitzar}
+	\begin{itemize}
+		\item Dispersió: \# assignatures / professors. (\#1)
+		\item Deutes personal (saldo de hores). (\#2)
+	\end{itemize}
+	\end{tcolorbox}
+
+	\subsection{Altres notes del \textit{Model actual}}
+	\begin{enumerate}
+		\item Primer és fa una ronda de repartiment amb el professorat que té preferència per que repeteix una assignatura. Després és fa una segona ronda amb el que queda tot i que ha vegades hi ha canvis a ultim moment. En aquesta segona ronda és reparteix \textit{el que queda}, aquí  és on es fa un tractament més personal i més precís.
+		\item En aquesta segona \textit{ronda} hi ha una llista de \textit{argument} que ajuden a seleccionar el millor repartiment, vegem-ne alguns exemples:
+		\begin{enumerate}
+			\item Que tots els professors puguin fer almenys alguna hora de teoria (en general compten més i són més valorades).
+			\item Suposant que hi ha una assignatura molt desitjada de teoria que compten més hores, probablement s'assignara a algú que per exemple tingui un saldo de hores negatiu abans que algú que tingui un saldo positiu (això és que faci més del que ha de fer). També pot passar que entre dos sol·licitats s'assigni a qui fagi quadrar més ; $S(p_1)=-30$ i saldo de professor dos $S(p_2)=-5$, llavor una assignatura que val 20 hores s'assignara preferentment al primer.
+			\item Aquestes estratègies buscant minimitzar (\#1) i (\#2) i a més tenir el personal \textit{content} que és una cosa molt difícil de modelitzar, però també és important.
+			\item S'intenta que els alumnes de doctorat puguin fer unes poques hores d'alguna matèria que estigui relacionada amb el seu treball.
+		\end{enumerate} 
+		\item Hi ha normes prou bones que no s'han escrit, pel que fa les assignatures de 3r i 4rt  també tenen un filtre:
+		\begin{enumerate}
+			\item  Cada subdepartament només pot fer assignatures del bloc que li toca i si en vol fer alguna de una \textit{branca de coneixement} que no li pertoca ha de ser convidat pel subdepartament responsable.
+			\item És a dir cada subdepartament té un \textit{mercat d'assignatures associat} que s'han de repartir en una \textit{Reunió}. (Això dóna una bona idea, ja que així si més gent està implicada en el repartiment és poden considerar un model gran format de petits models \textit{més tractable} que interactuen \textit{poc} entre ells).
+			\end{enumerate}
+		\end{enumerate}
+\subsection{Estat del model actual}
+\nehh{Aquí s'han de ficar les dades dels saldos.}
+\subsection{Conclusions}
+		\begin{enumerate}
+			\item El model actual funciona prou bé, fixa normes generals i fa un tractament diferent per cada cas, aconseguint més satisfacció en les assignacions. Per tant podem aprofitar molt del model actual. 
+			\item Les particularitats \textit{bones} del model actual és que donen un tractament prou adaptable a la \textit{biodiversitat} del professorat.
+			\item Els aspectes negatius del model no són clars llevat de dedicació que requereix, necessita un temps de dedicació considerable per fer quadrar totes les assignacions satisfactòriament .
+			\item Les dades que ens ens seran facilitades seran dues llistes amb els \textit{items demandats} i una altra amb el \textit{nombre de professors de cada tipus} en funció de hores docents; amb \textit{noms} xifrats o anònims.
+		\end{enumerate}
+\subsection{Dades per extreure del \textit{model actual} i recopilar}
+\begin{enumerate}
+	\item \textbf{Variables per a mesurar l'esforç} 
+	
+	$(Element,\esp detalls,\esp  \textbf{G}eneral \esp o \esp \textbf{E}specific)$
+	\begin{itemize}
+		\item 
+		\item $\cdots$
+		\item 
+	\end{itemize}
+\item \textbf{Desequilibris tipificats}
+
+	$(Element,\esp detalls,\esp  \textbf{G}eneral \esp o \esp \textbf{E}specific)$
+\begin{itemize}
+	\item 
+	\item 
+	\item 
+\end{itemize}
+\item \textbf{Restriccions}
+
+$(Element,\esp detalls,\esp  \textbf{G}eneral \esp o \esp \textbf{E}specific)$
+\begin{itemize}
+	\item 
+	\item 
+	\item 
+\end{itemize}
+\end{enumerate}
+Arribat aquí, després de 
+\lipsum{10}
+\footnotesize
+\bibliographystyle{ieeetr}
+\bibliography{Bib.bib}
+\end{document}
