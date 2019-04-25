@@ -354,17 +354,25 @@ Arribat aquí, després de
 %%                                                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
-\section{Segon model o mètode \textit{neeh}}
+\section{Segon model o mètode \textit{optimització}}
 \end{tcolorbox}
-Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció,Explica secció.
+Un altra forma d'abordar el problema es començar definint què és una alternativa bona, donant una mesura explícita de com de bona es una alternativa, ja que fins ara s'utilitzava una mesura no definida basada en el coneixement ímplicit del sistema que tenia el professor que realitzava l'assignació. Donat P el conjunt finit de professors i $o \in N$ el nombre d'assignatures que s'han de distribuïr, definim la mesura mencionada com una funció:
+$$f: P^o \longarrow R$$
+tal que com més baix sigui $f(a)$ (donat $a \in P^o$) millor serà l'alternativa $a$.
+
+Un cop haguem trobat una funció que compleixi això, trobar una alternativa bona passarà a ser un problema d'optimització, el qual tractarem a la secció OPTIMITZACIÓ.
 \\
-\subsection{Tria de les constants numèriques}
-Tal com s'ha il·lustrat abans la tria de les \textbf{constants numèrics} que intervenen en la \textbf{funció objectiu} resulta lligada al criteri subjectiu. Malgrat algunes és poden pensar com a \textbf{restriccions} altres resideixen en l'anterior ambigüitat. Tres possibles sortides a aquesta problemàtica són:
+\subsection{Definició de la funció objectiu}
+Determinar la \textbf{funció objectiu} resulta difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre alternatives que estan prohibides pel sistema (com per exemple un professor assignat a dos classes que es realitzin simultaneament), de menera que ens aquests casos la funció donarà infinit. En els altres casos, en els que hem de determinar la qualitat de una alternativa viable ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor aquesta funció seria diferent i hem de balancejar els desitjos de uns professors amb els dels altres, ja que en molts casos ens trobarem que una alternativa que es millor per a uns es pitjor per altres. Hi ha diverses possibles sortides a aquesta problemàtica:
 \begin{enumerate}
-	\item \textbf{Basar-les en dades Històriques} fent un recull del \textit{historial}  de la demanda, en la sol·licitud per part del professorat, de les diferents assignatures  podem obtenir una imatge de \textbf{l'ordre de rellevància} de les \nehh{No sé si té massa sentit això}.
-	\item \textbf{Obtenció de dades mitjançant enquesta} \nehh{No sé si té massa sentit això}.
-	\item \textbf{Personalització funcions} \nehh{No sé si té massa sentit això}.
+	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  de alternatives previes, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la funció ímplicita que es va utilitzar per crear les alternatives. És a dir, buscar, utlitzant aproximadors de funcions, una funció sobre les dades base tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una alternativa el més semblant possible a la solució que es va utilitzar aquell any. 
+	\item \textbf{Obtenció de dades mitjançant enquesta} preguntant als professors directament que valoren més i creant una funció de forma artesanal basant-nos en els resultats.
+	\item \textbf{Funcions personalitzables} a nivell individual per cada professor. A partir d'aquestes funcions individuals podem crear una funció global que estigui formada per un sumatori d'aquestes funcions tal que al optimitzar aquesta funció global estarem optimitzant les funcions individuals en conjunt.
 \end{enumerate} 
+
+\subsection{Optimització}
+Optimitzar aquesta funció resulta un problema molt difícil, ja que tenim unes $100^500$
+Inicialment vam utilitzar Simulated Annealing amb control de mínims locals per tal d'optimitzar 
 ----
 \\
 \newpage
