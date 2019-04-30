@@ -418,7 +418,23 @@ Aquí tenim un resum de les problemàtiques que ha de soluciona'l el model de su
 \subsection{Construcció primer model}
 De forma constructiva, i aprofitant la subsecció prèvia, construirem un model que compleixi les condicions  de la llista anterior.
 
-bla bla
+\subsection{Model nasi}
+% Porque hitlur solo queria pintar cuadros
+\begin{itemize}
+	\item Subhastes multidimensionals en que es tenen en compte diverses coses per a decidir el guanyador de la subhasta
+	\item Els professors poden fer pujes condicionades sobre els resultats d'altres subhastes
+	\item Al finalitzar subhastes els seus resultats són propagats a altres subhastes passades on hi havia pujes condicionades sobre el resultat de la subhasta actual -> Subhastes passades actualitzen el seu resultat i el propaguen.
+	\item Realitzem subhastes -> Eliminem assignacions que sobrepassin hores -> Realitzem subhastes -> ...
+\end{itemize}
+
+Algoritme
+\begin{enumerate}
+	\item Els professors entren totes les seves puges (que poden estar condicionades sobre altres pujes)
+	\item Executar totes les subhastes una rer l'altra. En cas de trobar un apuja condicionada sobre una subhasta que no s'ha executat es considera la puja com a bona i s'executa la subhasta com si fos una puja normal, depsrés es fa una anotació marcant que aquesta puja depén de els resultats futurs d'una altra subhasta futura. Quan l'altra subhasta s'executi, al obtenir els resultats es revisita la subhasta depenent i, en cas que la puja condicional ja no sigui vàlida, aquesta subhasta és tornar a executar ignorant la puja invalidada. Aquestes invalidacions es propaguen sobre totes les subhastes depenents.
+	\item Buscar els professors als que els hi ha sigut assignat assignatures que superen el nombre d'hores que haurien de realitzar, desassignar-lis suficients assignatures com per a que el nombre d'hores totals de les assignatures assignades a ells sigui semblant al nombre d'hores que han de fer. A continuació, aquests professors, les seves pujes i les assignatures que encara tenen assignades són eliminats del sistema.
+	\item Si en el pas anterior s'han eliminat professors del sistema tornar al pas 2. En cas contrari, ja hem acabat i l'assignació final ja està feta (queda assignar les asisgnatures que no ha volgut ningú i vigilar que no hi hagi professors que hagin quedat amb molt poques assignatures assignades)
+\end{enumerate}
+
 \\
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
