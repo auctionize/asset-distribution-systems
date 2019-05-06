@@ -1,0 +1,18 @@
+\babel@toc {catalan}{}
+\contentsline {section}{\numberline {\textbf {$\mathit {0}$}}\textit {Comentari per a la lectura}}{1}{section.0}
+\contentsline {section}{\numberline {\textbf {$\mathit {1}$}}An\IeC {\`a}lisis del problema}{1}{section.1}
+\contentsline {section}{\numberline {\textbf {$\mathit {2}$}}Estudi del model Actual}{2}{section.2}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {2}$}.1}Dades obtingudes de la Web del Departament}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {2}$}.2}Dades facilitades pel Secretari del departament}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {2}$}.3}Altres notes del \textit {Model actual}}{3}{subsection.2.3}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {2}$}.4}Estat del model actual}{3}{subsection.2.4}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {2}$}.5}Conclusions}{3}{subsection.2.5}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {2}$}.6}Dades per extreure del \textit {model actual} i recopilar}{3}{subsection.2.6}
+\contentsline {section}{\numberline {\textbf {$\mathit {3}$}}Segon model o m\IeC {\`e}tode \textit {optimitzaci\IeC {\'o}}}{5}{section.3}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.1}Definici\IeC {\'o} de la funci\IeC {\'o} objectiu}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.2}Optimitzaci\IeC {\'o}}{5}{subsection.3.2}
+\contentsline {section}{\numberline {\textbf {$\mathit {4}$}}Model d'assignacions per subhastes }{6}{section.4}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.1}Aqu\IeC {\'\i } va una part de Talloc}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.2}Problem\IeC {\`a}tiques de les subhastes}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.3}Construcci\IeC {\'o} primer model}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.4}Model nasi}{6}{subsection.4.4}
