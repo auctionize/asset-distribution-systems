@@ -93,7 +93,9 @@
 
 % Serveix per ficar caixes
 \usepackage{tcolorbox}
- 
+
+% Serveix per ficar lletres d'un alfafet 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                                              %%%
 %%%                   %Utilitats visuals%                        %%%
@@ -322,7 +324,22 @@ Donat que les dades publiques de la web són limitades i insuficients per tenir 
 			\end{enumerate}
 		\end{enumerate}
 \subsection{Estat del model actual}
-\nehh{Aquí s'han de ficar les dades dels saldos.}
+Des del propi Departament de matemàtiques se'ns han facilitat dades que ens permeten calcular el saldo dels professors. Les dades facilitades són:\footnote{Per consultar-les vegeu el document \cod{pla\_docent.ods.}}
+\begin{itemize}
+	\item Nombre d'hores que ha de fer cada professor del departament en un any.$\quad(p_i, \esp i \in I)$
+	\item Nombre d'hores que fa realment un professor per a cada assignatura que se li ha assignat en el repartiment. $\quad (p'_i, \esp i \in I)$
+\end{itemize}
+El nostre objectiu és extreure del document tota la informació rellevant  mitjançant eines informàtiques, com la programació en llenguatge C, obtenir la diferencia entre les hores que hauria de fer un professor i les hores que realment fa, és a dir, $D_i:=p'_i-p_i$.
+
+En cas de que un professor fes més hores, el programa ens tornarà un resultat positiu en hores $D_i>0$. En cas contrari $D_i<0$ , el programa ens tornarà un resultat negatiu indicant així que el professor no arriba al nombre d'hores que ha de fer. Aquest també suma totes les hores que s'estan fent extra i totes les que no s'arriben a fer i ens les mostra per pantalla i , a continuació, suma aquests dos valors per obtenir el saldo total.\footnote{Per veure el codi del programa vegeu el fitxer \cod{saldo.c.}}
+Executem el programa i aquests són els resultats:
+\begin{itemize}
+	\item El $\sum$ de saldos positius és \texttt{1793} hores.	
+	\item El $\sum$ de saldos negatius és \texttt{671.0} hores.	
+	\item El $\sum$ de saldos positius i negatius  és \texttt{-1122} hores, que és un \texttt{\textbf{8.968825 \%}} del nombre d'hores total que haurien de fer tots els professors.
+	\item La mitjana aritmètica d' assignatures que fa cada professor és de  $\approx 5$.
+\end{itemize}
+Es fa evident doncs que el model és propens a reduir el nombre d'hores que s'haurien de fer i observant els resultats professor a professor veiem que hi han diferencies de fins a 80 hores de saldo negatiu o casos on el saldo positiu ascendeix fins a 62.
 \subsection{Conclusions}
 		\begin{enumerate}
 			\item El model actual funciona prou bé, fixa normes generals i fa un tractament diferent per cada cas, aconseguint més satisfacció en les assignacions. Per tant podem aprofitar molt del model actual. 
@@ -400,6 +417,47 @@ Inicialment vam utilitzar \textit{Simulated Annealing} amb control de mínims lo
 	\section{Model d'assignacions  per subhastes  }
 \end{tcolorbox}
 \lettrine{E}n aquesta secció abordarem la problemàtica d'assignacions mitjançant l'estructura de subhasta, pensant, com en les seccions anteriors, en la seva aplicació final. La intenció  és construir un mètode sobre l'estructura de subhasta que permeti  donar solució al problema dels repartiments.
+\subsection{Model Kiwis}
+\subsection{Repartiment kiwis}
+Per a tal de fer més justa la repartició d'assignatures i de premiar l'esforç del professorat i la qualitat de la seva feina, proposem un model de subhastes on la moneda de canvi, els kiwis, siguin repartits entre els pujadors de la següent manera:
+Cada professor parteix de 10 Kiwis.
+Si el professor té acumulat un saldo positiu (ha fet més hores del que li pertoquen en els ultims 3 anys) se li sumen 5 Kiwis per cada 10 hores que tingui en el saldo : 
+\begin{itemize}
+	\item 5 Kiwis per un saldo de 0 a 10h
+	\item 10 Kiwis per un saldo de 11 a 20h
+	\item  Etc.
+\end{itemize}
+
+A partir del segon any de l'instauració d'aquest model, si el professor va haver de impartir $x$ matèries que no va triar (assignades mitjançant la funció després de fer totes les subhastes) se li sumaran $x$ Kiwis. A aquells professors que vagin aconseguir més d'un 4.5 de mitjana en les enquestes realitzades per l'alumnat l'any anterior,  se li sumaran 30 kiwis. 
+
+\subsection{Funcionament subhasta}
+
+Realitzarem una subhasta per blocs de matèries, cada professor omplirà les caselles de les matèries per les que vulgui pujar d'un pdf amb el valor en kiwis que està disposat  a pagar. El preu inicial de cada matèria és de 0 Kiwis, la puja mínima és de 1 Kiwi, i a partir d'aquí es pot augmentar el preu de 0.5 Kiwis en 0.5 Kiwis (és a dir, les pujes vàlides per a una assignatura són: 1K, 1.5K, 2K, 2.5K, 3K,3.5K, etc.)
+
+Un programa recullirà els resultats i otorgarà cada matèria al major pujador. En cas d'empat, es quedarà la matèria aquell professor qui partís de més kiwis al començament. En cas de tornar a haver empat, la assignatura quedarà lliure amb el valor obtingut com a valor inicial per a la següent subhasta.
+
+D'aquesta manera es realitzaran tres subhastes. (En la última hi haurà la possibilitat de pujar amb Kiwis negatius: els pofessors poden oferir-se a fer una assignatura a canvi de rebre fins a 5 kiwis a canvi (pujant per -5 Kiwis)).
+
+
+\subsubsection{Revalorització hores}
+
+\begin{itemize}
+	\item Suposem que una assignatura s'acaba assignant per un valor > 0 Kiwis (a la pràctica $\geq$1), i que aquesta matèria està valorada en h hores. Aleshores, el valor horari final de l'assignatura serà 
+	$$ 
+	h' = h - \frac{num. profs. que. han. pujat}{num. profs. que. han. pujat + 1}
+	$$
+	$$ - \frac{preu. en. Kiwis. pagat}{preu. Kiwis +1}
+	$$
+	
+	Així doncs, el valor final de la matèria pot arribar a ser de fins a dues hores menys del valor inicial h.
+	
+	\item Ara suposem que una assignatura s'acaba assignant per un valor $\leq$ 0 Kiwis o que directament no s'assigna, i que està valorada en h hores. Aleshores, el valor final de l'assignatura serà: $$h'= h +1 $$
+	(Contarà com una hora més).
+\end{itemize}
+
+\subsubsection{Assignacions finals}
+
+Amb aquesta nova revalorització horària, es repartiran les matèries no assignades mitjançant el mètode de la funció entre els professors que tinguin de moment cobert un valor inferior a $\frac{2M}{3}$ hores, on M són les hores que ha de realitzar aquell professor.
 \subsection{Aquí va una part de Talloc}
 \subsection{Problemàtiques de les  subhastes}
 Aquí tenim un resum de les problemàtiques que ha de soluciona'l el model de subhasta que considerem construir 
