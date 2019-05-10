@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Anàlisi saldo del model actual}
+\author{Modelització. Pla docent}
+\date{Abril 2019}
+\begin{document}
+\maketitle
+Des del departament de matemàtiques se'ns han facilitat dades que ens permeten calcular el saldo dels professors. Les dades facilitades són:
+\begin{itemize}
+    \item Nombre d'hores que ha de fer cada professor del departament en un any.
+    \item Nombre d'hores que fa realment un professor per a cada assignatura que se li ha assignat en el repartiment.
+\end{itemize}
+\\
+Per consultar-les vegeu el document pla\_docent.ods.
+\\
+El nostre objectiu és extreure del document tota la informació que ens interessa, introduir-la  en un programa i que aquest ens calculi la diferencia entre les hores que hauria de fer un professor i les hores que realment fa. En cas de que el professor fes més hores, el programa ens tornarà un resultat positiu en hores. En cas contrari, el programa ens tornarà un resultat negatiu indicant així que el professor no arriba al nombre d'hores que ha de fer. Aquest també suma totes les hores que s'estan fent extra i totes les que no s'arriben a fer i ens les mostra per pantalla i , a continuació, suma aquests dos valors per obtenir el saldo total.
+\\
+Per veure el codi del programa vegeu el fitxer saldo.c.
+Executem el programa i aquests són els resultats:
+\begin{itemize}
+    \item Hi ha un total de 1793 hores de saldo negatiu
+    \item Hi ha un total de 671.0 hores de saldo positiu
+    \item El saldo absolut és de -1122 hores, que es un 8.968825 per cent del nombre d'hores total que haurien de fer tots els professors.
+    \item La mitjana de assignatures que fa cada professor és de 5.
+\end{itemize}
+Es fa evident doncs que el model es propens a reduir el nombre d'hores que s'haurien de fer i observant els resultats professor a professor veiem que hi han diferencies de fins a 80 hores de saldo negatiu o casos on el saldo positiu ascendeix fins a 62.
+\\
+\end{document}
