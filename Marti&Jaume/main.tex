@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{schemata}
+\usepackage{keyval}
+\usepackage{eurosym}
+\usepackage{float}
+\usepackage{wrapfig}
+\setlength{\parindent}{0pt}
+
+\title{Model subhasta}
+\author{ }
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Repartiment kiwis}
+Per a tal de fer més justa la repartició d'assignatures i de premiar l'esforç del professorat i la qualitat de la seva feina, proposem un model de subhastes on la moneda de canvi, els kiwis, siguin repartits entre els pujadors de la següent manera:
+
+Cada professor parteix de 10 Kiwis.
+Si el professor té acumulat un saldo positiu (ha fet més hores del que li pertoquen en els ultims 3 anys) se li sumen 5 Kiwis per cada 10 hores que tingui en el saldo : 
+\begin{itemize}
+    \item 5 Kiwis per un saldo de 0 a 10h
+    \item 10 Kiwis per un saldo de 11 a 20h
+    \item  Etc.
+\end{itemize}
+
+A partir del segon any de la instauració d'aquest model, si el professor va haver de impartir x matèries que no va triar (assignades mitjançant la funció després de fer totes les subhastes) se li sumaran x Kiwis. A aquells professors que vagin aconseguir més d'un 4.5 de mitjana en les enquestes realitzades per l'alumnat l'any anterior,  se li sumaran 30 kiwis. 
+
+\section{Funcionament subhasta}
+
+Realitzarem una subhasta per blocs de matèries, cada professor omplirà les caselles de les matèries per les que vulgui pujar d'un pdf amb el valor en kiwis que està disposat  a pagar. El preu inicial de cada matèria és de 0 Kiwis, la puja mínima és de 1 Kiwi, i a partir d'aquí es pot augmentar el preu de 0.5 Kiwis en 0.5 Kiwis (és a dir, les pujes vàlides per a una assignatura són: 1K, 1.5K, 2K, 2.5K, 3K,3.5K, etc.)
+
+Un programa recullirà els resultats i otorgarà cada matèria al major pujador. En cas d'empat, es quedarà la matèria aquell professor qui partís de més kiwis al començament. En cas de tornar a haver empat, la assignatura quedarà lliure amb el valor obtingut com a valor inicial per a la següent subhasta.
+
+D'aquesta manera es realitzaran tres subhastes. (En la última hi haurà la possibilitat de pujar amb Kiwis negatius: els pofessors poden oferir-se a fer una assignatura a canvi de rebre fins a 5 kiwis a canvi (pujant per -5 Kiwis)).
+
+
+\section{Revalorització hores}
+
+\begin{itemize}
+    \item Suposem que una assignatura s'acaba assignant per un valor > 0 Kiwis (a la pràctica $>=$1), i que aquesta matèria està valorada en h hores. Aleshores, el valor horari final de l'assignatura serà $$ h' = h - \frac{num. profs. que. han. pujat}{num. profs. que. han. pujat + 1} - \frac{preu. en. Kiwis. pagat}{preu. Kiwis +1}$$
+    
+    Així doncs, el valor final de la matèria pot arribar a ser de fins a dues hores menys del valor inicial h.
+    
+    \item Ara suposem que una assignatura s'acaba assignant per un valor $<= $ 0 Kiwis o que directament no s'assigna, i que està valorada en h hores. Aleshores, el valor final de l'assignatura serà: $$h'= h +1 $$
+    (Contarà com una hora més).
+\end{itemize}
+
+\section{Assignacions finals}
+
+Amb aquesta nova revalorització horària, es repartiran es matèries no assignades mitjançant el mètode de la funció entre els professors que tinguin de moment cobert un valor inferior a $\frac{2M}{3}$ hores, on M són les hores que ha de realitzar aquell professor.
+
+\end{document}
