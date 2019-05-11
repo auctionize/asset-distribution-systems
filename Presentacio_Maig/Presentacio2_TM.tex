@@ -256,13 +256,42 @@
 \end{columns}
 \end{frame}
 
+
 %Diapositiva 6 (2.)
-\begin{frame}{$\mathbf 2.$ Anàlisis del \textit{Model Actual}}
+\begin{frame}{Resultats \textit{Model Actual}, valors numèrics }\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+
+\begin{block}{Dades del \textit{Model actual}}
+	\begin{itemize}
+		\item El $\sum$ de saldos positius és \texttt{1793} hores.	
+		\item El $\sum$ de saldos negatius és \texttt{-2671.0} hores.	
+		\item El $\sum$ de saldos positius i negatius  és \texttt{-1122} hores, que és un \texttt{\textbf{8.968825 \%}} del nombre d'hores total que haurien de fer tots els professors.
+		\item La mitjana aritmètica d' assignatures que fa cada professor és de  $\approx 5.9999999999$. 
+	\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+
+%Diapositiva 6 (2.)
+\begin{frame}{Resultats \textit{Model Actual}, gràfics}
 \begin{figure}
-\includegraphics[width=10cm]{saldo_actual}
-\caption{Saldos actual del professorat any 2018}
+	\includegraphics[width=10cm]{saldo_actual}
+	\caption{Saldos \texttt{TOTAL} actual del professorat any 2018}
 \end{figure}
 \end{frame}
+
+
+%Diapositiva 6 (2.)
+\begin{frame}{Resultats \textit{Model Actual}, gràfics}
+\begin{figure}
+	\includegraphics[width=10cm]{saldo_actual}
+	\caption{Saldos \texttt{TOTAL} actual del professorat any 2018}
+\end{figure}
+\end{frame}
+
+
 %Diapositiva 7 (2.)
 \begin{frame}{$\mathbf 2.$ Anàlisis del \textit{Model Actual}}
 \begin{columns}[t]
@@ -287,35 +316,6 @@
 \end{columns}
 \end{frame}
 
-%Diapositiva 8 (3.)
-\begin{frame}{$\mathbf 3.$ Model d’Optimització o d’investigació de sistemes}
-\begin{columns}[t]
-	%c1
-	\begin{column}{.5\textwidth}
-		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
-		%>\
-		\begin{block}{Estat del model}
-			Lorem ipsum dolor sit amet,
-			consectetuer adipiscing elit. Upurus elit, vestibulum ut,
-			placerat ac, adipiscing vitae,
-			felis. Curabitur dictum gravida
-			mauris. Nam arcu libero,
-			nonummy eget, consectetuer ivulputate a, magna. Donec
-			vehicula augue eu neque.
-		\end{block}
-	\end{column}
-	%c2
-	\begin{column}{.5\textwidth}
-		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
-		\begin{block}{Valors rellevants}
-			Lorem ipsum dolor sit amet,
-			adipiscing elit. Upurus elit, vestibu
-			consectetuer 
-		\end{block}
-		\includegraphics[width=3.5cm]{eps}
-	\end{column}
-\end{columns}
-\end{frame}
 %Diapositiva 10 (3.)
 \begin{frame}{$\mathbf 3.$ Model d’Optimització o d’investigació de sistemes}
 \begin{columns}[t]
@@ -329,26 +329,60 @@
 	\end{block}
 \setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 
-\begin{block}{Valors rellevants}
-\texttt{\textbf{maximitzar} o \textbf{minimitzar}} \text{f}
-\\
+\begin{block}{Optimització}
+\texttt{\textbf{maximitzar} o \textbf{minimitzar}} \texttt{f}
+\\ 
 \texttt{Subjecte a}
+\\
+$\quad $ \texttt{\textbf{restriccions}}
 \end{block}
 \end{column}
 %c2
 \begin{column}{.5\textwidth}
 	\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
-	\begin{block}{Valors rellevants}
-		Lorem ipsum dolor sit amet,
-		adipiscing elit. Upurus elit, vestibu
-		consectetuer 
+	\begin{block}{Un esquema}
+		\includegraphics[width=5cm]{algor}
 	\end{block}
-	\includegraphics[width=3.5cm]{eps}
 \end{column}
 \end{columns}
 \end{frame}
+
+
+
+%Diapositiva 10 (3.)
+\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
+\begin{columns}[t]
+	%c1
+	\begin{column}{.5\textwidth}
+		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
+		%>\
+		\begin{block}{Una noció del model}
+			[...la gracià està en escollir uns \emph{criteris raonables}
+			a partir dels quals , i donades unes \textbf{restriccions}, definir una \textbf{funció objectiu} a optimitza...]
+		\end{block}
+		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
+		
+		\begin{block}{Optimització}
+			\texttt{\textbf{maximitzar} o \textbf{minimitzar}} \texttt{f}
+			\\ 
+			\texttt{Subjecte a}
+			\\
+			$\quad $ \texttt{\textbf{restriccions}}
+		\end{block}
+	\end{column}
+	%c2
+	\begin{column}{.5\textwidth}
+		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
+		\begin{block}{Un esquema}
+			\includegraphics[width=5cm]{eps}
+		\end{block}
+	\end{column}
+\end{columns}
+\end{frame}
+
+
 %Diapositiva 9 (3.)
-\begin{frame}{$\mathbf 3.$ Model d’Optimització o d’investigació de sistemes}
+\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
 \begin{columns}[t]
 	%c1
 	\begin{column}{.5\textwidth}
@@ -377,35 +411,31 @@
 \end{columns}
 \end{frame}
 %Diapositiva 10 (3.)
-\begin{frame}{$\mathbf 3.$ Model d’Optimització o d’investigació de sistemes}
+\begin{frame}{Resultats i limitacions del mode}
 \begin{columns}[t]
 	%c1
 	\begin{column}{.5\textwidth}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		%>\
-		\begin{block}{Estat del model}
-			Lorem ipsum dolor sit amet,
-			consectetuer adipiscing elit. Upurus elit, vestibulum ut,
-			placerat ac, adipiscing vitae,
-			felis. Curabitur dictum gravida
-			mauris. Nam arcu libero,
-			nonummy eget, consectetuer ivulputate a, magna. Donec
-			vehicula augue eu neque.
+		\begin{block}{Limitacions}
+			[...malgrat buscar un \textbf{òptim} en un conjunt $|\mathbb{A}|\approx10^{5000}$ de possibles assignacions finit , no podem garantir que aquesta assignació és correspongui amb un  \textbf{mínim} de la \textbf{funció objectiu}...]
+		\end{block}
+		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
+		
+		\begin{block}{Però ...}
+		\end{block}
+	...podem dir suficient de les  assignacions 
 		\end{block}
 	\end{column}
 	%c2
 	\begin{column}{.5\textwidth}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
-		\begin{block}{Valors rellevants}
-			Lorem ipsum dolor sit amet,
-			adipiscing elit. Upurus elit, vestibu
-			consectetuer 
+		\begin{block}{Un esquema}
+			\includegraphics[width=5cm]{eps}
 		\end{block}
-		\includegraphics[width=3.5cm]{eps}
 	\end{column}
 \end{columns}
 \end{frame}
-
 %Diapositiva 11 (3.)
 \begin{frame}{$\mathbf 4.$ \textit{Models} o \textit{Mètodes} per Subhastes}
 \begin{columns}[t]
