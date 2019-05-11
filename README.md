@@ -1,8 +1,14 @@
-##Tasques que encara no s'han repartir
-- a dormir!
--
-
-
+## Tasques per acabar dissabte
+- Albert:
+  - **2.4** (Estat del model actual falta ficar imatges de la grafica en Excel 
+         i comparar resultats diferents amb Jaume)
+  - **3.1,3.2,3.3** Definició de la funció objectiu, Optimització i **Biblioteca**
+  - **3.5** (no se que era)
+- Marc:
+  - **2.5** Conclusions model actual.
+  - **3.4** Limitacions del model funció.
+  - **4.1** Problematiques i beneficis Subhastes
+## Tasques per acabar Diumenge
 
 
 
