@@ -1,0 +1,4 @@
+\babel@toc {catalan}{}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}}{1}{0}{1}
+\beamer@sectionintoc {2}{Grup 15}{1}{0}{2}
+\beamer@sectionintoc {3}{Taller de Modelitzaci\IeC {\'o}}{1}{0}{3}
