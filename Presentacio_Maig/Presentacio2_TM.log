@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.23)  11 MAY 2019 19:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.23)  12 MAY 2019 00:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1489,6 +1489,31 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@lastruleclass=\count362
 \@thisrulewidth=\dimen352
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count363
+\lst@gtempboxa=\box72
+\lst@token=\toks58
+\lst@length=\count364
+\lst@currlwidth=\dimen353
+\lst@column=\count365
+\lst@pos=\count366
+\lst@lostspace=\dimen354
+\lst@width=\dimen355
+\lst@newlines=\count367
+\lst@lineno=\count368
+\lst@maxwidth=\dimen356
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count369
+\lst@skipnumbers=\count370
+\lst@framebox=\box73
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (/usr/share/texlive/texmf-dist/tex/latex/erewhon/erewhon.sty
 Package: erewhon 2017/03/14 v1.08
 
@@ -1808,32 +1833,32 @@ LaTeX Info: Redefining \scshape on input line 37.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count363
+\c@lips@count=\count371
 )
 (/usr/share/texlive/texmf-dist/tex/latex/lettrine/lettrine.sty
 File: lettrine.sty 2015/08/31 v1.9 (Daniel Flipo)
-\c@DefaultLines=\count364
-\c@DefaultDepth=\count365
-\DefaultFindent=\dimen353
-\DefaultNindent=\dimen354
-\DefaultSlope=\dimen355
-\DiscardVskip=\dimen356
-\L@lbox=\box72
-\L@tbox=\box73
-\c@L@lines=\count366
-\c@L@depth=\count367
-\L@Pindent=\dimen357
-\L@Findent=\dimen358
-\L@Nindent=\dimen359
-\L@lraise=\dimen360
-\L@first=\dimen361
-\L@next=\dimen362
-\L@slope=\dimen363
-\L@height=\dimen364
-\L@novskip=\dimen365
-\LettrineWidth=\dimen366
-\LettrineHeight=\dimen367
-\LettrineDepth=\dimen368
+\c@DefaultLines=\count372
+\c@DefaultDepth=\count373
+\DefaultFindent=\dimen357
+\DefaultNindent=\dimen358
+\DefaultSlope=\dimen359
+\DiscardVskip=\dimen360
+\L@lbox=\box74
+\L@tbox=\box75
+\c@L@lines=\count374
+\c@L@depth=\count375
+\L@Pindent=\dimen361
+\L@Findent=\dimen362
+\L@Nindent=\dimen363
+\L@lraise=\dimen364
+\L@first=\dimen365
+\L@next=\dimen366
+\L@slope=\dimen367
+\L@height=\dimen368
+\L@novskip=\dimen369
+\LettrineWidth=\dimen370
+\LettrineHeight=\dimen371
+\LettrineDepth=\dimen372
 
 Loading lettrine.cfg
 (/usr/share/texlive/texmf-dist/tex/latex/lettrine/lettrine.cfg))
@@ -1843,31 +1868,6 @@ Package: GoudyIn 2007/11/24 v1.01 GoudyIn CFR
 (/usr/share/texlive/texmf-dist/tex/latex/initials/GoudyIn.fd
 File: GoudyIn.fd 2003/04/02 Font definition file for U/GoudyIn
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count368
-\lst@gtempboxa=\box74
-\lst@token=\toks58
-\lst@length=\count369
-\lst@currlwidth=\dimen369
-\lst@column=\count370
-\lst@pos=\count371
-\lst@lostspace=\dimen370
-\lst@width=\dimen371
-\lst@newlines=\count372
-\lst@lineno=\count373
-\lst@maxwidth=\dimen372
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count374
-\lst@skipnumbers=\count375
-\lst@framebox=\box75
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2015/06/04 1.6 listings configuration
-))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
-
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2018/01/12 version 4.12 text color boxes
 
@@ -1913,48 +1913,48 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@record@out=\write6
 )
 LaTeX Font Info:    Try loading font information for T1+erewhon-TLF on input li
-ne 101.
+ne 102.
 
 (/usr/share/texlive/texmf-dist/tex/latex/erewhon/T1erewhon-TLF.fd
 File: T1erewhon-TLF.fd 2014/09/11 (autoinst) Font definitions for T1/erewhon-TL
 F.
 )
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 101.
+(Font)              scaled to size 10.0pt on input line 102.
 
 (./Presentacio2_TM.aux)
 \openout1 = `Presentacio2_TM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 101.
-LaTeX Font Info:    Try loading font information for LY1+ptm on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 102.
+LaTeX Font Info:    Try loading font information for LY1+ptm on input line 102.
 
  (/usr/share/texlive/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 101.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 102.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    ... okay on input line 102.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 101.
+(Font)              scaled to size 10.95pt on input line 102.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2022,7 +2022,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box86
-Package hyperref Info: Link coloring OFF on input line 101.
+Package hyperref Info: Link coloring OFF on input line 102.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2032,9 +2032,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count385
 )
-LaTeX Info: Redefining \ref on input line 101.
-LaTeX Info: Redefining \pageref on input line 101.
-LaTeX Info: Redefining \nameref on input line 101.
+LaTeX Info: Redefining \ref on input line 102.
+LaTeX Info: Redefining \pageref on input line 102.
+LaTeX Info: Redefining \nameref on input line 102.
 
 (./Presentacio2_TM.out) (./Presentacio2_TM.out)
 \@outlinefile=\write7
@@ -2065,25 +2065,20 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \l on input line 101.
-LaTeX Info: Redefining \L on input line 101.
-\c@mv@tabular=\count386
-\c@mv@boldtabular=\count387
-\c@lstlisting=\count388
+LaTeX Info: Redefining \l on input line 102.
+LaTeX Info: Redefining \L on input line 102.
+\c@lstlisting=\count386
+\c@mv@tabular=\count387
+\c@mv@boldtabular=\count388
  (./Presentacio2_TM.nav)
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 101.
+(Font)              scaled to size 6.0pt on input line 102.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
 (Font)              scaled to size 14.4pt on input line 113.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
 (Font)              scaled to size 14.4pt on input line 113.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 113.
-<eps.png, id=37, 411.136pt x 411.136pt>
-File: eps.png Graphic file (type png)
-<use eps.png>
-Package pdftex.def Info: eps.png  used on input line 113.
-(pdftex.def)             Requested size: 42.67912pt x 42.67809pt.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
 (Font)              scaled to size 4.0pt on input line 113.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
@@ -2102,13 +2097,14 @@ Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored! <./eps.png>]
+Non-PDF special ignored!]
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 176.
 
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 176.
+
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2177,126 +2173,147 @@ Overfull \vbox (3.85193pt too high) detected at line 220
 
 ]
 LaTeX Font Info:    Try loading font information for TS1+erewhon-TLF on input l
-ine 258.
+ine 257.
  (/usr/share/texlive/texmf-dist/tex/latex/erewhon/TS1erewhon-TLF.fd
 File: TS1erewhon-TLF.fd 2014/09/11 (autoinst) Font definitions for TS1/erewhon-
 TLF.
 )
 LaTeX Font Info:    Font shape `TS1/erewhon-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 258.
+(Font)              scaled to size 9.0pt on input line 257.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 258.
+(Font)              scaled to size 24.88pt on input line 257.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 258.
+(Font)              <24.88> on input line 257.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 258.
+(Font)              <20.74> on input line 257.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 258.
+(Font)              <17.28> on input line 257.
 
 [5
 
 ]
-File: eps.png Graphic file (type png)
-<use eps.png>
-Package pdftex.def Info: eps.png  used on input line 287.
-(pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
- [6
+Package epstopdf Info: Source file: <saldo_actual.eps>
+(epstopdf)                    date: 2019-05-11 22:07:59
+(epstopdf)                    size: 26430 bytes
+(epstopdf)             Output file: <saldo_actual-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-05-11 23:20:58
+(epstopdf)                    size: 11033 bytes
+(epstopdf)             Command: <repstopdf --outfile=saldo_actual-eps-converted
+-to.pdf saldo_actual.eps>
+(epstopdf)             \includegraphics on input line 265.
+Package epstopdf Info: Output file is already uptodate.
 
-]
+
+pdfTeX warning: /usr/bin/pdflatex (file ./saldo_actual-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<saldo_actual-eps-converted-to.pdf, id=126, 685.56125pt x 385.44pt>
+File: saldo_actual-eps-converted-to.pdf Graphic file (type pdf)
+<use saldo_actual-eps-converted-to.pdf>
+Package pdftex.def Info: saldo_actual-eps-converted-to.pdf  used on input line 
+265.
+(pdftex.def)             Requested size: 284.52756pt x 159.97226pt.
+[6
+
+ <./saldo_actual-eps-converted-to.pdf>]
+<eps.png, id=138, 411.136pt x 411.136pt>
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 316.
+Package pdftex.def Info: eps.png  used on input line 288.
 (pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [7
 
-]
+ <./eps.png>]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 346.
+Package pdftex.def Info: eps.png  used on input line 318.
 (pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [8
 
 ]
+LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 347.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 347.
+
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 347.
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 375.
+Package pdftex.def Info: eps.png  used on input line 347.
 (pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [9
 
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 404.
+Package pdftex.def Info: eps.png  used on input line 376.
 (pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [10
 
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 434.
+Package pdftex.def Info: eps.png  used on input line 405.
 (pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [11
 
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 463.
+Package pdftex.def Info: eps.png  used on input line 435.
 (pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [12
 
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 492.
+Package pdftex.def Info: eps.png  used on input line 464.
 (pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [13
 
 ]
-LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 519.
+File: eps.png Graphic file (type png)
+<use eps.png>
+Package pdftex.def Info: eps.png  used on input line 493.
+(pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [14
 
 ] [15
 
-] [16
+]
+[16
 
 ] [17
 
+] [18
+
 ]
-Underfull \hbox (badness 1824) in paragraph at lines 576--576
+Underfull \hbox (badness 1824) in paragraph at lines 577--577
 []|$\OMS/lmsy/m/n/10.95 ^^C$ \T1/erewhon-TLF/m/n/10.95 Ob-jec-tiu re-va-lo-rit-
 zar
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 576--576
+Underfull \hbox (badness 2401) in paragraph at lines 577--577
 []|$\OMS/lmsy/m/n/10.95 ^^C$ \T1/erewhon-TLF/m/n/10.95 Su-po-sem que hi ha
  []
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 576.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 577.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 576.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 577.
 
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 576.
+Package pdftex.def Info: eps.png  used on input line 577.
 (pdftex.def)             Requested size: 142.26378pt x 142.26239pt.
 
-Overfull \hbox (32.76381pt too wide) in paragraph at lines 576--576
+Overfull \hbox (32.76381pt too wide) in paragraph at lines 577--577
 []|[]| 
- []
-
-[18
-
-]
-File: eps.png Graphic file (type png)
-<use eps.png>
-Package pdftex.def Info: eps.png  used on input line 585.
-(pdftex.def)             Requested size: 142.26378pt x 142.26239pt.
-
-Overfull \vbox (20.91235pt too high) detected at line 585
  []
 
 [19
@@ -2304,51 +2321,62 @@ Overfull \vbox (20.91235pt too high) detected at line 585
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 588.
-(pdftex.def)             Requested size: 284.52756pt x 284.53105pt.
+Package pdftex.def Info: eps.png  used on input line 586.
+(pdftex.def)             Requested size: 142.26378pt x 142.26239pt.
 
-Overfull \vbox (76.4441pt too high) detected at line 588
+Overfull \vbox (20.91235pt too high) detected at line 586
  []
 
 [20
 
-] [21
+]
+File: eps.png Graphic file (type png)
+<use eps.png>
+Package pdftex.def Info: eps.png  used on input line 589.
+(pdftex.def)             Requested size: 284.52756pt x 284.53105pt.
+
+Overfull \vbox (76.4441pt too high) detected at line 589
+ []
+
+[21
 
 ] [22
 
+] [23
+
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 618.
+Package pdftex.def Info: eps.png  used on input line 619.
 (pdftex.def)             Requested size: 199.16928pt x 199.1686pt.
- [23
+ [24
 
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 622.
+Package pdftex.def Info: eps.png  used on input line 623.
 (pdftex.def)             Requested size: 284.52756pt x 284.53105pt.
 
-Overfull \vbox (76.4441pt too high) detected at line 622
- []
-
-[24
-
-]
-File: eps.png Graphic file (type png)
-<use eps.png>
-Package pdftex.def Info: eps.png  used on input line 626.
-(pdftex.def)             Requested size: 284.52756pt x 284.53105pt.
-
-Overfull \vbox (76.4441pt too high) detected at line 626
+Overfull \vbox (76.4441pt too high) detected at line 623
  []
 
 [25
 
 ]
+File: eps.png Graphic file (type png)
+<use eps.png>
+Package pdftex.def Info: eps.png  used on input line 627.
+(pdftex.def)             Requested size: 284.52756pt x 284.53105pt.
+
+Overfull \vbox (76.4441pt too high) detected at line 627
+ []
+
+[26
+
+]
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
-(Font)              scaled to size 24.88pt on input line 630.
- [26
+(Font)              scaled to size 24.88pt on input line 631.
+ [27
 
 ]
 \tf@nav=\write8
@@ -2360,47 +2388,49 @@ LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
 \tf@snm=\write10
 \openout10 = `Presentacio2_TM.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 632.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 632.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 633.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 633.
  (./Presentacio2_TM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 632.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 632.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 633.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 633.
 Package rerunfilecheck Info: File `Presentacio2_TM.out' has not changed.
 (rerunfilecheck)             Checksum: 0F1F73C0547907879FA3D53674CD4FF6;151.
  ) 
 Here is how much of TeX's memory you used:
- 35835 strings out of 492982
- 681895 string characters out of 6134896
- 916853 words of memory out of 5000000
- 38604 multiletter control sequences out of 15000+600000
- 653484 words of font info for 125 fonts, out of 8000000 for 9000
+ 35918 strings out of 492982
+ 683290 string characters out of 6134896
+ 916807 words of memory out of 5000000
+ 38667 multiletter control sequences out of 15000+600000
+ 654121 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,75p,10460b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/font
-s/enc/dvips/erewhon/zut1_d2bm6z.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dv
-ips/erewhon/zut1_5gd3w7.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/erew
-hon/zut1_geqeyh.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/E
-rewhon-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewh
-on-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon
--Regular.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmb
-x9.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on Presentacio2_TM.pdf (26 pages, 366732 bytes).
+hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/erewhon/zut1_d2bm6z.
+enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/erewhon/zut1_5gd3w7.enc}{/us
+r/share/texlive/texmf-dist/fonts/enc/dvips/erewhon/zut1_geqeyh.enc}</usr/share/
+texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-Bold.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/erewhon/Erewhon-Italic.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/erewhon/Erewhon-Regular.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb>
+Output written on Presentacio2_TM.pdf (27 pages, 415049 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
- 334 compressed objects within 4 object streams
- 56 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 351 compressed objects within 4 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

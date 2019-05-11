@@ -55,7 +55,8 @@
 \usepackage{booktabs} %Serveix per taules
 
 
-%Serveix per lletre inicial més elegant i vanidosa 
+%Serveix per lletre inicial més elegant i vanidosa
+\usepackage{listings}
 \usepackage{erewhon}
 \usepackage{lipsum}
 \usepackage{lettrine}
@@ -102,14 +103,13 @@
 \section{Introducció}
 \title{\textit{Pla Docent}}
 \subtitle{\color{blue!20!black} Taller de Modelització \\ 2n. de Grau en  Matemàtiques \\ \color{black} Universitat Autònoma de Barcelona}
-\date{Albert Acebrón, Jaume Betriu, Martina Canet, Marc Graells\\ 13 o 16 de maig de 2019 \\\includegraphics[width=1.5cm]{eps}}
+\date{Albert Acebrón, Jaume Betriu, Martina Canet, Marc Graells\\ 13 o 16 de maig de 2019 \\}
 \section{Grup 15}
 \section{Taller de Modelització}
 %Diapositiva 1 (Ens presentem i anunciem el títol)
 \begin{frame} 
 \maketitle
 \centering
-
 \end{frame}
 %Diapositiva 2 (Com Esquema)
 \begin{frame}{Les quatre parts de la presentació}
@@ -218,7 +218,6 @@
 \end{itemize}
 \end{block}
 \end{frame}
-
 %Diapositiva 5 (2.)
 \begin{frame}{$\mathbf 2.$ Anàlisis del \textit{Model Actual}}
 \begin{columns}[t]
@@ -256,34 +255,13 @@
 	    \end{column}
 \end{columns}
 \end{frame}
+
 %Diapositiva 6 (2.)
 \begin{frame}{$\mathbf 2.$ Anàlisis del \textit{Model Actual}}
-\begin{columns}[t]
-	%c1
-	\begin{column}{.5\textwidth}
-		\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
-		%>\
-		\begin{block}{Estat del model}
-	Lorem ipsum dolor sit amet,
-	consectetuer adipiscing elit. Upurus elit, vestibulum ut,
-	placerat ac, adipiscing vitae,
-	felis. Curabitur dictum gravida
-	mauris. Nam arcu libero,
-	nonummy eget, consectetuer ivulputate a, magna. Donec
-	vehicula augue eu neque.
-		\end{block}
-	\end{column}
-	%c2
-	\begin{column}{.5\textwidth}
-		\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
-		\begin{block}{Valors rellevants}
-		Lorem ipsum dolor sit amet,
-		adipiscing elit. Upurus elit, vestibu
-		consectetuer 
-		\end{block}
-	\includegraphics[width=3.5cm]{eps}
-	\end{column}
-\end{columns}
+\begin{figure}
+\includegraphics[width=10cm]{saldo_actual}
+\caption{Saldos actual del professorat any 2018}
+\end{figure}
 \end{frame}
 %Diapositiva 7 (2.)
 \begin{frame}{$\mathbf 2.$ Anàlisis del \textit{Model Actual}}
@@ -293,13 +271,7 @@
 		\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
 		%>\
 		\begin{block}{Estat del model}
-			Lorem ipsum dolor sit amet,
-			consectetuer adipiscing elit. Upurus elit, vestibulum ut,
-			placerat ac, adipiscing vitae,
-			felis. Curabitur dictum gravida
-			mauris. Nam arcu libero,
-			nonummy eget, consectetuer ivulputate a, magna. Donec
-			vehicula augue eu neque.
+		
 		\end{block}
 	\end{column}
 	%c2
@@ -342,6 +314,37 @@
 		\end{block}
 		\includegraphics[width=3.5cm]{eps}
 	\end{column}
+\end{columns}
+\end{frame}
+%Diapositiva 10 (3.)
+\begin{frame}{$\mathbf 3.$ Model d’Optimització o d’investigació de sistemes}
+\begin{columns}[t]
+%c1
+\begin{column}{.5\textwidth}
+	\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
+	%>\
+	\begin{block}{Una noció del model}
+		[...la gracià està en escollir uns \emph{criteris raonables}
+		a partir dels quals , i donades unes \textbf{restriccions}, definir una \textbf{funció objectiu} a optimitza...]
+	\end{block}
+\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
+
+\begin{block}{Valors rellevants}
+\texttt{\textbf{maximitzar} o \textbf{minimitzar}} \text{f}
+\\
+\texttt{Subjecte a}
+\end{block}
+\end{column}
+%c2
+\begin{column}{.5\textwidth}
+	\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
+	\begin{block}{Valors rellevants}
+		Lorem ipsum dolor sit amet,
+		adipiscing elit. Upurus elit, vestibu
+		consectetuer 
+	\end{block}
+	\includegraphics[width=3.5cm]{eps}
+\end{column}
 \end{columns}
 \end{frame}
 %Diapositiva 9 (3.)
