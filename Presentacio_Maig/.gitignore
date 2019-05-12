@@ -1,0 +1,8 @@
+*.aux
+*.nav
+*.snm
+*.toc
+*.out
+*.log
+*.synctex.gz
+*-converted-to.pdf
