@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.23)  12 MAY 2019 06:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.23)  12 MAY 2019 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2316,7 +2316,7 @@ her resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 380.
+Package pdftex.def Info: eps.png  used on input line 383.
 (pdftex.def)             Requested size: 142.26378pt x 142.26239pt.
  [11
 
@@ -2329,7 +2329,7 @@ Package epstopdf Info: Source file: <Assignatures.eps>
 (epstopdf)                    size: 14102 bytes
 (epstopdf)             Command: <repstopdf --outfile=Assignatures-eps-converted
 -to.pdf Assignatures.eps>
-(epstopdf)             \includegraphics on input line 389.
+(epstopdf)             \includegraphics on input line 392.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -2339,10 +2339,10 @@ DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Assignatures-eps-converted-to.pdf Graphic file (type pdf)
 <use Assignatures-eps-converted-to.pdf>
 Package pdftex.def Info: Assignatures-eps-converted-to.pdf  used on input line 
-389.
+392.
 (pdftex.def)             Requested size: 256.0748pt x 170.72333pt.
 
-Overfull \vbox (4.50638pt too high) detected at line 389
+Overfull \vbox (4.50638pt too high) detected at line 392
  []
 
 [12
@@ -2356,7 +2356,7 @@ Package epstopdf Info: Source file: <hores_dia.eps>
 (epstopdf)                    size: 13164 bytes
 (epstopdf)             Command: <repstopdf --outfile=hores_dia-eps-converted-to
 .pdf hores_dia.eps>
-(epstopdf)             \includegraphics on input line 402.
+(epstopdf)             \includegraphics on input line 405.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -2365,13 +2365,13 @@ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <hores_dia-eps-converted-to.pdf, id=255, 433.62pt x 289.08pt>
 File: hores_dia-eps-converted-to.pdf Graphic file (type pdf)
 <use hores_dia-eps-converted-to.pdf>
-Package pdftex.def Info: hores_dia-eps-converted-to.pdf  used on input line 402
+Package pdftex.def Info: hores_dia-eps-converted-to.pdf  used on input line 405
 .
 (pdftex.def)             Requested size: 241.84842pt x 161.23528pt.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 402.
+(Font)              scaled to size 7.0pt on input line 405.
 
-Overfull \vbox (4.14856pt too high) detected at line 402
+Overfull \vbox (4.14856pt too high) detected at line 405
  []
 
 [13
@@ -2385,7 +2385,7 @@ Package epstopdf Info: Source file: <saldo.eps>
 (epstopdf)                    size: 11825 bytes
 (epstopdf)             Command: <repstopdf --outfile=saldo-eps-converted-to.pdf
  saldo.eps>
-(epstopdf)             \includegraphics on input line 409.
+(epstopdf)             \includegraphics on input line 412.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -2394,10 +2394,10 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 <saldo-eps-converted-to.pdf, id=298, 433.62pt x 289.08pt>
 File: saldo-eps-converted-to.pdf Graphic file (type pdf)
 <use saldo-eps-converted-to.pdf>
-Package pdftex.def Info: saldo-eps-converted-to.pdf  used on input line 409.
+Package pdftex.def Info: saldo-eps-converted-to.pdf  used on input line 412.
 (pdftex.def)             Requested size: 256.0748pt x 170.72333pt.
 
-Overfull \vbox (4.50638pt too high) detected at line 409
+Overfull \vbox (4.50638pt too high) detected at line 412
  []
 
 [14
@@ -2407,7 +2407,7 @@ Overfull \vbox (4.50638pt too high) detected at line 409
 File: ../plots/llibreria_funcs/horari.png Graphic file (type png)
 <use ../plots/llibreria_funcs/horari.png>
 Package pdftex.def Info: ../plots/llibreria_funcs/horari.png  used on input lin
-e 416.
+e 419.
 (pdftex.def)             Requested size: 256.0748pt x 151.08104pt.
  [15
 
@@ -2420,7 +2420,7 @@ Package epstopdf Info: Source file: <interclass.eps>
 (epstopdf)                    size: 12064 bytes
 (epstopdf)             Command: <repstopdf --outfile=interclass-eps-converted-t
 o.pdf interclass.eps>
-(epstopdf)             \includegraphics on input line 423.
+(epstopdf)             \includegraphics on input line 426.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -2430,20 +2430,23 @@ pdfTeX warning: /usr/bin/pdflatex (file ./interclass-eps-converted-to.pdf): PDF
 File: interclass-eps-converted-to.pdf Graphic file (type pdf)
 <use interclass-eps-converted-to.pdf>
 Package pdftex.def Info: interclass-eps-converted-to.pdf  used on input line 42
-3.
+6.
 (pdftex.def)             Requested size: 256.0748pt x 170.72333pt.
 
-Overfull \vbox (4.73639pt too high) detected at line 423
+Overfull \vbox (4.73639pt too high) detected at line 426
  []
 
 [16
 
- <./interclass-eps-converted-to.pdf>] [17
+ <./interclass-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 457.
+ [17
 
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 483.
+Package pdftex.def Info: eps.png  used on input line 486.
 (pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [18
 
@@ -2456,7 +2459,7 @@ Package epstopdf Info: Source file: <dispersio_diff_ga.eps>
 (epstopdf)                    size: 34500 bytes
 (epstopdf)             Command: <repstopdf --outfile=dispersio_diff_ga-eps-conv
 erted-to.pdf dispersio_diff_ga.eps>
-(epstopdf)             \includegraphics on input line 491.
+(epstopdf)             \includegraphics on input line 494.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -2466,7 +2469,7 @@ f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: dispersio_diff_ga-eps-converted-to.pdf Graphic file (type pdf)
 <use dispersio_diff_ga-eps-converted-to.pdf>
 Package pdftex.def Info: dispersio_diff_ga-eps-converted-to.pdf  used on input 
-line 491.
+line 494.
 (pdftex.def)             Requested size: 256.0748pt x 143.83443pt.
 [19
 
@@ -2479,7 +2482,7 @@ Package epstopdf Info: Source file: <saldo_diff_ga.eps>
 (epstopdf)                    size: 19802 bytes
 (epstopdf)             Command: <repstopdf --outfile=saldo_diff_ga-eps-converte
 d-to.pdf saldo_diff_ga.eps>
-(epstopdf)             \includegraphics on input line 502.
+(epstopdf)             \includegraphics on input line 505.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -2489,7 +2492,7 @@ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: saldo_diff_ga-eps-converted-to.pdf Graphic file (type pdf)
 <use saldo_diff_ga-eps-converted-to.pdf>
 Package pdftex.def Info: saldo_diff_ga-eps-converted-to.pdf  used on input line
- 502.
+ 505.
 (pdftex.def)             Requested size: 256.0748pt x 143.83443pt.
 [20
 
@@ -2497,10 +2500,10 @@ Package pdftex.def Info: saldo_diff_ga-eps-converted-to.pdf  used on input line
 <subs.pdf, id=430, 694.51468pt x 451.6875pt>
 File: subs.pdf Graphic file (type pdf)
 <use subs.pdf>
-Package pdftex.def Info: subs.pdf  used on input line 536.
+Package pdftex.def Info: subs.pdf  used on input line 539.
 (pdftex.def)             Requested size: 256.0748pt x 166.5428pt.
 
-Overfull \hbox (40.97284pt too wide) in paragraph at lines 536--536
+Overfull \hbox (40.97284pt too wide) in paragraph at lines 539--539
 [][]  
  []
 
@@ -2509,7 +2512,7 @@ Overfull \hbox (40.97284pt too wide) in paragraph at lines 536--536
  <./subs.pdf>]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 565.
+Package pdftex.def Info: eps.png  used on input line 568.
 (pdftex.def)             Requested size: 99.58464pt x 99.58429pt.
  [22
 
@@ -2522,28 +2525,28 @@ Package pdftex.def Info: eps.png  used on input line 565.
 ] [26
 
 ]
-Underfull \hbox (badness 1824) in paragraph at lines 649--649
+Underfull \hbox (badness 1824) in paragraph at lines 652--652
 []|$\OMS/lmsy/m/n/10.95 ^^C$ \T1/erewhon-TLF/m/n/10.95 Ob-jec-tiu re-va-lo-rit-
 zar
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 649--649
+Underfull \hbox (badness 2401) in paragraph at lines 652--652
 []|$\OMS/lmsy/m/n/10.95 ^^C$ \T1/erewhon-TLF/m/n/10.95 Su-po-sem que hi ha
  []
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 649.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 652.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 649.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 652.
 
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 649.
+Package pdftex.def Info: eps.png  used on input line 652.
 (pdftex.def)             Requested size: 142.26378pt x 142.26239pt.
 
-Overfull \hbox (32.76381pt too wide) in paragraph at lines 649--649
+Overfull \hbox (32.76381pt too wide) in paragraph at lines 652--652
 []|[]| 
  []
 
@@ -2552,10 +2555,10 @@ Overfull \hbox (32.76381pt too wide) in paragraph at lines 649--649
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 658.
+Package pdftex.def Info: eps.png  used on input line 661.
 (pdftex.def)             Requested size: 142.26378pt x 142.26239pt.
 
-Overfull \vbox (20.91235pt too high) detected at line 658
+Overfull \vbox (20.91235pt too high) detected at line 661
  []
 
 [28
@@ -2563,10 +2566,10 @@ Overfull \vbox (20.91235pt too high) detected at line 658
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 661.
+Package pdftex.def Info: eps.png  used on input line 664.
 (pdftex.def)             Requested size: 284.52756pt x 284.53105pt.
 
-Overfull \vbox (76.4441pt too high) detected at line 661
+Overfull \vbox (76.4441pt too high) detected at line 664
  []
 
 [29
@@ -2578,17 +2581,17 @@ Overfull \vbox (76.4441pt too high) detected at line 661
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 691.
+Package pdftex.def Info: eps.png  used on input line 694.
 (pdftex.def)             Requested size: 199.16928pt x 199.1686pt.
  [32
 
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 695.
+Package pdftex.def Info: eps.png  used on input line 698.
 (pdftex.def)             Requested size: 284.52756pt x 284.53105pt.
 
-Overfull \vbox (76.4441pt too high) detected at line 695
+Overfull \vbox (76.4441pt too high) detected at line 698
  []
 
 [33
@@ -2596,17 +2599,17 @@ Overfull \vbox (76.4441pt too high) detected at line 695
 ]
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 699.
+Package pdftex.def Info: eps.png  used on input line 702.
 (pdftex.def)             Requested size: 284.52756pt x 284.53105pt.
 
-Overfull \vbox (76.4441pt too high) detected at line 699
+Overfull \vbox (76.4441pt too high) detected at line 702
  []
 
 [34
 
 ]
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
-(Font)              scaled to size 24.88pt on input line 703.
+(Font)              scaled to size 24.88pt on input line 706.
  [35
 
 ]
@@ -2619,20 +2622,20 @@ LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
 \tf@snm=\write10
 \openout10 = `Presentacio2_TM.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 705.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 705.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 708.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 708.
  (./Presentacio2_TM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 705.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 705.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 708.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 708.
 Package rerunfilecheck Info: File `Presentacio2_TM.out' has not changed.
 (rerunfilecheck)             Checksum: 0F1F73C0547907879FA3D53674CD4FF6;151.
  ) 
 Here is how much of TeX's memory you used:
- 36039 strings out of 492982
- 685948 string characters out of 6134896
- 917329 words of memory out of 5000000
- 38751 multiletter control sequences out of 15000+600000
- 657468 words of font info for 131 fonts, out of 8000000 for 9000
+ 36041 strings out of 492982
+ 685996 string characters out of 6134896
+ 917330 words of memory out of 5000000
+ 38752 multiletter control sequences out of 15000+600000
+ 660056 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,75p,10460b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
@@ -2659,7 +2662,7 @@ ic/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/yhmath/yhcmex.
 pfb>
-Output written on Presentacio2_TM.pdf (35 pages, 645653 bytes).
+Output written on Presentacio2_TM.pdf (35 pages, 646246 bytes).
 PDF statistics:
  702 PDF objects out of 1000 (max. 8388607)
  471 compressed objects within 5 object streams
