@@ -427,7 +427,7 @@ $\quad $ \texttt{\textbf{restriccions}}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		%>\
 		\begin{block}{Limitacions}
-			[...malgrat buscar un \textbf{òptim} en un conjunt $|\mathbb{A}|\approx10^{5000}$ de possibles assignacions finit , no podem garantir que aquesta assignació és correspongui amb un  \textbf{mínim} de la \textbf{funció objectiu}...]
+			Malgrat l'espai de solucions és finit, al ser de dimensió $|\mathbb{A}|\approx10^{5000}$, no podem garantir que la millor assignació que trobem és correspongui amb un  \textbf{mínim} de la \textbf{funció objectiu} ni donar cap altra garantia sobre la qualitat de la solució a la que arribaràn els algorismes d'optimització.
 		\end{block}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		
@@ -443,7 +443,7 @@ $\quad $ \texttt{\textbf{restriccions}}
 			\end{itemize}
 		\end{block}
 		\begin{block}{Conclusions i resultats}
-			Malgrat això donat el
+			A partir de simulacions concluïm que les solucions que trobem són bastant més bones que les obtingudes amb el model actual.
 		\end{block}
 	\end{column}
 \end{columns}
@@ -452,16 +452,16 @@ $\quad $ \texttt{\textbf{restriccions}}
 
 \begin{frame}{Conclusions funció}
 \begin{figure}
-	\includegraphics[width=9cm]{dispersio_diff}
+	\includegraphics[width=9cm]{dispersio_diff_ga}
 	\caption{Dispersió d'assignatures per professor}
 \end{figure}
 \end{frame}
 
 \begin{frame}{Conclusions funció}
 \begin{figure}
-	\includegraphics[width=9cm]{saldo_diff}
+	\includegraphics[width=9cm]{saldo_diff_ga}
 	\begin{tabular}{c|c|c}
-		\textbf{Model} & \textbf{Actual} & \textbf{Funció} \\
+		\textbf{Model} & \textbf{Actual} & \textbf{Funció (SA)} \\
 		Variància & 737.0676 & 14.7221 \\
 		Suma absoluta & 2498 & 1156 \\
 	\end{tabular}
