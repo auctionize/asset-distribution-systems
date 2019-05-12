@@ -246,7 +246,7 @@
 			\item Actualment el model intenta minimitzar:
 			\textit{\footnotesize \color{blue}
 				\\-Dispersió:$$\frac{\# assignatures}{professors}$$
-				\\-Deute personal}
+				\\-Deute personal o Saldo}
 		     \end{itemize}
 		\end{block}
 	
@@ -293,25 +293,27 @@
 
 
 %Diapositiva 7 (2.)
-\begin{frame}{$\mathbf 2.$ Anàlisis del \textit{Model Actual}}
+\begin{frame}{$\mathbf 2.$ Conclusions del \textit{Model Actual}}
 \begin{columns}[t]
 	%c1
 	\begin{column}{.5\textwidth}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
 		%>\
-		\begin{block}{Estat del model}
-		
+		\begin{block}{Conclusions anàlisis}
+			\begin{itemize}
+				\item No tenim amb que compara.
+				\item Requereix \textit{alt grau} de dedicació.
+				\item 
+				\item\item
+			\end{itemize}
 		\end{block}
 	\end{column}
 	%c2
 	\begin{column}{.5\textwidth}
-		\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
-		\begin{block}{Valors rellevants}
-			Lorem ipsum dolor sit amet,
-			adipiscing elit. Upurus elit, vestibu
-			consectetuer 
-		\end{block}
-		\includegraphics[width=3.5cm]{eps}
+\begin{figure}
+	\includegraphics[width=5cm]{saldo_actual}
+	\caption{Saldos \texttt{TOTAL} actual del professorat any 2018}
+\end{figure}
 	\end{column}
 \end{columns}
 \end{frame}
@@ -355,28 +357,34 @@ $\quad $ \texttt{\textbf{restriccions}}
 	\begin{column}{.5\textwidth}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		%>\
-		\begin{block}{}
+		\begin{block}{Funció de objectiu $F(a)$}
 		\begin{itemize}
 		 \item Com \textbf{modelitzem} aquest criteris?
-		 \item També afegim \text{restriccions}.
-		 \item Potser seria interessant donar una \textbf{Biblioteca} de subfusions.
+		 \item Potser seria interessant donar una \textbf{Biblioteca} de subfusions i \text{restriccions}.
 		\end{itemize}
 		\end{block}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		
 		\begin{block}{Funció com a $\sum$ de \textit{funcions}}
-			\texttt{\textbf{maximitzar} o \textbf{minimitzar}} \texttt{f}
-			\\ 
-			\texttt{Subjecte a}
+			
+			\texttt{\color{green!75!black!75}def:} \texttt{\textbf{func1({\color{blue!75!black!75}a}), func2({\color{blue!75!black!75}a}),.. }}
 			\\
-			$\quad $ \texttt{\textbf{restriccions}}
+			$\quad$\texttt{\color{purple!75!black!75}\textbf{minimitzar}}( \texttt{F({\color{blue!75!black!75}a})})
+			\\ 	
+			$\quad$ \texttt{\color{red!75!black!75}subj }: \texttt{rst1, rst2, ...}
+			\\
 		\end{block}
 	\end{column}
 	%c2
 	\begin{column}{.5\textwidth}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		\begin{block}{Un esquema}
-			\includegraphics[width=5cm]{eps}
+		\begin{itemize}
+		 \item Sigui $a \in \mathbb{A}$ on $|\mathbb{A}|\approx10^{5000}$ conjunt de les possibles assignacions (\textbf{solucions}).
+		 \item Llavors volem trobar $a_{\sim opt} \in \mathbb{A}$
+		 tal que $F(a_{\sim opt})$ sigui prou petit.
+		 \item La \textit{misteriosa}
+		  \end{itemize}
 		\end{block}
 	\end{column}
 \end{columns}
