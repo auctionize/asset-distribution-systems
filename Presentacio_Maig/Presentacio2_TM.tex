@@ -380,13 +380,43 @@ $\quad $ \texttt{\textbf{restriccions}}
 \end{frame}
 
 
-%Diapositiva 9 (3.)
+
 \begin{frame}{\textit{Biblioteca} de funcions i restriccions}
 \begin{figure}
-	\includegraphics[width=10cm]{../plots/llibreria_funcs/horari}
-	\caption{Dispersió \texttt{TOTAL} actual del professorat any 2018}
+	\includegraphics[width=9cm]{Assignatures}
+	\caption{$x^3$}
 \end{figure}
 \end{frame}
+
+\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
+\begin{figure}
+	\includegraphics[width=9cm]{hores_dia}
+	\caption{$(x-5000)^2$ si $x>5000$}
+\end{figure}
+\end{frame}
+
+\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
+\begin{figure}
+	\includegraphics[width=9cm]{saldo}
+	\caption{$x^2$}
+\end{figure}
+\end{frame}
+
+\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
+\begin{figure}
+	\includegraphics[width=9cm]{../plots/llibreria_funcs/horari}
+	\caption{La distància entre classes es calcula entre dies}
+\end{figure}
+\end{frame}
+
+\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
+\begin{figure}
+	\includegraphics[width=9cm]{interclass}
+	\caption{$x^2$, $x$ i $log(x)$}
+\end{figure}
+\end{frame}
+
+
 %Diapositiva 10 (3.)
 \begin{frame}{Resultats i limitacions del mode}
 \begin{columns}[t]
@@ -395,7 +425,7 @@ $\quad $ \texttt{\textbf{restriccions}}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		%>\
 		\begin{block}{Limitacions}
-			[...malgrat buscar un \textbf{òptim} en un conjunt $|\mathbb{A}|\approx10^{5000}$ de possibles assignacions finit , no podem garantir que aquesta assignació és correspongui amb un  \textbf{mínim} de la \textbf{funció objectiu}...]
+			Malgrat l'espai de solucions és finit, al ser de dimensió $|\mathbb{A}|\approx10^{5000}$, no podem garantir que la millor assignació que trobem és correspongui amb un  \textbf{mínim} de la \textbf{funció objectiu} ni donar cap altra garantia sobre la qualitat de la solució a la que arribaràn els algorismes d'optimització.
 		\end{block}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		
@@ -411,7 +441,7 @@ $\quad $ \texttt{\textbf{restriccions}}
 			\end{itemize}
 		\end{block}
 		\begin{block}{Conclusions i resultats}
-			Malgrat això donat el
+			A partir de simulacions concluïm que les solucions que trobem són bastant més bones que les obtingudes amb el model actual.
 		\end{block}
 	\end{column}
 \end{columns}
@@ -447,38 +477,21 @@ $\quad $ \texttt{\textbf{restriccions}}
 \end{frame}
 
 
-\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
+\begin{frame}{Conclusions funció}
 \begin{figure}
-	\includegraphics[width=9cm]{Assignatures}
-	\caption{$x^3$}
+	\includegraphics[width=9cm]{dispersio_diff_ga}
+	\caption{Dispersió d'assignatures per professor}
 \end{figure}
 \end{frame}
 
-\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
+\begin{frame}{Conclusions funció}
 \begin{figure}
-	\includegraphics[width=8.5cm]{hores_dia}
-	\caption{$ f(x):=\left\lbrace \begin{matrix}(x-500)^2& \text{ si }& x>500\text{ ,}\\ 0 & \text{ si } &x\leq 500\end{matrix}\right.$ }
-\end{figure}
-\end{frame}
-
-\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
-\begin{figure}
-	\includegraphics[width=9cm]{saldo}
-	\caption{$x^2$}
-\end{figure}
-\end{frame}
-
-\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
-\begin{figure}
-	\includegraphics[width=9cm]{../plots/llibreria_funcs/horari}
-	\caption{La distància entre classes es calcula entre dies}
-\end{figure}
-\end{frame}
-
-\begin{frame}{\textit{Biblioteca} de funcions i restriccions}
-\begin{figure}
-	\includegraphics[width=9cm]{interclass}
-	\caption{$x^2$, $x$ i $log(x)$}
+	\includegraphics[width=9cm]{saldo_diff_ga}
+	\begin{tabular}{c|c|c}
+		\textbf{Model} & \textbf{Actual} & \textbf{Funció (SA)} \\
+		Variància & 737.0676 & 14.7221 \\
+		Suma absoluta & 2498 & 1156 \\
+	\end{tabular}
 \end{figure}
 \end{frame}
 
@@ -556,7 +569,6 @@ $\quad $ \texttt{\textbf{restriccions}}
 %
 %
 %
-\end{document}
 \begin{frame}{Orientació i treball actual}
 \begin{box1}{\normalsize Esquema treball (fins avui)}
 \begin{itemize}
@@ -683,6 +695,30 @@ El model complex i \textit{artesanal} \\\textbf{ $\Rightarrow$ Molta dedicació 
 \begin{frame}
 \textit{\color{redviolet} \Huge Gràcies per la vostra atenció}
 \end{frame}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %Diapositiva 2 (Expliquem el contigut breument del treball)
 \begin{frame}{Esquema}
