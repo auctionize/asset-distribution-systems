@@ -9,9 +9,20 @@
   - **2.5** Conclusions model actual.
   - **3.4** Limitacions del model funció.
   - **4.1** Problematiques i beneficis Subhastes
-## Tasques per acabar Diumenge
-
-
+## Presentació en Beamer:
+- **Red**
+  -**Conclusió**
+  -Introducció (modificar D_i)
+- **Green**
+  -Gràfic dispersssió (+add)
+  -Canviar **5.0005** per **5.96...**
+- **Orange**
+  -Frame Biblioteca i Restriccións **(2 or more)**
+  -Conclusions model funció
+- **Cyan**
+  -Model Kiwis (1 or 2)
+  -Model condicional
+#### Valor en hores necesariament s'ha de modificar
 
 
 
