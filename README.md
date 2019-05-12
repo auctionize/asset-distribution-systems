@@ -1,3 +1,5 @@
+## Valor en hores necesariament s'ha de modificar
+void
 ## Tasques per acabar dissabte
 - Albert:
   - **2.4** (Estat del model actual falta ficar imatges de la grafica en Excel 
@@ -22,7 +24,7 @@
 - **Cyan**
   - Model Kiwis (1 or 2)
   - Model condicional
-## Valor en hores necesariament s'ha de modificar
+
 
 
 
