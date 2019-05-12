@@ -14,13 +14,21 @@ void
 ## Presentació en Beamer:
 - **Red**
   - **Conclusió**
-  - Introducció (modificar D_i)
+  - Introducció (modificar D_i, és a dir, ficar quines frames són cada part)
+- **Green**
+  - Ficar mínimi conclusió del ànalisis del _Model actual_ 
 - **Orange**
   - Frame Biblioteca i Restriccións **(2 or more)**
   - Conclusions model funció
 - **Cyan**
-  - Model Kiwis (1 or 2)
+  - Model Kiwis (1 or 2) (Demanar Jaume que facin frames kiwis)
   - Model condicional
+
+
+
+
+# Preguntes o notes d'en Marc
+- Enserio encara no sé que és la disperssió...
 
 
 
