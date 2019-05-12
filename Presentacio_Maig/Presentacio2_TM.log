@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.23)  12 MAY 2019 04:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.23)  12 MAY 2019 05:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1489,6 +1489,12 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@lastruleclass=\count362
 \@thisrulewidth=\dimen352
 )
+(/usr/share/texlive/texmf-dist/tex/latex/yhmath/yhmath.sty
+Package: yhmath 
+\symyhlargesymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 13.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 14.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count363
 \lst@gtempboxa=\box72
@@ -2137,15 +2143,36 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 176.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Try loading font information for OMX+yhex on input line 176
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/yhmath/OMXyhex.fd
+File: OMXyhex.fd 
+File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
+)
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <10.95> on input line 176.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <8> on input line 176.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <6> on input line 176.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 176.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 176.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 176.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <10> on input line 176.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <7> on input line 176.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <5> on input line 176.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 176.
 LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 176.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
 (Font)              <9> on input line 176.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 176.
@@ -2159,6 +2186,8 @@ LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/b/n' will be
 (Font)              scaled to size 10.95pt on input line 205.
 LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 205.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
 (Font)              <14.4> on input line 205.
  [3
 
@@ -2187,6 +2216,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 257.
 LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 257.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <24.88> on input line 257.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <20.74> on input line 257.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
 (Font)              <17.28> on input line 257.
 
 [5
@@ -2218,7 +2253,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./saldo_actual-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<saldo_actual-eps-converted-to.pdf, id=138, 685.56125pt x 385.44pt>
+<saldo_actual-eps-converted-to.pdf, id=139, 685.56125pt x 385.44pt>
 File: saldo_actual-eps-converted-to.pdf Graphic file (type pdf)
 <use saldo_actual-eps-converted-to.pdf>
 Package pdftex.def Info: saldo_actual-eps-converted-to.pdf  used on input line 
@@ -2241,7 +2276,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./dispersio_actual-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<dispersio_actual-eps-converted-to.pdf, id=151, 455.7025pt x 255.95625pt>
+<dispersio_actual-eps-converted-to.pdf, id=152, 455.7025pt x 255.95625pt>
 File: dispersio_actual-eps-converted-to.pdf Graphic file (type pdf)
 <use dispersio_actual-eps-converted-to.pdf>
 Package pdftex.def Info: dispersio_actual-eps-converted-to.pdf  used on input l
@@ -2250,7 +2285,7 @@ ine 292.
 [8
 
  <./dispersio_actual-eps-converted-to.pdf>]
-<eps.png, id=163, 411.136pt x 411.136pt>
+<eps.png, id=164, 411.136pt x 411.136pt>
 File: eps.png Graphic file (type png)
 <use eps.png>
 Package pdftex.def Info: eps.png  used on input line 317.
@@ -2258,7 +2293,7 @@ Package pdftex.def Info: eps.png  used on input line 317.
  [9
 
  <./eps.png>]
-<algor.pdf, id=176, 551.05875pt x 551.05875pt>
+<algor.pdf, id=177, 551.05875pt x 551.05875pt>
 File: algor.pdf Graphic file (type pdf)
 <use algor.pdf>
 Package pdftex.def Info: algor.pdf  used on input line 347.
@@ -2286,7 +2321,7 @@ Package pdftex.def Info: eps.png  used on input line 380.
  [11
 
 ]
-<../plots/llibreria_funcs/horari.png, id=210, 722.7pt x 426.393pt>
+<../plots/llibreria_funcs/horari.png, id=211, 722.7pt x 426.393pt>
 File: ../plots/llibreria_funcs/horari.png Graphic file (type png)
 <use ../plots/llibreria_funcs/horari.png>
 Package pdftex.def Info: ../plots/llibreria_funcs/horari.png  used on input lin
@@ -2322,7 +2357,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Assignatures-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Assignatures-eps-converted-to.pdf, id=240, 433.62pt x 289.08pt>
+<Assignatures-eps-converted-to.pdf, id=241, 433.62pt x 289.08pt>
 File: Assignatures-eps-converted-to.pdf Graphic file (type pdf)
 <use Assignatures-eps-converted-to.pdf>
 Package pdftex.def Info: Assignatures-eps-converted-to.pdf  used on input line 
@@ -2349,7 +2384,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./hores_dia-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<hores_dia-eps-converted-to.pdf, id=284, 433.62pt x 289.08pt>
+<hores_dia-eps-converted-to.pdf, id=285, 433.62pt x 289.08pt>
 File: hores_dia-eps-converted-to.pdf Graphic file (type pdf)
 <use hores_dia-eps-converted-to.pdf>
 Package pdftex.def Info: hores_dia-eps-converted-to.pdf  used on input line 462
@@ -2378,7 +2413,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./saldo-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<saldo-eps-converted-to.pdf, id=326, 433.62pt x 289.08pt>
+<saldo-eps-converted-to.pdf, id=327, 433.62pt x 289.08pt>
 File: saldo-eps-converted-to.pdf Graphic file (type pdf)
 <use saldo-eps-converted-to.pdf>
 Package pdftex.def Info: saldo-eps-converted-to.pdf  used on input line 469.
@@ -2412,7 +2447,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./interclass-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<interclass-eps-converted-to.pdf, id=373, 433.62pt x 289.08pt>
+<interclass-eps-converted-to.pdf, id=374, 433.62pt x 289.08pt>
 File: interclass-eps-converted-to.pdf Graphic file (type pdf)
 <use interclass-eps-converted-to.pdf>
 Package pdftex.def Info: interclass-eps-converted-to.pdf  used on input line 48
@@ -2425,7 +2460,7 @@ Overfull \vbox (4.73639pt too high) detected at line 483
 [19
 
  <./interclass-eps-converted-to.pdf>]
-<subs.pdf, id=414, 694.51468pt x 451.6875pt>
+<subs.pdf, id=415, 694.51468pt x 451.6875pt>
 File: subs.pdf Graphic file (type pdf)
 <use subs.pdf>
 Package pdftex.def Info: subs.pdf  used on input line 517.
@@ -2463,11 +2498,11 @@ Package rerunfilecheck Info: File `Presentacio2_TM.out' has not changed.
 (rerunfilecheck)             Checksum: 0F1F73C0547907879FA3D53674CD4FF6;151.
  ) 
 Here is how much of TeX's memory you used:
- 35899 strings out of 492982
- 683482 string characters out of 6134896
- 916592 words of memory out of 5000000
- 38652 multiletter control sequences out of 15000+600000
- 654086 words of font info for 127 fonts, out of 8000000 for 9000
+ 35935 strings out of 492982
+ 684134 string characters out of 6134896
+ 916825 words of memory out of 5000000
+ 38678 multiletter control sequences out of 15000+600000
+ 654880 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,75p,10460b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
@@ -2490,11 +2525,12 @@ onts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Presentacio2_TM.pdf (21 pages, 558241 bytes).
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb>
+Output written on Presentacio2_TM.pdf (21 pages, 565072 bytes).
 PDF statistics:
- 547 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
+ 551 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
  46 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
