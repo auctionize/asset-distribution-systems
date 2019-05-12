@@ -11,18 +11,18 @@
   - **4.1** Problematiques i beneficis Subhastes
 ## Presentació en Beamer:
 - **Red**
-  -**Conclusió**
-  -Introducció (modificar D_i)
+  - **Conclusió**
+  - Introducció (modificar D_i)
 - **Green**
-  -Gràfic dispersssió (+add)
-  -Canviar **5.0005** per **5.96...**
+  - Gràfic dispersssió (+add)
+  - Canviar **5.0005** per **5.96...**
 - **Orange**
-  -Frame Biblioteca i Restriccións **(2 or more)**
-  -Conclusions model funció
+  - Frame Biblioteca i Restriccións **(2 or more)**
+  - Conclusions model funció
 - **Cyan**
-  -Model Kiwis (1 or 2)
-  -Model condicional
-#### Valor en hores necesariament s'ha de modificar
+  - Model Kiwis (1 or 2)
+  - Model condicional
+## Valor en hores necesariament s'ha de modificar
 
 
 
