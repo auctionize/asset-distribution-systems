@@ -15,9 +15,6 @@ void
 - **Red**
   - **Conclusió**
   - Introducció (modificar D_i)
-- **Green**
-  - Gràfic dispersssió (+add)
-  - Canviar **5.0005** per **5.96...**
 - **Orange**
   - Frame Biblioteca i Restriccións **(2 or more)**
   - Conclusions model funció
