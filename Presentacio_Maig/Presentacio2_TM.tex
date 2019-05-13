@@ -324,8 +324,8 @@
 	\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 	%>\
 	\begin{block}{Una noció del model}
-		[...la gracià està en escollir uns \emph{criteris raonables}
-		a partir dels quals , i donades unes \textbf{restriccions}, definir una \textbf{funció objectiu} a optimitza...]
+		La gracià està en escollir uns \emph{criteris raonables}
+		a partir dels quals , i donades unes \textbf{restriccions}, definir una \textbf{funció objectiu} a optimitzar.
 	\end{block}
 \setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 
@@ -440,7 +440,8 @@ $\quad $ \texttt{\textbf{restriccions}}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		%>\
 		\begin{block}{Limitacions}
-			Malgrat el conjunt de solucions ser finit, al ser tenir un cardinal $|\mathbb{A}|\approx10^{5000}$, no podem\footnote{Necessitaríem ...} garantir que la millor assignació que trobem és correspongui amb un  \textbf{mínim} de la \textbf{funció objectiu} ni donar cap altra garantia sobre la \textit{qualitat} de la solució a la que arribaran els \textit{algorismes} d'optimització.
+			Malgrat que l'\textbf{espai de solucions} és finit, com que la seva \textbf{dimensió} és $|\mathbb{A}|\approx10^{5000}$ no podem  garantir que la millor assignació que trobem és correspongui amb un  \textbf{mínim} de la \textbf{funció objectiu}. 
+			I \textit{a priori} tampoc podem donar cap altra garantia sobre la \textit{qualitat} de la solució a la que arribaran els \textit{algorismes} d'optimització.
 		\end{block}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 		
@@ -514,6 +515,8 @@ $\quad $ \texttt{\textbf{restriccions}}
 	\end{column}
 \end{columns}
 \end{frame}
+
+
 %Diapositiva 11 (3.)
 \begin{frame}{Problemàtiques i beneficis de les Subhastes}
 \begin{columns}[t]
@@ -523,9 +526,8 @@ $\quad $ \texttt{\textbf{restriccions}}
 		%>\
 		\begin{block}{Problemàtiques}
 			\begin{itemize}
-				\item
-				\item
-				\item
+				\item Concurrència
+				\item Incentius han d'estar ben alineats
 			\end{itemize}
 		\end{block}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=cyan!75!black}
@@ -533,9 +535,8 @@ $\quad $ \texttt{\textbf{restriccions}}
 		
 		\begin{block}{Beneficis}
 			\begin{itemize}
-				\item
-				\item
-				\item
+				\item Transparència
+				\item Simplicitat
 			\end{itemize}
 		\end{block}
 	\end{column}
@@ -547,6 +548,8 @@ $\quad $ \texttt{\textbf{restriccions}}
 	\end{column}
 \end{columns}
 \end{frame}
+
+\iffalse
 %Diapositiva 11 (3.)
 \begin{frame}{$\mathbf 4.$ \textit{Models} o \textit{Mètodes} per Subhastes}
 \begin{columns}[t]
@@ -576,6 +579,8 @@ $\quad $ \texttt{\textbf{restriccions}}
 	\end{column}
 \end{columns}
 \end{frame}
+\fi
+
 %Diapositiva 11 (3.)
 \begin{frame}{Model $Kiwis$}
 \begin{columns}[t]
@@ -583,27 +588,57 @@ $\quad $ \texttt{\textbf{restriccions}}
 	\begin{column}{.5\textwidth}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=cyan!75!black}
 		%>\
-		\begin{block}{Estat del model}
-			Lorem ipsum dolor sit amet,
-			consectetuer adipiscing elit. Upurus elit, vestibulum ut,
-			placerat ac, adipiscing vitae,
-			felis. Curabitur dictum gravida
-			mauris. Nam arcu libero,
-			nonummy eget, consectetuer ivulputate a, magna. Donec
-			vehicula augue eu neque.
+		\begin{block}{1.Repartiment $Kiwis$}
+			\begin{itemize}
+				\item Subhastes basades en moneda de canvi ($Kiwis$)
+				\item Es parteix de 10 $Kiwis$
+				\item +5 $Kiwis$ per cada 10 hores de saldo positiu
+				\item A partir del segon any:
+			\end{itemize}
 		\end{block}
 	\end{column}
 	%c2
 	\begin{column}{.5\textwidth}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=cyan!75!black}
-		\begin{block}{Valors rellevants}
-			Lorem ipsum dolor sit amet,
-			adipiscing elit. Upurus elit, vestibu
-			consectetuer 
+		\begin{block}{A partir del segon any:}
+			\begin{itemize}
+				\footnotesize
+				\item + $X$ kiwis per $X$ assignatures no triades pel professor
+				\item +30 kiwis per un 4.5 o més en les enquestes
+			\end{itemize}
 		\end{block}
-		\includegraphics[width=3.5cm]{eps}
+		\includegraphics[width=3.5cm]{kiwi}
 	\end{column}
 \end{columns}
+\end{frame}
+
+\begin{frame}{Funcionament $Kiwis$}
+\setbeamercolor{block title}{use=structure,fg=white,bg=cyan!75!black}
+\begin{block}{1.Repartiment $Kiwis$}
+\begin{itemize}
+	\item Subhasta en blocs mitjançant pdf (evitant bloqueig)
+	\item Valor inicial 0, puja mínima 1
+	\item Atorguem les assig. al millor postor
+	\item Empat $\Rightarrow$ guanya qui té més kiwis al inici
+	\begin{itemize}
+		\item Si empatem novament revaloritzem amb valor de mercat i la subhastem a la següent
+		\item Ultima subhasta: possibilitat de fer pujes negatives
+	\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Funcionament $Kiwis$}
+\setbeamercolor{block title}{use=structure,fg=white,bg=cyan!75!black}
+\begin{block}{Revalorització de les hores}
+\begin{itemize}
+\item Valor assig. $=$ h inicialment
+\item Valor final $$h'=h-\frac{num.profs.que.han.pujat}{num.profs.que.han.pujat+1}-\frac{preu.en.Kiwis}{preu.en.Kiwis+1}$$
+\item Assignatures no assignades o assignades per $\leq0$ kiwis  $h’=h+1$
+\item Assignatures sense pujes repartides per $f(x)$ als prof. $\leq \frac{2M}{3}$
+\end{itemize}
+\end{block}
 \end{frame}
 
 %Diapositiva 6 (2.)
@@ -712,9 +747,12 @@ $\quad $ \texttt{\textbf{restriccions}}
 	\begin{column}{.5\textwidth}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=red!75!black}
 		%>\
-		\begin{block}{Enunciat del problema, \textbf{part 1}}
-			
-		\end{block}
+	\begin{block}{Enunciat del problema, \textbf{part 1}}
+		\small
+		\textit{{\color{cyan!60}$\blacksquare$}$^{(01)}${\color{black!80}Un departament d'una universitat té diferents tasques docents assignades, que s'han de repartir entre els seus professors.}}
+		
+		\textit{{\color{blue!60}$\blacksquare$}$^{(02)}$ Actualment es distribueixen segons les hores de classe de cada tasca. Se suposa que el nombre d'hores mesura l'esforç associat a una tasca, però en la pràctica això no és prou realista, la qual cosa genera desequilibris.}
+	\end{block}
 	\end{column}
 	\begin{column}{.5\textwidth}
 		\setbeamercolor{block title}{use=structure,fg=white,bg=red!75!black}
