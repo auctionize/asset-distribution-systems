@@ -245,7 +245,7 @@
 			\item El nombre de hores que fa cada professor pot ser molt diferent. \\ \textit{\footnotesize \color{blue} oscil·la entre 60 i 240 hores per any}
 			\item Actualment el model intenta minimitzar:
 			\textit{\footnotesize \color{blue}
-				\\-Dispersió:$$\frac{\# assignatures}{professors}$$
+				\\-Dispersió:$$\sum_{i=0}^{112} a_{i}$$
 				\\-Deute personal o Saldo}
 		     \end{itemize}
 		\end{block}
@@ -301,10 +301,8 @@
 		%>\
 		\begin{block}{Conclusions anàlisis}
 			\begin{itemize}
-				\item No tenim amb que compara.
+				\item Variància molt alta.
 				\item Requereix \textit{alt grau} de dedicació.
-				\item 
-				\item\item
 			\end{itemize}
 		\end{block}
 	\end{column}
@@ -607,6 +605,107 @@ $\quad $ \texttt{\textbf{restriccions}}
 	\end{column}
 \end{columns}
 \end{frame}
+
+%Diapositiva 6 (2.)
+\begin{frame}{Definició de subhasta òptima}\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+
+\begin{block}{Subhastes òptimes}
+	\begin{itemize}
+		\item Hi ha una branca sencera (Auction theory) de l'Economia que es dedica a l'estudi de subhastes. De manera que hi ha molta recerca sobre com evaluar-les.
+		\item Definició: Una subhasta és òptima si el sistema maximitza l'utilitat de tots els participants, en el nostre cas això passa si el sistema obté el màxim (mínim) en pujes a l'alta (baixa).
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Problemes}\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+\begin{block}{Problemes en subhastes no òptimes}
+	\begin{itemize}
+		\item Subhastes parcialment simultànies porten a ineficiencies causades pel bloqueig de moneda.
+		\item Subhastes simples no funcionen bé en el cas en que hi hagin dependències entre puges (ex: només vull aquesta assignatura si tinc aquesta altra assignatura).	
+		\item Cas concret: Un professor vol fer totes les seves assignatures en un només 2 dies de la setmana.
+		\item Si els actors tenen que especular el model de subhasta no serà òptim, volem evitar la especulació.
+		\item Com assignem les assignatures que no vol ningú?
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Solució}\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+\begin{block}{Model de subhastes}
+	\begin{itemize}
+		\item Subhastes a la baixa per hores (en kiwis funcionaria igualment).
+		\item De vickrey (en cas de tenir pujes a la baixa fiquem un màxim superior).
+		\item Combinatorials.
+		\item Totalment simùltanies/paral·leles.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{El gran problema}\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+\begin{block}{El problema del guanyador en subhastes combinatorials}
+	\begin{itemize}
+		\item Les subhastes combinatorials han estat molt estudiades a la literatura.
+		\item Està demostrat que el problema de trobar els guanyadors d'aquest tipus d'apostes es NP-Complet, de manera que no el podem resoldre en un temps tractable ja que la complexitat és massa alta.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{La gran solució}\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+\begin{block}{Transformació}
+	\begin{itemize}
+		\item Transformem el problema a un de pujes condicionals (puja A només es vàlida si la puja B és guanyadora).
+		\item Podem donar un algoritme que ens permet transformar un problema en l'altre en temps polinomial de manera que demostrem que els dos problemes són equivalents.
+	\end{itemize}
+\end{block}
+\begin{block}{Algoritme per decidir guanyador en el nou problema}
+	\begin{itemize}
+		\item Assumim que totes les pujes són vàlides. Si alguna puja guanyadora depèn d'una perdedora, invalidem la guanyadora i la segona passa a ser la guanyadora.
+		\item La persona que ha guanyat més pujes tria les assignatures que vol (de forma polinòmica).
+		\item Tornar al pas 1.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Anàlisis de l'algoritme}\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+\begin{block}{Complexitat}
+	\begin{itemize}
+		\item L'algoritme és NP, però si en el moment de crear noves pujes restringim la profunditat màxima de cadenes condicionals (restricció que no influeix ja que quasi cap professor té dependencies d'assignatures de profunditat molt elevada) l'algoritme passa a ser polinòmic.
+		\item Si l'assignació donada per aquest algorisme és òptima haurem resolt un problema important en les matemàtiques!
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Spoiler: No hi ha medalla per nosaltres}\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+\begin{block}{Cas no òptim}
+	\begin{itemize}
+		\item Realitzant la demostració de que l'algoritme generava una assignació òptima ens trobem amb un cas on no és així.
+		\item Alice puja 5 per A, 4 per B
+		\item Bob puja 3 per B, 2 per C, 2 per D i 2 per E.
+		\item Bob guanya C, D i E i decideix quedar-se D.
+		\item Alice guanya A i B i decideix quedar-se A.
+		\item Bob es podria haver quedat B però no ha pogut, perdem optimalitat.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{L'algoritme no és perfecte però és bo}\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+\begin{block}{No òptim $\neq$ No bo}
+	\begin{itemize}
+		\item L'algoritme no dona una assignació òptima però podem veure que l'assignació que donarà serà propera a l'òptima, ja que els casos en que falla no són comuns, i, si falla, l'assignatura serà assignada a la següent puja, de manera que la pèrdua en utilitat serà baixa.
+		\item A més, el sistema aconsegueix solucionar tots els problemes que hem presentat abans: té en compte pujes condicionals, realitza la subhasta de forma totalment paral·lela i evita especul·lació.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Recerca futura}\setbeamercolor{block title}{use=structure,fg=white,bg=green!75!black}
+\begin{block}{Idees prometedores}
+	\begin{itemize}
+		\item Tot i que no hem aconseguit donar una solució perfecta al problema de les subhastes combinatorials, hem desenvolupat diversos conceptes que podrien ser utilitzats en recerca futura.
+		\item La idea de transformar el problema de les subhastes combinatorials a puges condicionals és nova en la literatura, així com la demostració d'equivalència entre els dos sistemes.
+		\item Una idea que no hem tingut temps a explorar però sembla molt prometedora és la de permetre intercanvis d'items després de la subhasta. Aquest mercat post-subhasta podria causar un equilibri que portés a una assignació òptima.
+	\end{itemize}
+\end{block}
+\end{frame}
+
 \begin{frame}{$\mathbf{5.}$ Conclusions del treball}
 \begin{columns}[t]
 	%c1
@@ -631,6 +730,19 @@ $\quad $ \texttt{\textbf{restriccions}}
 	\end{column}
 \end{columns}
 \end{frame}
+
+\begin{frame}{Solució proposada}
+\setbeamercolor{block title}{use=structure,fg=white,bg=red!75!black}
+%>\
+\begin{block}{Subhasta + Funció + Model actual}
+	\begin{itemize}
+		\item Realitzar primer la subhasta proposada per donar una primera assignació
+		\item Assignar les assignatures sobrants utilitzant el model de la funció
+		\item Realitzar modificacions finals utilitzant el model actual
+	\end{itemize}
+\end{block}
+\end{frame}
+
 \begin{frame}
 \textit{\color{redviolet} \Huge Gràcies per la vostra atenció}
 \end{frame}
