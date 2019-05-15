@@ -68,31 +68,7 @@
 \usepackage{listings}
 % Serveix per ficar caixes
 \usepackage{tcolorbox}
-%Dades estil capçalera 
-%\pagestyle{fancy}
-%\rhead{\textbf{ CDVO  \\ 2n. Grau en  Matemàtiques}}
-%\lhead{\textbf{Nom: }Marc Graells Ricardo \\ \textbf{NIU: }1388471}
-%Perquè capiguen les coses a la capçalera 
-%\setlength{\headheight}{25pt}
-\newcommand{\cod}[1]{{ \color{redviolet}\texttt{#1}}}
 
-\newtcolorbox{box1}[1]{
-	colback=gray!5!white,
-	colframe=gray!75!black,
-	title={\Large #1}
-}
-\newtcolorbox{box2}[1]{
-	colback=gray!5!white,
-	colframe=redviolet!75!black,
-	title={\Large #1}
-}
-\setbeamercolor{block}{bg=redviolet, fg=white}
-\newcommand{\gwv}[1]{\color{green!40!black!40}  \texttt{{#1}} \normalcolor }
-\newcommand{\gwg}[1]{\color{gray!40!black!40} \texttt{{#1}}) \normalcolor }
-\newcommand{\gwb}[1]{\color{blue!40!black!40}  \texttt{{#1}} \normalcolor }
-\newcommand{\giv}[1]{\color{green!40!black!40}  \textit{{#1}} \normalcolor }
-\newcommand{\gig}[1]{\color{gray!40!black!40} \textit{{#1}}) \normalcolor }
-\newcommand{\gb}[1]{\color{blue!40!black!40}  \textit{{#1}} \normalcolor }
 %*****************************************************************
 %*****************************************************************
 %*******************[         El document         ]***************
@@ -210,9 +186,9 @@
 \begin{block}{Anàlisis Enunciat}
 \begin{itemize}
 	\footnotesize
-	\item[{ \color{cyan!60} \underline{\underline{\normalcolor (01)}}}] El problema abstracte consisteix en una tasca de repartiment o assignació. Concretament, els \textbf{objectes a repartir} són les tasques docents que han de ser repartides entre  el professorat, cada possible assignació s'anomenara \textbf{pla docent} o \textbf{solució} de forma anàloga en funció del context.\\
+	\item[{ \color{cyan!60} \underline{\underline{\normalcolor (01)}}}] El problema abstracte consisteix en una tasca de repartiment o assignació. Concretament, els \textbf{objectes a repartir} són les tasques docents que han de ser repartides entre  el professorat, cada possible assignació s'anomenarà \textbf{pla docent} o \textbf{solució} de forma anàloga en funció del context.\\
 	\item[{ \color{blue!60} \underline{\underline{\normalcolor (02)}}}] Acceptem que el \textit{Model actual} genera solucions \textbf{subòptimes} i això ho  justificarem amb els mateixos arguments del enunciat.\\
-	\item[{ \color{green!60} \underline{\underline{\normalcolor (03)}}}] És requereix { \color{green!60} \underline{\normalcolor mètode}} per { \color{green!60} \underline{\normalcolor valorar}} i { \color{green!60} \underline{\normalcolor repartir}} tasca docent en funció de la demanda del professorat. A més ha de poder aportar una solució millor \footnote{Equivalentment menys desequilibrada.}. 
+	\item[{ \color{green!60} \underline{\underline{\normalcolor (03)}}}] Es requereix { \color{green!60} \underline{\normalcolor mètode}} per { \color{green!60} \underline{\normalcolor valorar}} i { \color{green!60} \underline{\normalcolor repartir}} tasca docent en funció de la demanda del professorat. A més ha de poder aportar una solució millor \footnote{Equivalentment menys desequilibrada.}. 
 	\item[{ \color{purple!60} \underline{\underline{\normalcolor (04)}}}] Es proposa com a \textbf{alternativa}  desenvolupar un  { \color{purple!60} \underline{\normalcolor mètode basat en subhasta}}.
 	\item[{ \color{violet!60} \underline{\underline{\normalcolor (05)}}}] S'expressa anticipadament que el \textbf{model/mètode} ha de tenir \textbf{restriccions}  i s'expliciten dos de necessàries. El volum del treball ha de ser \textit{homogeni}\footnote{Entesa com la qualitat de: quantitat de docències semblants entre el professorat.}. El mètode ha de contemplar la possibilitat de restriccions pròpies del departament. 
 \end{itemize}
@@ -324,7 +300,7 @@
 	\setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
 	%>\
 	\begin{block}{Una noció del model}
-		La gracià està en escollir uns \emph{criteris raonables}
+		La gràcia està en escollir uns \emph{criteris raonables}
 		a partir dels quals , i donades unes \textbf{restriccions}, definir una \textbf{funció objectiu} a optimitzar.
 	\end{block}
 \setbeamercolor{block title}{use=structure,fg=white,bg=orange!75!black}
@@ -416,10 +392,9 @@ $\quad $ \texttt{\textbf{restriccions}}
 	\caption{$x^2$}
 \end{figure}
 \end{frame}
-
 \begin{frame}{\textit{Biblioteca} de funcions i restriccions}
 \begin{figure}
-	\includegraphics[width=9cm]{../plots/llibreria_funcs/horari}
+	\includegraphics[width=9cm]{../PD_Plots/llibreria_funcs/horari}
 	\caption{La distància entre classes es calcula entre dies}
 \end{figure}
 \end{frame}
