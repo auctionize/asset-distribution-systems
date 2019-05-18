@@ -1,5 +1,4 @@
 ## Valor en hores necesariament s'ha de modificar
-void
 ## Tasques per acabar dissabte
 - Albert:
   - **2.4** (Estat del model actual falta ficar imatges de la grafica en Excel 
@@ -24,14 +23,5 @@ void
   - Model Kiwis (1 or 2) (Demanar Jaume que facin frames kiwis)
   - Model condicional
 
-
-
-
 # Preguntes o notes d'en Marc
 - Enserio encara no sé que és la disperssió...
-
-
-
-
-# myturtleproject
-This is my turtle ...I need Coffee. This is a proof. 
