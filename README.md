@@ -1,4 +1,4 @@
-#### Bloc de Notes de Treball:
+## Bloc de Notes de Treball:
 ## Albert una cosa
 - He pensat que estaría bé ficar un gràfic discret: eix x (en min i en segons): 10,20,...,100 i 10,100,1000... (eix y): resultats del algoritme genetic per optimitzar funció. Tinc molta curiositat per saber quin tipude de creixement té la eficiencia dels selecció genetica dels algoritmes.
 
