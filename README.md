@@ -1,4 +1,7 @@
 ## Bloc de Notes de Treball:
+## Notes d'en Marc 2:
+
+
 ## Albert una cosa
 - He pensat que estaría bé ficar un gràfic discret: eix x (en min i en segons): 10,20,...,100 i 10,100,1000... (eix y): resultats del algoritme genetic per optimitzar funció. Tinc molta curiositat per saber quin tipude de creixement té la eficiencia dels selecció genetica dels algoritmes.
 
@@ -35,5 +38,5 @@
   - Model Kiwis (1 or 2) (Demanar Jaume que facin frames kiwis)
   - Model condicional
 # Preguntes o notes d'en Marc
-- Enserio encara no sé que és la disperssió...
+- Enserio encara no sé que és la disperssió... 
 
