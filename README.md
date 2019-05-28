@@ -22,7 +22,6 @@
   - **2.5** Conclusions model actual.
   - **3.4** Limitacions del model funció.
   - **4.1** Problematiques i beneficis Subhastes
-<!--> 
 ## Presentació en Beamer:
 - **Red**
   - **Conclusió**
@@ -35,7 +34,6 @@
 - **Cyan**
   - Model Kiwis (1 or 2) (Demanar Jaume que facin frames kiwis)
   - Model condicional
-
 # Preguntes o notes d'en Marc
 - Enserio encara no sé que és la disperssió...
 
