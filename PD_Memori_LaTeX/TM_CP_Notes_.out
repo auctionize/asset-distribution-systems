@@ -1,0 +1,26 @@
+\BOOKMARK [1][-]{section.0}{Comentari per a la lectura}{}% 1
+\BOOKMARK [1][-]{section.1}{An\340lisis del problema}{}% 2
+\BOOKMARK [1][-]{section.2}{Estudi del model Actual}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Dades obtingudes de la Web del Departament}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Dades facilitades pel Secretari del departament}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{Altres notes del Model actual}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.4}{Estat del model actual}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.5}{Conclusions}{section.2}% 8
+\BOOKMARK [1][-]{section.3}{Model d'Optimitzaci\363 o d'investigaci\363 de sistemes}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{Definici\363 de la funci\363 objectiu}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Optimitzaci\363}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Ventall de criteris i Biblioteca de subfuncions}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{Limitacions del model}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.5}{Resultats del model}{section.3}% 14
+\BOOKMARK [1][-]{section.4}{Models d'assignacions per subhastes}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{Problem\340tiques i beneficis de les subhastes}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.2}{Un model minimalista, els Kiwis}{section.4}% 17
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Repartiment kiwis}{subsection.4.2}% 18
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Funcionament subhasta}{subsection.4.2}% 19
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Revaloritzaci\363 hores}{subsection.4.2}% 20
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Assignacions finals}{subsection.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.3}{Subhastes condicionals i n-dimensionals}{section.4}% 22
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Problem\340tiques de les subhastes}{subsection.4.3}% 23
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Construcci\363 primer model}{subsection.4.3}% 24
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Model nasi}{subsection.4.3}% 25
+\BOOKMARK [1][-]{section.5}{Conclusions revalora}{}% 26

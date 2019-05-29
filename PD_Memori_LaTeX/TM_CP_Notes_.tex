@@ -112,7 +112,7 @@
 \fancyhf{}
 \fancyhead[LE,RO]{Pla Docent}
 \fancyhead[RE,LO]{\thepage}
-\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[CE,CO]{\slshape\nouppercase{\leftmark}}
 \fancyfoot[LE,RO]{\thepage}
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\footrulewidth}{1pt}
@@ -131,7 +131,7 @@
 \renewcommand{\LettrineFontHook}{\color{redviolet}\GoudyInfamily{}}
 \setcounter{DefaultLines}{3}%
 \usepackage{listings}
-
+\usepackage{yhmath}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
@@ -205,7 +205,8 @@ Un departament d'una universitat té diferents tasques docents assignades, que s
 }
 \end{tcolorbox}
 Influenciats per la lectura de \cite{tah} indexem el enunciat de forma conceptual mitjançant color i nombres\footnote{Únicament com a eina visual, eliminant la seva possible ambigüitat amb nombres enters}. Alternem el color de la font per facilitar la lectura. 
-\newline
+\vspace{3mm}
+
 \begin{tcolorbox}[colback=black!1,title=\textbf{Enunciat del problema},coltitle=black,colbacktitle=black!10]
 
 \textit{{\color{cyan!60}$\blacksquare$}$^{(01)}${\color{black!80}Un departament d'una universitat té diferents tasques docents assignades, que s'han de repartir entre els seus professors.}}
@@ -223,7 +224,7 @@ Fem el anàlisis o interpretació per blocs, mantenint el mateix codi d'indexaci
 \begin{itemize}
 \item[{ \color{cyan!60} \underline{\underline{\normalcolor (01)}}}] El problema abstracte consisteix en una tasca de repartiment o assignació. Concretament, els \textbf{objectes a repartir} són les tasques docents que han de ser repartides entre  el professorat, cada possible assignació s'anomenara \textbf{pla docent} o \textbf{solució} de forma anàloga en funció del context.\\
 \item[{ \color{blue!60} \underline{\underline{\normalcolor (02)}}}] Acceptem que el \textit{Model actual} genera solucions \textbf{subòptimes} i això ho  justificarem amb els mateixos arguments del enunciat.\\
-\item[{ \color{green!60} \underline{\underline{\normalcolor (03)}}}] És requereix { \color{green!60} \underline{\normalcolor mètode}} per { \color{green!60} \underline{\normalcolor valorar}} i { \color{green!60} \underline{\normalcolor repartir}} tasca docent en funció de la demanda del professorat. A més ha de poder aportar una solució millor \footnote{Equivalentment menys desequilibrada.}. 
+\item[{ \color{green!60} \underline{\underline{\normalcolor (03)}}}] És requereix { \color{green!60} \underline{\normalcolor mètode}} per { \color{green!60} \underline{\normalcolor valorar}} i { \color{green!60} \underline{\normalcolor repartir}} tasca docent en funció de la demanda del professorat. A més ha de poder aportar una solució millor \footnote{Equivalentment, menys desequilibrada.}. 
 \item[{ \color{purple!60} \underline{\underline{\normalcolor (04)}}}] Es proposa com a \textbf{alternativa}  desenvolupar un  { \color{purple!60} \underline{\normalcolor mètode basat en subhasta}}.
 \item[{ \color{violet!60} \underline{\underline{\normalcolor (05)}}}] S'expressa anticipadament que el \textbf{model/mètode} ha de tenir \textbf{restriccions}  i s'expliciten dos de necessàries. El volum del treball ha de ser \textit{homogeni}\footnote{Entesa com la qualitat de: quantitat de docències semblants entre el professorat}. El mètode ha de contemplar la possibilitat de restriccions pròpies del departament. 
 \end{itemize}
@@ -307,7 +308,7 @@ Donat que les dades publiques de la web són limitades i insuficients per tenir 
 	\end{itemize}
 	\textbf{Actualment s'intenta minimitzar}
 	\begin{itemize}
-		\item Dispersió: \# assignatures / professors. (\#1)
+		\item Dispersió: \# assignatures / professor. (\#1)
 		\item Deutes personal (saldo de hores). (\#2)
 	\end{itemize}
 	\end{tcolorbox}
@@ -334,47 +335,72 @@ Des del propi Departament de matemàtiques se'ns han facilitat dades que ens per
 	\item Nombre d'hores que ha de fer cada professor del departament en un any.$\quad(p_i, \esp i \in I)$
 	\item Nombre d'hores que fa realment un professor per a cada assignatura que se li ha assignat en el repartiment. $\quad (p'_i, \esp i \in I)$
 \end{itemize}
-El nostre objectiu és extreure del document tota la informació rellevant  mitjançant eines informàtiques, com la programació en llenguatge C, obtenir la diferencia entre les hores que hauria de fer un professor i les hores que realment fa, és a dir, $D_i:=p'_i-p_i$.
+El nostre objectiu és extreure del document tota la informació rellevant  mitjançant eines informàtiques elementals, com la programació en suite ofimàtica \textit{Excel}  per tal de donar una \textit{radiografia} del \textbf{model actual}. Per exemple, ens interessarà, obtenir la diferencia entre les hores que hauria de fer un professor i les hores que realment fa, és a dir, el \textit{saldo} \footnote{Dada molt rellevant del \textbf{model actual}.} del professor $i\in I$; $D_i:=p'_i-p_i$.
 
-En cas de que un professor fes més hores, el programa ens tornarà un resultat positiu en hores $D_i>0$. En cas contrari $D_i<0$ , el programa ens tornarà un resultat negatiu indicant així que el professor no arriba al nombre d'hores que ha de fer. Aquest també suma totes les hores que s'estan fent extra i totes les que no s'arriben a fer i ens les mostra per pantalla i , a continuació, suma aquests dos valors per obtenir el saldo total.\footnote{Per veure el codi del programa vegeu el fitxer \cod{saldo.c.}}
-Executem el programa i aquests són els resultats:
+El \textit{saldo} podrà prendre valors tan positius com negatius. En cas de que un professor fes més hores, el resultat  serà positiu (en hores) $D_i>0$. En cas contrari, és a dir, $D_i<0$ , obtindrem un resultat negatiu, indicant així, que el professor no arriba al nombre d'hores que ha de fer. També voldrem saber totes les hores que s'estan fent de forma \textit{extra} i totes les que no s'arriben a fer.  També sumarem aquests dos valors per obtenir el saldo total.\footnote{Per veure/consultar les dades recomanem visitar el fitxer \cod{saldo.c.}}
+
+Els resultats més rellevants com a valors numèrics són:
 \begin{itemize}
 	\item El $\sum$ de saldos positius és \texttt{1793} hores.	
-	\item El $\sum$ de saldos negatius és \texttt{671.0} hores.	
+	\item El $\sum$ de saldos negatius és \texttt{-2671.0} hores.	
 	\item El $\sum$ de saldos positius i negatius  és \texttt{-1122} hores, que és un \texttt{\textbf{8.968825 \%}} del nombre d'hores total que haurien de fer tots els professors.
-	\item La mitjana aritmètica d' assignatures que fa cada professor és de  $\approx 5$. \nehh{No està acabat.}
+	\item La mitjana aritmètica d' assignatures que fa cada professor és de $\approx 5. \wideparen{972}$.
+	\item Variància: 737.0676, Suma absoluta: 2498. (Veure Figures 1 i 2)
 \end{itemize}
 Es fa evident doncs que el model és propens a reduir el nombre d'hores que s'haurien de fer i observant els resultats professor a professor veiem que hi han diferencies de fins a 80 hores de saldo negatiu o casos on el saldo positiu ascendeix fins a 62.
+\begin{figure}
+\centering
+\includegraphics[width=9cm]{D_ma}
+\caption{Saldos \texttt{TOTAL} actual del professorat any 2018}
+\label{fig:1}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm]{dis_ma}
+	\caption{Dispersió \texttt{TOTAL} actual del professorat any 2018}
+	\label{fig:2}
+\end{figure}
 \subsection{Conclusions}
 		\begin{enumerate}
+		    \item La variància del \textit{Saldo} sembla ser \textit{millorable}.
 			\item El model actual funciona prou bé, fixa normes generals i fa un tractament diferent per cada cas, aconseguint més satisfacció en les assignacions. Per tant podem aprofitar molt del model actual. 
-			\item Les particularitats \textit{bones} del model actual és que donen un tractament prou adaptable a la \textit{biodiversitat} del professorat.
-			\item Els aspectes negatius del model no són clars llevat de dedicació que requereix, necessita un temps de dedicació considerable per fer quadrar totes les assignacions satisfactòriament .
-			\item Les dades que ens ens seran facilitades seran dues llistes amb els \textit{items demandats} i una altra amb el \textit{nombre de professors de cada tipus} en funció de hores docents; amb \textit{noms} xifrats o anònims.
-			\nehh{No està acabat}
+			\item Les particularitats \textit{bones} del model, entre altres, són el tractament prou adaptable a la \textit{biodiversitat} del professorat.
+			\item Els aspectes negatius del model no són clars llevat de la \textit{alta} dedicació que requereix. La necessitat d' un temps de dedicació considerable per fer quadrar totes les assignacions satisfactòriament potser sembla ser un preu. \textit{massa alt}
+			\item No analitzem la satisfacció del professorat amb el model actual, però la considerem la \textit{millor} fins el moment. 
 		\end{enumerate}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                   Model d'optimització o        %%
 %    #03                                          %%
-%                 investigació de sistemes        %%
+%                 investigació Operativa          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
 \section{Model d'Optimització o d'investigació de sistemes}
 \end{tcolorbox}
-\lettrine{U}na altra forma d'abordar el problema es començar definint què és una \textbf{alternativa bona}, donant una mesura explícita de com de bona es una \textbf{alternativa}, ja que fins ara s'utilitzava una mesura no definida basada en el coneixement ímplicit del sistema que tenia el professor que realitzava l'assignació. Donat P el conjunt finit de professors i $o \in N$ el nombre d'assignatures que s'han de distribuïr, definim la mesura mencionada com una funció:
-$$f: P^o \longrightarrow R$$
+\lettrine{U}na altra forma d'abordar el problema és començar definint què és una \textbf{alternativa bona}, donant una mesura explícita de com de bona és una \textbf{alternativa}, és a dir, com de satisfactòria és una assignació de assignatures entre el professorat.
+
+Fins ara s'utilitzava una mesura no definida basada en el coneixement implícit del sistema que tenia el professor que realitzava l'assignació. Donat $I$ el conjunt finit de professors i $o \in N$ el nombre d'assignatures que s'han de distribuir, definim la mesura mencionada com una funció:
+
+$$f: I^o \longrightarrow R$$
+
 tal que com més baix sigui $f(a)$ (donat $a \in P^o$) millor serà l'alternativa $a$.
 
-Un cop haguem trobat una funció que compleixi això, trobar una alternativa bona passarà a ser un problema d'optimització, el qual tractarem a la secció OPTIMITZACIÓ \nehh.
-\\
+Un cop haguem trobat una funció que compleixi això, trobar una alternativa bona passarà a ser un problema d'optimització, el qual tractarem a la secció 3.2 (Optimització).
+
 \subsection{Definició de la funció objectiu}
-Determinar la \textbf{funció objectiu} resulta difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre \textbf{alternatives} que estan prohibides pel sistema (com per exemple un professor assignat a dos classes que es realitzin simultàniament), de manera que ens aquests casos la funció donarà infinit. En els altres casos, en els que hem de determinar la qualitat d'una \textbf{alternativa factible} ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor aquesta funció seria diferent i hem de balancejar els desitjos d'uns professors amb els dels altres, ja que en molts casos ens trobarem que una \textbf{alternativa} que és millor per a uns, és pitjor pels altres. Hi ha diverses possibles sortides a aquesta problemàtica:
+Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre les  \textbf{alternatives} que estan \textit{prohibides} pel sistema (com per exemple: un professor assignat a dos classes que es realitzin simultàniament), de manera que ens aquests casos la funció donarà infinit o bé els descartara. En els altres casos, en els que hem de determinar la qualitat d'una \textbf{alternativa factible} ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor aquesta funció seria diferent i hem de balancejar els desitjos d'uns professors amb els dels altres, ja que en molts casos ens trobarem que una \textbf{alternativa} que és millor per a uns, és pitjor pels altres. Hi ha diverses possibles sortides a aquesta problemàtica:
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm]{algor}
+	\caption{555}
+	\label{fig:2}
+\end{figure}
 \begin{enumerate}
 	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  de alternatives previes, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la funció ímplicita que es va utilitzar per crear les alternatives. És a dir, buscar, utlitzant aproximadors de funcions, una funció sobre les dades base tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una alternativa el més semblant possible a la solució que es va utilitzar aquell any. 
 	\item \textbf{Obtenció de dades mitjançant enquesta} preguntant als professors directament que valoren més i creant una funció de forma artesanal basant-nos en els resultats.
 	\item \textbf{Funcions personalitzables} a nivell individual per cada professor. A partir d'aquestes funcions individuals podem crear una funció global que estigui formada per un sumatori d'aquestes funcions tal que al optimitzar aquesta funció global estarem optimitzant les funcions individuals en conjunt.
 \end{enumerate} 
+
 \subsection{Optimització}
 Optimitzar aquesta funció resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \footnote{Altrament $ \approx 10^{1000}$}
 Inicialment vam utilitzar \textit{Simulated Annealing} amb control de mínims locals per tal d'optimitzar 
@@ -393,7 +419,7 @@ Tal com podem veure en els gràfics de la figura [??] el model de la funció gar
 \centering
 \includegraphics[width=4cm]{eps}
 \caption{En aquesta figura veiem una icona del format d'arxiu \texttt{.eps}}
-\label{fig:1}
+\label{fig:3}
 \end{figure}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
