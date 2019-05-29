@@ -369,38 +369,59 @@ Es fa evident doncs que el model és propens a reduir el nombre d'hores que s'ha
 			\item No analitzem la satisfacció del professorat amb el model actual, però la considerem la \textit{millor} fins el moment. 
 		\end{enumerate}
 \newpage
+$\esp$
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                   Model d'optimització o        %%
 %    #03                                          %%
 %                 investigació Operativa          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
-\section{Model d'Optimització o d'investigació de sistemes}
+\section{Model d'Optimització o d'investigació operativa}
 \end{tcolorbox}
-\lettrine{U}na altra forma d'abordar el problema és començar definint què és una \textbf{alternativa bona}, donant una mesura explícita de com de bona és una \textbf{alternativa}, és a dir, com de satisfactòria és una assignació de assignatures entre el professorat.
+\lettrine{U}na altra forma d'abordar el problema és començar definint què és una \textbf{alternativa bona}, donant una mesura explícita de com de bona és una \textbf{alternativa}, és a dir, com de satisfactòria és una assignació d'assignatures entre el professorat.
 
-Fins ara s'utilitzava una mesura no definida basada en el coneixement implícit del sistema que tenia el professor que realitzava l'assignació. Donat $I$ el conjunt finit de professors i $o \in N$ el nombre d'assignatures que s'han de distribuir, definim la mesura mencionada com una funció:
+Fins ara s'utilitzava una mesura no definida basada en el \textit{coneixement implícit} del sistema que tenia el professor que realitzava l'assignació. Donat $I$ el conjunt finit de professors i $o \in N$ el nombre d'assignatures que s'han de distribuir, definim la mesura mencionada com una funció:
 
-$$f: I^o \longrightarrow R$$
+$$f: I^o \longrightarrow \R$$
 
-tal que com més baix sigui $f(a)$ (donat $a \in P^o$) millor serà l'alternativa $a$.
+tal que com \textit{més baix} sigui $f(a)$ (donat $a \in P^o$) millor serà l'alternativa $a$.
 
-Un cop haguem trobat una funció que compleixi això, trobar una alternativa bona passarà a ser un problema d'optimització, el qual tractarem a la secció 3.2 (Optimització).
+Un cop haguem trobat una funció que compleixi això, trobar una alternativa bona passarà a ser un problema d'optimització, el qual tractarem amb una filosofia \textbf{heurística} a la secció 3.2 (Optimització).
+
+És a dir, farem servir la \textit{típica estratègia} elemental de investigació d'operacions:
+\vspace{3 mm}
+
+\begin{tcolorbox}
+	\texttt{\textbf{maximitzar} o \textbf{minimitzar}} \texttt{f}
+	\\ 
+	\texttt{Subjecte a:}
+	\\
+	\text{ } \hspace{10mm} \texttt{\textbf{restriccions}}
+\end{tcolorbox}
+En aquest cas \textbf{minimitzarem} la funció $f$ encara per definir.
+\vspace{3mm}
 
 \subsection{Definició de la funció objectiu}
-Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre les  \textbf{alternatives} que estan \textit{prohibides} pel sistema (com per exemple: un professor assignat a dos classes que es realitzin simultàniament), de manera que ens aquests casos la funció donarà infinit o bé els descartara. En els altres casos, en els que hem de determinar la qualitat d'una \textbf{alternativa factible} ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor aquesta funció seria diferent i hem de balancejar els desitjos d'uns professors amb els dels altres, ja que en molts casos ens trobarem que una \textbf{alternativa} que és millor per a uns, és pitjor pels altres. Hi ha diverses possibles sortides a aquesta problemàtica:
-\begin{figure}
-	\centering
-	\includegraphics[width=9cm]{algor}
-	\caption{555}
-	\label{fig:2}
-\end{figure}
+Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre les  \textbf{alternatives} que estan \textit{prohibides} pel sistema (com per exemple: un professor assignat a dos classes que es realitzin simultàniament), de manera que ens aquests casos la funció donarà infinit o bé els descartara. En els altres casos, en els que hem de determinar la qualitat d'una \textbf{alternativa factible} ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor aquesta funció seria diferent i hem de balancejar els desitjos d'uns professors amb els dels altres, ja que en molts casos ens trobarem que una \textbf{alternativa} que és \textit{millor} per a uns, és \textit{pitjor} pels altres. Hi ha diverses possibles sortides a aquesta problemàtica:
 \begin{enumerate}
-	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  de alternatives previes, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la funció ímplicita que es va utilitzar per crear les alternatives. És a dir, buscar, utlitzant aproximadors de funcions, una funció sobre les dades base tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una alternativa el més semblant possible a la solució que es va utilitzar aquell any. 
+	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  d'alternatives prèvies, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la \textbf{funció implícita} que es va utilitzar per \textit{avaluar} les \textbf{alternatives}. És a dir, buscar, utilitzant aproximacions de funcions, una funció sobre les \textbf{dades base} \footnote{De nou aquestes estarien basades en l'historial recuperable  que esdevindria el dels  últims cinc anys.} tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una \textbf{alternativa} el més semblant possible a la solució que es va utilitzar aquell any. 
 	\item \textbf{Obtenció de dades mitjançant enquesta} preguntant als professors directament que valoren més i creant una funció de forma artesanal basant-nos en els resultats.
 	\item \textbf{Funcions personalitzables} a nivell individual per cada professor. A partir d'aquestes funcions individuals podem crear una funció global que estigui formada per un sumatori d'aquestes funcions tal que al optimitzar aquesta funció global estarem optimitzant les funcions individuals en conjunt.
 \end{enumerate} 
+\begin{figure}
+	\centering
+	\includegraphics[width=9cm]{algor_bl}
+	\caption{ \footnotesize Esquema que il·lustra les diferents \textit{vies} que és podrien considerar per l'hora de concretar aquesta funció que valores \textit{com de bona}  és una assignació donada d'assignatures entre el professorat. El \textit{hexàgon irregular}   (en un color més clar) representa un algoritme d'optimització concret  Simulated annealing $\cong$ (SA) que té origen en l'industria metal·lúrgica i està pensat per buscar \textbf{solucions optimes} en \textit{espais de cerca} grans. La seva presencia és \textit{oportunista} però no compromet la idea general ja que podríem encaixar, en el mateix esquema, qualsevol altre algorisme d'optimització, cosa que farem en la subsecció 3.5 resultats del model}
+	\label{fig:4}
+\end{figure}
+A la figura \ref{fig:4} observem un esquema que il·lustra la problemàtica i els tres punts comentats on  l'\textit{idea clau} és respondre a la pregunta.
+\vspace{1mm}
 
+\textit{Com justifiquem que els criteris que fixem i definiran la funció són bons o és corresponen amb el desig del professorat ?} 
+ 
+\vspace{1mm}
+En el nostre cas \textit{apostem} per un \textit{mix} entre el punt 2 i 3. Personalització limitada per restriccions, però adaptable a les \textit{particularitats} del Departament i les \textit{preferències}. La idea és facilitar una \textit{Biblioteca} de funcions per definir la funció final com a la suma d'una selecció d'aquestes.
 \subsection{Optimització}
 Optimitzar aquesta funció resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \footnote{Altrament $ \approx 10^{1000}$}
 Inicialment vam utilitzar \textit{Simulated Annealing} amb control de mínims locals per tal d'optimitzar 
