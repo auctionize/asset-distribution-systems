@@ -449,15 +449,17 @@ La pregunta ara doncs és, quina mena de funcions podem donar ? De fet aquesta p
 		\textbf{Comentari (B:1):}& Aconseguir minimitzar el nombre d'assignatures que fa cada professor. Si volem ficar més pes només hem d'augmentar el grau del \textit{monomi}.\\
 		\hline
 	\end{tabular}
+   \vspace{3mm}
     \includegraphics[width=8.5cm]{asig_mf}
     \\ 
     {
     \textbf{Figura (B:1):} 
     {\footnotesize Gràfic de la funció $f_1(x)=x^3$.}}
+\vspace{3mm}
 \item 
 \begin{tabular}{|c|m{5cm}|}
 	\hline
-	\textbf{Criteri (B:2):}& Limitar el nombre d'hores  de classe per dia.\\
+	\textbf{Criteri (B:2):}& Limitar el nombre d'hores de classe per dia.\\
 	\hline
 	\textbf{Funció (B:2):}& \footnotesize $\begin{matrix} \\ f_2(x):=\left\lbrace 
 	\begin{matrix}
@@ -477,28 +479,42 @@ La pregunta ara doncs és, quina mena de funcions podem donar ? De fet aquesta p
 			(x-500)^2 \text{ si } x>500\text{ ,} \\
 			0  \qquad \qquad \text{ si } x\leq 500\end{matrix}
 		\right.\\ $.}}
-
-
 \item \begin{tabular}{|c|m{50mm}|}
 	\hline
-	\textbf{Criteri (B:3):}& \\
+	\textbf{Criteri (B:3):}& Moderar els saldos molt alts en valor absolut.\\
 	\hline
-	\textbf{Funció (B:3):}& \\
+	\textbf{Funció (B:3):}& $\begin{matrix} \\ f_3(x)=x^2 \\ \\ \end{matrix}$ \\
 	\hline
-	\textbf{Comentari (B:3):}& \\
+	\textbf{Comentari (B:3):}& Agafant la noció de \textit{saldo} del \textbf{model actual}. La idea és aconseguir que no hi hagi saldos molt \textit{grans} ja que d'aquesta forma aconseguim adequar les hores que ha de fer cada professor a la llarga. També evitem la acumulació de \textit{deutes} que a la llarga serien insalvables.\\
 	\hline
 \end{tabular}
+    \includegraphics[width=8.5cm]{D_mf}
+    \\ 
+    {
+	\textbf{Figura (B:3):} 
+	{\footnotesize Gràfic de la funció $f_3(x)=x^2$.}}
+\\
+\includegraphics[width=8.5cm]{inter_mf} 
+{\textbf{Diagrama (B:4):} {\footnotesize Diagrama que il·lustra  la distància \textit{en temps} entre les hores de classe de diferents docents (cada color representa un docent) les fletxes (en el mateix color, diferent per cada docent) il·lustren la distància entre les assignatures que han de impartir  en diferents dies d'una setmana.}}
 \item \begin{tabular}{|c|m{50mm}|}
 	\hline
-	\textbf{Criteri (B:4):}& \\
+	\textbf{Criteri (B:4):}& Temps entre classes \textit{desagradables} o \textit{inviables}\\
 	\hline
-	\textbf{Funció (B:4):}& \\
+	\textbf{Funció (B:4):}& \footnotesize $\begin{matrix} \\ f_2(x):=\left\lbrace 
+	\begin{matrix}
+    x^2\\ x \\ ln(x)\end{matrix}
+	\right.\\ \\ \end{matrix}$\\
 	\hline
-	\textbf{Comentari (B:4):}& \\
+	\textbf{Comentari (B:4):}& Aquest \textit{subfunció}  definida a trossos evita  temps \textit{inviables} entre classe com acabar una classe i començar la següent de forma \textit{instantània} (Aquest seria l'us \textit{ics} quadrat); o bé temps molt distants (Evitant així casos com tenir  únicament dues assignatures  en un mateix dia separades potser per 5 hores $\approx 300 \esp min$).\\
 	\hline
 \end{tabular}
+\includegraphics[width=8.5cm]{interc_mf}
+\\ 
+{
+	\textbf{Figura (B:4):} 
+	{\footnotesize Gràfic de la funció $f_4(x)=...$.}} \nehh{On começa cada una}
+\\
 \end{itemize}
-
 \subsection{Optimització}
 Optimitzar aquesta funció resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \footnote{Altrament $ \approx 10^{1000}$}
 Inicialment vam utilitzar \textit{Simulated Annealing} amb control de mínims locals per tal d'optimitzar 

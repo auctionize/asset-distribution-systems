@@ -10,18 +10,18 @@
 \contentsline {section}{\numberline {\textbf {$\mathit {3}$}}Model d'Optimitzaci\IeC {\'o} o d'investigaci\IeC {\'o} operativa}{6}{section.3}
 \contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.1}Definici\IeC {\'o} o Ontolog\IeC {\'\i }a de la funci\IeC {\'o} objectiu}{6}{subsection.3.1}
 \contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.2}Ventall de criteris i Biblioteca de \textit {subfuncions}}{7}{subsection.3.2}
-\contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.3}Optimitzaci\IeC {\'o}}{7}{subsection.3.3}
-\contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.4}Limitacions del model}{7}{subsection.3.4}
-\contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.5}Resultats del model}{7}{subsection.3.5}
-\contentsline {section}{\numberline {\textbf {$\mathit {4}$}}Models d'assignacions per subhastes}{8}{section.4}
-\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.1}Problem\IeC {\`a}tiques i beneficis de les subhastes}{8}{subsection.4.1}
-\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.2}Un model minimalista, els \textit {Kiwis}}{8}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.2.1}Repartiment kiwis}{8}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.2.2}Funcionament subhasta}{8}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.2.3}Revaloritzaci\IeC {\'o} hores}{8}{subsubsection.4.2.3}
-\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.2.4}Assignacions finals}{8}{subsubsection.4.2.4}
-\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.3}Subhastes condicionals i n-dimensionals}{8}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.3.1}Problem\IeC {\`a}tiques de les subhastes}{8}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.3.2}Construcci\IeC {\'o} primer model}{9}{subsubsection.4.3.2}
-\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.3.3}Model nasi}{9}{subsubsection.4.3.3}
-\contentsline {section}{\numberline {\textbf {$\mathit {5}$}}Conclusions revalora}{10}{section.5}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.3}Optimitzaci\IeC {\'o}}{8}{subsection.3.3}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.4}Limitacions del model}{8}{subsection.3.4}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {3}$}.5}Resultats del model}{8}{subsection.3.5}
+\contentsline {section}{\numberline {\textbf {$\mathit {4}$}}Models d'assignacions per subhastes}{9}{section.4}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.1}Problem\IeC {\`a}tiques i beneficis de les subhastes}{9}{subsection.4.1}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.2}Un model minimalista, els \textit {Kiwis}}{9}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.2.1}Repartiment kiwis}{9}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.2.2}Funcionament subhasta}{9}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.2.3}Revaloritzaci\IeC {\'o} hores}{9}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.2.4}Assignacions finals}{9}{subsubsection.4.2.4}
+\contentsline {subsection}{\numberline {\textbf {$\mathit {4}$}.3}Subhastes condicionals i n-dimensionals}{9}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.3.1}Problem\IeC {\`a}tiques de les subhastes}{9}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.3.2}Construcci\IeC {\'o} primer model}{10}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {\textbf {$\mathit {4}$}.3.3}Model nasi}{10}{subsubsection.4.3.3}
+\contentsline {section}{\numberline {\textbf {$\mathit {5}$}}Conclusions revalora}{11}{section.5}
