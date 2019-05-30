@@ -93,6 +93,7 @@
 
 % Serveix per ficar caixes
 \usepackage{tcolorbox}
+\usepackage{wasysym}
 
 % Serveix per ficar lletres d'un alfafet 
 
@@ -383,9 +384,9 @@ $\esp$
 
 Fins ara s'utilitzava una mesura no definida basada en el \textit{coneixement implícit} del sistema que tenia el professor que realitzava l'assignació. Donat $I$ el conjunt finit de professors i $o \in N$ el nombre d'assignatures que s'han de distribuir, definim la mesura mencionada com una funció:
 
-$$f: I^o \longrightarrow \R$$
+$$F: I^o \longrightarrow \R$$
 
-tal que com \textit{més baix} sigui $f(a)$ (donat $a \in P^o$) millor serà l'alternativa $a$.
+tal que com \textit{més baix} sigui $F(a)$ (donat $a \in I^o$) millor serà l'alternativa $a$.
 
 Un cop haguem trobat una funció que compleixi això, trobar una alternativa bona passarà a ser un problema d'optimització, el qual tractarem amb una filosofia \textbf{heurística} a la secció 3.2 (Optimització).
 
@@ -393,16 +394,16 @@ Un cop haguem trobat una funció que compleixi això, trobar una alternativa bon
 \vspace{3 mm}
 
 \begin{tcolorbox}
-	\texttt{\textbf{maximitzar} o \textbf{minimitzar}} \texttt{f}
+	\texttt{\textbf{maximitzar} o \textbf{minimitzar}} \texttt{F}
 	\\ 
 	\texttt{Subjecte a:}
 	\\
 	\text{ } \hspace{10mm} \texttt{\textbf{restriccions}}
 \end{tcolorbox}
-En aquest cas \textbf{minimitzarem} la funció $f$ encara per definir.
+En aquest cas, \textbf{minimitzarem} la funció $F$ encara per definir.
 \vspace{3mm}
 
-\subsection{Definició de la funció objectiu}
+\subsection{Definició o Ontología de la funció objectiu}
 Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre les  \textbf{alternatives} que estan \textit{prohibides} pel sistema (com per exemple: un professor assignat a dos classes que es realitzin simultàniament), de manera que ens aquests casos la funció donarà infinit o bé els descartara. En els altres casos, en els que hem de determinar la qualitat d'una \textbf{alternativa factible} ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor aquesta funció seria diferent i hem de balancejar els desitjos d'uns professors amb els dels altres, ja que en molts casos ens trobarem que una \textbf{alternativa} que és \textit{millor} per a uns, és \textit{pitjor} pels altres. Hi ha diverses possibles sortides a aquesta problemàtica:
 \begin{enumerate}
 	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  d'alternatives prèvies, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la \textbf{funció implícita} que es va utilitzar per \textit{avaluar} les \textbf{alternatives}. És a dir, buscar, utilitzant aproximacions de funcions, una funció sobre les \textbf{dades base} \footnote{De nou aquestes estarien basades en l'historial recuperable  que esdevindria el dels  últims cinc anys.} tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una \textbf{alternativa} el més semblant possible a la solució que es va utilitzar aquell any. 
@@ -412,7 +413,7 @@ Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que 
 \begin{figure}
 	\centering
 	\includegraphics[width=9cm]{algor_bl}
-	\caption{ \footnotesize Esquema que il·lustra les diferents \textit{vies} que és podrien considerar per l'hora de concretar aquesta funció que valores \textit{com de bona}  és una assignació donada d'assignatures entre el professorat. El \textit{hexàgon irregular}   (en un color més clar) representa un algoritme d'optimització concret  Simulated annealing $\cong$ (SA) que té origen en l'industria metal·lúrgica i està pensat per buscar \textbf{solucions optimes} en \textit{espais de cerca} grans. La seva presencia és \textit{oportunista} però no compromet la idea general ja que podríem encaixar, en el mateix esquema, qualsevol altre algorisme d'optimització, cosa que farem en la subsecció 3.5 resultats del model}
+	\caption{ \footnotesize Esquema que il·lustra les diferents \textit{vies} que és podrien considerar per l'hora de concretar aquesta funció que valores \textit{com de bona}  és una assignació donada d'assignatures entre el professorat. El \textit{hexàgon irregular}   (en un color més clar) representa un algoritme d'optimització concret  Simulated annealing $\cong$ (SA) que té origen en l'industria metal·lúrgica i està pensat per buscar \textbf{solucions optimes} en \textit{espais de cerca} grans. La seva presencia és \textit{oportunista} però no compromet la idea general ja que podríem encaixar, en el mateix esquema, qualsevol altre algorisme d'optimització, cosa que farem en la subsecció 3.5 ( resultats del model).}
 	\label{fig:4}
 \end{figure}
 A la figura \ref{fig:4} observem un esquema que il·lustra la problemàtica i els tres punts comentats on  l'\textit{idea clau} és respondre a la pregunta.
@@ -422,12 +423,91 @@ A la figura \ref{fig:4} observem un esquema que il·lustra la problemàtica i el
  
 \vspace{1mm}
 En el nostre cas \textit{apostem} per un \textit{mix} entre el punt 2 i 3. Personalització limitada per restriccions, però adaptable a les \textit{particularitats} del Departament i les \textit{preferències}. La idea és facilitar una \textit{Biblioteca} de funcions per definir la funció final com a la suma d'una selecció d'aquestes.
+
+\subsection{Ventall de criteris i Biblioteca de \textit{subfuncions}}
+Definirem de forma additiva la funció $F$, és a dir, direm com és pot construir a partir d'altres \textit{subfuncions} i perquè ho fem així: 
+
+$$
+\begin{matrix}
+F: I^o \longrightarrow \R \qquad \quad  \\
+a\longmapsto \displaystyle \sum_{i=1}^{k}f_i(a) \\
+\end{matrix}
+$$
+On cada $f_i$ representa un \textit{criteri matematitzat} que  valorar un aspecte concret. D'aquesta manera podem fer que la funció tingui en compte tants criteris com volguem i que el fet de \textit{suprimir-ne} un  o \textit{afegir-ne} un altre no impliqui definir de nou la funció.
+Això respon \textit{fortament} a {\color{violet!60}$\blacksquare$}$^{(05)}$.
+
+La pregunta ara doncs és, quina mena de funcions podem donar ? De fet aquesta pregunta és massa ambiciosa, però donem alguns del exemples de funcions que hem vist \textit{raonables} i \textit{interessants}, i a més poden facilitar la tasca. De fet d'ara en endavant ens referirem a un conjunt de \textbf{subfuncions} concretes com a \textbf{Biblioteca}.
+\vspace{3mm}
+
+\begin{itemize}[$\RHD$]
+	\item \begin{tabular}{|c|m{50mm}|}
+		\hline
+		\textbf{Criteri (B:1):}& Moderar el nombre d'assignatures  per professor.\\
+		\hline
+		\textbf{Funció (B:1):}& $\begin{matrix} \\ f_1(x)=x^3 \\ \\ \end{matrix}$\\
+		\hline
+		\textbf{Comentari (B:1):}& Aconseguir minimitzar el nombre d'assignatures que fa cada professor. Si volem ficar més pes només hem d'augmentar el grau del \textit{monomi}.\\
+		\hline
+	\end{tabular}
+    \includegraphics[width=8.5cm]{asig_mf}
+    \\ 
+    {
+    \textbf{Figura (B:1):} 
+    {\footnotesize Gràfic de la funció $f_1(x)=x^3$.}}
+\item 
+\begin{tabular}{|c|m{5cm}|}
+	\hline
+	\textbf{Criteri (B:2):}& Limitar el nombre d'hores  de classe per dia.\\
+	\hline
+	\textbf{Funció (B:2):}& \footnotesize $\begin{matrix} \\ f_2(x):=\left\lbrace 
+	\begin{matrix}
+		(x-500)^2& \text{ si}& x>500\text{ ,} \\
+		0& \text{ si}& x\leq 500& \end{matrix}
+	\right.\\ \\ \end{matrix}$\\
+	\hline
+	\textbf{Comentari (B:2):}& La funció a trossos contínua penalitza \textit{fortament} qualsevol assignació que per faci que un docent hagi de fer més de 500 min de classe en un dia \\
+	\hline
+\end{tabular}
+\includegraphics[width=8.5cm]{timeday_mf}
+\\ 
+{
+	\textbf{Figura (B:2):} 
+	{\footnotesize Gràfic de la funció  $f_2(x):=\left\lbrace 
+		\begin{matrix}
+			(x-500)^2 \text{ si } x>500\text{ ,} \\
+			0  \qquad \qquad \text{ si } x\leq 500\end{matrix}
+		\right.\\ $.}}
+
+
+\item \begin{tabular}{|c|m{50mm}|}
+	\hline
+	\textbf{Criteri (B:3):}& \\
+	\hline
+	\textbf{Funció (B:3):}& \\
+	\hline
+	\textbf{Comentari (B:3):}& \\
+	\hline
+\end{tabular}
+\item \begin{tabular}{|c|m{50mm}|}
+	\hline
+	\textbf{Criteri (B:4):}& \\
+	\hline
+	\textbf{Funció (B:4):}& \\
+	\hline
+	\textbf{Comentari (B:4):}& \\
+	\hline
+\end{tabular}
+\end{itemize}
+
 \subsection{Optimització}
 Optimitzar aquesta funció resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \footnote{Altrament $ \approx 10^{1000}$}
 Inicialment vam utilitzar \textit{Simulated Annealing} amb control de mínims locals per tal d'optimitzar 
+\begin{enumerate}
+	\item \textbf{Simulated Annealing:}
+	\item \textbf{Algoritmes genètics:}
+	\item \textbf{Altres algoritmes d'optimització:}
+\end{enumerate}
 \nehh{Queda pendent acabar aquesta secció}
-\subsection{Ventall de criteris i Biblioteca de \textit{subfuncions}}
-Tal com és pot consultar al codi... aquí tenim un seguit d'alguns criteris ... i un seguit d'algunes funcions que hem modelitzat...
 \subsection{Limitacions del model}
 \subsection{Resultats del model}
 Els resultats més rellevants d'aquest model són:
@@ -436,12 +516,7 @@ Els resultats més rellevants d'aquest model són:
 	\item Possibilitat de millorar optimització d'alguns aspectes del \textit{model actual}.
 \end{enumerate}
 Tal com podem veure en els gràfics de la figura [??] el model de la funció garanteix millors optimitzacions i a més ....
-\begin{figure}
-\centering
-\includegraphics[width=4cm]{eps}
-\caption{En aquesta figura veiem una icona del format d'arxiu \texttt{.eps}}
-\label{fig:3}
-\end{figure}
+
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
@@ -494,6 +569,12 @@ D'aquesta manera es realitzaran tres subhastes. (En la última hi haurà la poss
 Amb aquesta nova revalorització horària, es repartiran les matèries no assignades mitjançant el mètode de la funció entre els professors que tinguin de moment cobert un valor inferior a $\frac{2M}{3}$ hores, on M són les hores que ha de realitzar aquell professor.
 \subsection{Subhastes condicionals i n-dimensionals}
 \subsubsection{Problemàtiques de les  subhastes}
+\begin{figure}
+	\centering
+	\includegraphics[width=4cm]{eps}
+	\caption{En aquesta figura veiem una icona del format d'arxiu \texttt{.eps}}
+	\label{fig:3}
+\end{figure}
 Aquí tenim un resum de les problemàtiques que ha de soluciona'l el model de subhasta que considerem construir 
 \begin{tcolorbox}[colback=black!1,title=\textbf{Llista problemàtiques subhastes},coltitle=black,colbacktitle=black!10]
 \begin{enumerate}
