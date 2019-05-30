@@ -1,3 +1,4 @@
+###### NO FEATCH/PULL haig de modificar el gitignore que he borrat
 ## Bloc de Notes de Treball:
 ## Notes d'en Marc 2:
 
