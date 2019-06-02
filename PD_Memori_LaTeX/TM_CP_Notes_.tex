@@ -8,7 +8,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                                              %%%
-%%%            %El més bàsic i alguns paquest%                   %%%
+%%%            %El més bàsic i alguns paquets%                   %%%
 %%%                                                              %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -94,6 +94,7 @@
 % Serveix per ficar caixes
 \usepackage{tcolorbox}
 \usepackage{wasysym}
+\setlength{\parindent}{0pt}
 
 % Serveix per ficar lletres d'un alfafet 
 
@@ -180,7 +181,7 @@
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
 	\section{\textit{Comentari per a la lectura}}
 \end{tcolorbox}
-\lettrine{D}onades les disperses ideàs que hem obtingut al llarg de les sessions de treball hem estructurat el treball de tal forma que cada secció té un cert grau \textit{d'independència} respecte les altres. Això ho podem veure en que les conclusions de cada secció ja queden explicites al finalitzar cadascuna i no després. Tot i poder fer-se una lectura permutada de les seccions recomanem el ordre facilitat. 
+\lettrine{D}onades les diverses idees que hem obtingut al llarg de les sessions de treball, hem estructurat el projecte de tal forma que cada secció tingui un cert grau \textit{d'independència} respecte les altres. Això es veu reflectit en el fet que cada secció té les seves pròpies conclusions \textit{independents}. Tot i que existeix la possibilitat d'una lectura permutada de les seccions recomanem l'ordre proposat en l'índex.
 \\ 
 \newpage
 $$
@@ -196,16 +197,16 @@ $$
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
 \section{Anàlisis del problema}
 \end{tcolorbox}
-\lettrine{F}em una lectura del enunciat que descriu el problema plantejat. 
+\lettrine{P} rimerament realitzem una lectura de l'enunciat que descriu el problema plantejat. 
 
 \vspace{5mm}
 
 \begin{tcolorbox}[colback=black!1,title=\textbf{Enunciat del problema},coltitle=black,colbacktitle=black!10]
 \textit{
-Un departament d'una universitat té diferents tasques docents assignades, que s'han de repartir entre els seus professors. Actualment es distribueixen segons les hores de classe de cada tasca. Se suposa que el nombre d'hores mesura l'esforç associat a una tasca, però en la pràctica això no és prou realista, la qual cosa genera desequilibris. Es tracta de trobar un mètode més equilibrat per valorar les tasques docents, que tingui en compte la demanda per cada tasca per part dels diferents professors. Es podria expressar aquesta demanda a través d'una mena de subhasta. S'haurien de tenir en compte algunes restriccions, com per exemple, que tothom faci la mateixa quantitat de docència o la restricció que hi hagi a cada departament.
+Un departament d'una universitat té diferents tasques docents assignades, que s'han de repartir entre els seus professors. Actualment es distribueixen segons les hores de classe de cada tasca. Se suposa que el nombre d'hores mesura l'esforç associat a una tasca, però en la pràctica això no és prou realista, la qual cosa genera desequilibris. Es tracta de trobar un mètode més equilibrat per valorar les tasques docents, que tingui en compte la demanda de cada tasca per part dels diferents professors. Es podria expressar aquesta demanda a través d'una mena de subhasta. S'haurien de tenir en compte algunes restriccions, com per exemple, que tothom faci la mateixa quantitat de docència o la restricció que hi hagi a cada departament.
 }
 \end{tcolorbox}
-Influenciats per la lectura de \cite{tah} indexem el enunciat de forma conceptual mitjançant color i nombres\footnote{Únicament com a eina visual, eliminant la seva possible ambigüitat amb nombres enters}. Alternem el color de la font per facilitar la lectura. 
+Influenciats per la lectura de \cite{tah} indexem l'enunciat de forma conceptual mitjançant colors i nombres\footnote{Únicament com a eina visual, eliminant la seva possible ambigüitat amb nombres enters}. Alternem el color de la font per facilitar la lectura. 
 \vspace{3mm}
 
 \begin{tcolorbox}[colback=black!1,title=\textbf{Enunciat del problema},coltitle=black,colbacktitle=black!10]
@@ -214,27 +215,31 @@ Influenciats per la lectura de \cite{tah} indexem el enunciat de forma conceptua
  
 \textit{{\color{blue!60}$\blacksquare$}$^{(02)}$ Actualment es distribueixen segons les hores de classe de cada tasca. Se suposa que el nombre d'hores mesura l'esforç associat a una tasca, però en la pràctica això no és prou realista, la qual cosa genera desequilibris.}
 
-\textit{{\color{green!60}$\blacksquare$}$^{(03)}$ {\color{black!80}Es tracta de trobar un mètode més equilibrat per valorar les tasques docents, que tingui en compte la demanda per cada tasca per part dels diferents professors.}}
+\textit{{\color{green!60}$\blacksquare$}$^{(03)}$ {\color{black!80}Es tracta de trobar un mètode més equilibrat per valorar les tasques docents, que tingui en compte la demanda de cada tasca per part dels diferents professors.}}
  
 \textit{{\color{purple!60}$\blacksquare$}$^{(04)}$Es podria expressar aquesta demanda a través d'una mena de subhasta.}
  
 \textit{{\color{violet!60}$\blacksquare$}$^{(05)}${\color{black!80}S'haurien de tenir en compte algunes restriccions, com per exemple, que tothom faci la mateixa quantitat de docència o la restricció que hi hagi a cada departament.}}
 
 \end{tcolorbox}
-Fem el anàlisis o interpretació per blocs, mantenint el mateix codi d'indexació. Les paraules en negreta únicament tenen la finalitat de recordar els tecnicismes de \textit{investigació operativa} que ens faciliten l'abstracció del problema plantejat per l'enunciat.
+Tot seguit fem l'anàlisi o interpretació per blocs, mantenint el mateix codi d'indexació. Les paraules en negreta únicament tenen la finalitat de recordar els tecnicismes de \textit{investigació operativa} que ens faciliten l'abstracció del problema plantejat per l'enunciat.
+
+
 \begin{itemize}
-\item[{ \color{cyan!60} \underline{\underline{\normalcolor (01)}}}] El problema abstracte consisteix en una tasca de repartiment o assignació. Concretament, els \textbf{objectes a repartir} són les tasques docents que han de ser repartides entre  el professorat, cada possible assignació s'anomenara \textbf{pla docent} o \textbf{solució} de forma anàloga en funció del context.\\
-\item[{ \color{blue!60} \underline{\underline{\normalcolor (02)}}}] Acceptem que el \textit{Model actual} genera solucions \textbf{subòptimes} i això ho  justificarem amb els mateixos arguments del enunciat.\\
-\item[{ \color{green!60} \underline{\underline{\normalcolor (03)}}}] És requereix { \color{green!60} \underline{\normalcolor mètode}} per { \color{green!60} \underline{\normalcolor valorar}} i { \color{green!60} \underline{\normalcolor repartir}} tasca docent en funció de la demanda del professorat. A més ha de poder aportar una solució millor \footnote{Equivalentment, menys desequilibrada.}. 
+\item[{ \color{cyan!60} \underline{\underline{\normalcolor (01)}}}] El problema abstracte consisteix en una tasca de repartiment o assignació. Concretament, les tasques docents són els \textbf{objectes a repartir} entre  el professorat, cada possible assignació s'anomenarà \textbf{pla docent} o \textbf{solució} de forma anàloga en funció del context.\\
+\item[{ \color{blue!60} \underline{\underline{\normalcolor (02)}}}] Acceptem que el \textit{Model actual} genera solucions \textbf{subòptimes} i ho  justificarem amb els mateixos arguments de l'enunciat.\\
+\item[{ \color{green!60} \underline{\underline{\normalcolor (03)}}}] Es requereix un { \color{green!60} \underline{\normalcolor mètode}} per { \color{green!60} \underline{\normalcolor valorar}} i { \color{green!60} \underline{\normalcolor repartir}} les tasques docents en funció de la demanda del professorat. Aquest model ha de poder aportar una solució millor \footnote{Equivalentment, menys desequilibrada.}. 
 \item[{ \color{purple!60} \underline{\underline{\normalcolor (04)}}}] Es proposa com a \textbf{alternativa}  desenvolupar un  { \color{purple!60} \underline{\normalcolor mètode basat en subhasta}}.
-\item[{ \color{violet!60} \underline{\underline{\normalcolor (05)}}}] S'expressa anticipadament que el \textbf{model/mètode} ha de tenir \textbf{restriccions}  i s'expliciten dos de necessàries. El volum del treball ha de ser \textit{homogeni}\footnote{Entesa com la qualitat de: quantitat de docències semblants entre el professorat}. El mètode ha de contemplar la possibilitat de restriccions pròpies del departament. 
+\item[{ \color{violet!60} \underline{\underline{\normalcolor (05)}}}] S'expressa anticipadament que el \textbf{model/mètode} ha de complir \textbf{restriccions}  i se n'expliciten dues de necessàries: el volum del treball ha de ser \textit{homogeni}\footnote{Entesa com la qualitat de: quantitat de docències semblants entre el professorat} i el mètode ha de contemplar la possibilitat de restriccions pròpies de cada departament. 
 \end{itemize}
-Analitzat i desglossat el enunciat, passem a concretar o tipificar els objectius del treball.
+
+Un cop desglossat i analitzat l'enunciat, passem a concretar o tipificar els objectius del treball.
+
 \begin{tcolorbox}[colback=black!1,title=\textbf{0bjectius},coltitle=black,colbacktitle=black!10]
 	\begin{enumerate}
-	\item Elaborar \textbf{Mètode} per generar plans docents universitaris{\color{cyan!80} $^{(01)}$}. Aquest estarà basat en un repartiment de les tasques docents multivariable (dependrà de més d'una \textbf{variable decidible}) per a mesurar l'esforç{\color{blue!80} $^{(02)}$}{\color{green!80} $^{(03)}$} de cada tasca. El mètode haurà d'evitar desequilibris tipificats{\color{blue!80} $^{(02)}$}(documentats o previsibles) i estarà subjecte a un volum de \textbf{restriccions}{\color{violet!60} $^{(05)}$} variables. El mètode serà estructurat en base a la demanada del professorat com és requereix.
-	\item S'estudiara l'idea de fer un model  basat en les subhastes.{\color{purple!80} $^{(04)}$} 
-	\item S'aplicara el mètode en un cas concret per tal de comprovar la seva viable implementació i competència. El cas concret serà el \textit{Departament de Matemàtiques} de la pròpia Universitat Autònoma de Barcelona.
+	\item Elaborar un \textbf{Mètode} per generar plans docents universitaris{\color{cyan!80} $^{(01)}$}. Aquest estarà basat en un repartiment de les tasques docents multivariable (dependrà de més d'una \textbf{variable decidible}) per a mesurar l'esforç{\color{blue!80} $^{(02)}$}{\color{green!80} $^{(03)}$} que suposa cada tasca. El mètode haurà d'evitar desequilibris tipificats{\color{blue!80} $^{(02)}$}(documentats o previsibles) i estarà subjecte a un volum de \textbf{restriccions}{\color{violet!60} $^{(05)}$} variables. El mètode estarà estructurat en base a la demanada del professorat tal i com és requereix.
+	\item S'estudiara la idea de fer un model  basat en  subhastes.{\color{purple!80} $^{(04)}$} 
+	\item S'aplicarà el mètode a un cas concret per tal de comprovar la seva viabilitat d'implementació i competència. L'exemple concret serà el propi \textit{Departament de Matemàtiques} de la  Universitat Autònoma de Barcelona.
 	\end{enumerate}
 \end{tcolorbox}
 \vspace{5mm}
@@ -247,9 +252,9 @@ Analitzat i desglossat el enunciat, passem a concretar o tipificar els objectius
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
 \section{Estudi del model Actual}
 \end{tcolorbox}
-\lettrine{A}questa secció és una aproximació intuïtiva al \textbf{model actual}. Repetidament fem i farem servir el nom de \textit{Model actual}  per referir-nos al model/mètode\footnote{Actualment, 2019.} que s'utilitza per repartir les tasques docents entre el professorat\footnote{En el Departament de Matemàtiques de l'universitat.}
+\lettrine{E}n aquesta secció analitzarem el mètode amb el qual  es reparteixen actualment les tasques docents entre el professorat del Departament de Matemàtiques de la universitat,  gràcies a les dades facilitades per aquest. Repetidament fem i farem servir el nom de \textit{Model actual}  per referir-nos a  aquest mètode.
 
-Els objectius de la secció a  part d'obtenir una visió aproximada del \textit{cas particular} de major interès, tenen intenció d'extreure i prendre constància dels desequilibris i restriccions, de la secció anterior,({\color{blue!60}$\blacksquare$}$^{(02)}$) i ({\color{violet!60}$\blacksquare$}$^{(05)}$)  respectivament. 
+Els objectius d'aquesta secció a més a més d'obtenir una visió aproximada del \textit{cas particular} de major interès, tenen la intenció d'extreure i prendre constància dels desequilibris i restriccions, de l'apartat anterior,({\color{blue!60}$\blacksquare$}$^{(02)}$) i ({\color{violet!60}$\blacksquare$}$^{(05)}$)  respectivament. 
 \\
 
 \subsection{Dades obtingudes de la Web del Departament}
@@ -257,9 +262,9 @@ Algunes de les dades del model actual les podem trobar a la \textit{pàgina web}
 
 \vspace{3mm}
 
-\begin{tcolorbox}[colback=black!1,title=\textbf{Dades publiques a la web},coltitle=black,colbacktitle=black!10]
+\begin{tcolorbox}[colback=black!1,title=\textbf{Dades públiques a la web},coltitle=black,colbacktitle=black!10]
 \textbf{Docència de Grau}\\
-El Departament de Matemàtiques és responsable principal de tres graus:
+El Departament de Matemàtiques és el responsable principal de tres graus:
 	\begin{enumerate}
 		\item Grau de Matemàtiques
 		\item Grau d'Estadística Aplicada
@@ -280,65 +285,62 @@ El Departament de Matemàtiques és responsable principal de tres graus:
 	%\end{box2}
 	%\begin{box1}{Model actual {\footnotesize (A.Ruiz)}}
 \subsection{Dades facilitades pel Secretari del departament}\footnote{Actualment, càrrec ocupat pel Doctor Albert Ruiz Cirera.}
-Donat que les dades publiques de la web són limitades i insuficients per tenir un primer contacte amb el \textit{problema}, s'ens ofereix la possibilitat de concretar una entrevista amb el actual secretari del departament. D'aquesta obtenim un nou esquema que resumeix prou bé la tasca a la qual ha de fer front el mètode objectiu del treball.
+Donat que les dades públiques de la web són limitades i insuficients, per tal de tenir un primer contacte amb el \textit{problema}, s'ens ofereix la possibilitat de concretar una entrevista amb l'actual secretari del departament. D'aquesta obtenim un nou esquema que resumeix prou bé els objectius als quals ha de fer front el mètode a desenvolupar.
 \vspace{3mm}
 
 \begin{tcolorbox}[colback=black!1,title=\textbf{Dades del funcionament intern del \textit{model actual}},coltitle=black,colbacktitle=black!10]
 	\textbf{Titulacions que demanen docència}
+	Les assignatures a impartir tenen els següents aspectes ja fixats:
 	\begin{itemize}
-		\item Horari fixat
-		\item Nombre d'alumnes fixat.
-		\item Hores i tipologia fixada (Això vol dir: Teo, Semin, Probl).
+		\item L'horari
+		\item El nombre d'alumnes 
+		\item El pes en hores i la tipologia ( teoria, seminaris o problemes).
 	\end{itemize}
-	En total unes 500 sol·licituds $\approx$ 150 assignatures, assignatura: (3h de teoria), (1 hora de problemes), (2 hores seminaris).
+	En total fa front a unes 500 sol·licituds $\approx$ 150 assignatures. Normalment cada assignatura representa a la setmana 3 hores de teoria, 1 hora de problemes i 2 hores seminaris.
 	\\
 	\textbf{Professorat}
-	\begin{itemize}
-		\item 90 hores/any.
-		\item $\vdots$
-		\item 240 hores/any.
-		\item (60 hores/any els estudiants de doctorat) $\approx$ \textit{soroll}.
-	\end{itemize}
-	Podem estimar que hi ha uns 100 professors.\\
+	\\
+	La quantitat de docència a impartir és diferent per cada professor, però oscil·la entre 90 i 240 hores l'any. A més a més, als estudiants de doctorat se'ls ofereix donar fins a 60 hores anuals de classes relacionades amb la temàtica del seu treball (però no els considerarem).
+    Podem estimar que hi ha uns 100 professors.\\
 	\textbf{Algunes de les normes que s'apliquen}
 	\begin{itemize}
-		\item Si un professor a fet una assignatura un any  té preferència per repetir-la.
-		\item 3 anys com a màxim en assignatures dels 3 graus.
-		\item 4 anys la resta d'aquestes.
-		\item També hi ha altres càrrecs 
+		\item Si un professor ha fet una assignatura un any,  té preferència per repetir-la.
+		\item Un professor pot impartir fins a 3 anys seguits  com a màxim en les assignatures dels graus propis.
+		\item I en les matèries de les altres titulacions, màxim 4 anys consecutius.
+		\item També hi ha altres feines a realitzar en el departament que no impliquen docència.
 	\end{itemize}
 	\textbf{Actualment s'intenta minimitzar}
 	\begin{itemize}
 		\item Dispersió: \# assignatures / professor. (\#1)
-		\item Deutes personal (saldo de hores). (\#2)
+		\item Deute personal (saldo de hores). (\#2)
 	\end{itemize}
 	\end{tcolorbox}
 
 	\subsection{Altres notes del \textit{Model actual}}
 	\begin{enumerate}
-		\item Primer és fa una ronda de repartiment amb el professorat que té preferència per que repeteix una assignatura. Després és fa una segona ronda amb el que queda tot i que ha vegades hi ha canvis a ultim moment. En aquesta segona ronda és reparteix \textit{el que queda}, aquí  és on es fa un tractament més personal i més precís.
-		\item En aquesta segona \textit{ronda} hi ha una llista de \textit{argument} que ajuden a seleccionar el millor repartiment, vegem-ne alguns exemples:
+		\item Primer es fa una ronda de repartiment amb el professorat que té preferència (perquè repeteixen una assignatura). Després es fa una segona ronda amb les matèries restants, tot i que sovint hi ha canvis d'última hora. En aquesta segona ronda  és on es fa un tractament més personal i més precís.
+		\item A la segona \textit{ronda} hi ha una llista d' \textit{arguments} que ajuden a seleccionar el millor repartiment, vegem-ne alguns exemples:
 		\begin{enumerate}
 			\item Que tots els professors puguin fer almenys alguna hora de teoria (en general compten més i són més valorades).
-			\item Suposant que hi ha una assignatura molt desitjada de teoria que compten més hores, probablement s'assignara a algú que per exemple tingui un saldo de hores negatiu abans que algú que tingui un saldo positiu (això és que faci més del que ha de fer). També pot passar que entre dos sol·licitats s'assigni a qui fagi quadrar més ; $S(p_1)=-30$ i saldo de professor dos $S(p_2)=-5$, llavor una assignatura que val 20 hores s'assignara preferentment al primer.
-			\item Aquestes estratègies buscant minimitzar (\#1) i (\#2) i a més tenir el personal \textit{content} que és una cosa molt difícil de modelitzar, però també és important.
+			\item Suposant que hi ha una assignatura molt desitjada de teoria, probablement s'assignarà a algú que tingui un saldo d'hores negatiu abans que a algú que tingui un saldo positiu (que tingui acumulades més hores de les que ha de fer). Però també pot passar que entre dos sol·licitants s'assigni a qui fagi quadrar més els saldos, per exemple, si dos professors pugen per una matèria de 20 hores, i el saldo d'un és $S(p_1)=-30$ i el de l'altre  $S(p_2)=-5$, s'assignaria preferentment al primer.
+			\item Aquestes estratègies busquen minimitzar (\#1) i (\#2) i a més tenir el personal \textit{content}, que és una cosa molt difícil de modelitzar, però també és important.
 			\item S'intenta que els alumnes de doctorat puguin fer unes poques hores d'alguna matèria que estigui relacionada amb el seu treball.
 		\end{enumerate} 
-		\item Hi ha normes prou bones que no s'han escrit, pel que fa les assignatures de 3r i 4rt  també tenen un filtre:
+		\item Hi ha normes prou bones que no s'han escrit. Pel que fa les assignatures de 3r i 4rt  també tenen un filtre:
 		\begin{enumerate}
-			\item  Cada subdepartament només pot fer assignatures del bloc que li toca i si en vol fer alguna de una \textit{branca de coneixement} que no li pertoca ha de ser convidat pel subdepartament responsable.
-			\item És a dir cada subdepartament té un \textit{mercat d'assignatures associat} que s'han de repartir en una \textit{Reunió}. (Això dóna una bona idea, ja que així si més gent està implicada en el repartiment és poden considerar un model gran format de petits models \textit{més tractable} que interactuen \textit{poc} entre ells).
+			\item  Cada subdepartament només pot fer assignatures del bloc que li pertoca. En el cas que es vulgués impartir alguna matèria d'una altra \textit{branca de coneixement}, hauria de ser convidat pel subdepartament responsable.
+			\item És a dir cada subdepartament té un \textit{mercat d'assignatures associat} que s'han de repartir en una \textit{reunió}. (Això dóna una bona idea, ja que així si més gent està implicada en el repartiment és pot considerar un model gran format de petits models \textit{més tractables} que interactuen \textit{poc} entre si).
 			\end{enumerate}
 		\end{enumerate}
 \subsection{Estat del model actual}
-Des del propi Departament de matemàtiques se'ns han facilitat dades que ens permeten calcular el saldo dels professors. Les dades facilitades són:\footnote{Per consultar-les vegeu el document \cod{pla\_docent.ods.}}
+Des del propi Departament de matemàtiques se'ns han facilitat dades anònimes\footnote{Per consultar-les vegeu el document \cod{pla\_docent.ods.}} que ens permeten calcular el saldo actual dels professors. 
 \begin{itemize}
 	\item Nombre d'hores que ha de fer cada professor del departament en un any.$\quad(p_i, \esp i \in I)$
 	\item Nombre d'hores que fa realment un professor per a cada assignatura que se li ha assignat en el repartiment. $\quad (p'_i, \esp i \in I)$
 \end{itemize}
-El nostre objectiu és extreure del document tota la informació rellevant  mitjançant eines informàtiques elementals, com la programació en suite ofimàtica \textit{Excel}  per tal de donar una \textit{radiografia} del \textbf{model actual}. Per exemple, ens interessarà, obtenir la diferencia entre les hores que hauria de fer un professor i les hores que realment fa, és a dir, el \textit{saldo} \footnote{Dada molt rellevant del \textbf{model actual}.} del professor $i\in I$; $D_i:=p'_i-p_i$.
+El nostre objectiu és extreure del document tota la informació rellevant  mitjançant eines informàtiques elementals, com la programació en suite ofimàtica \textit{Excel}  per tal de donar una \textit{radiografia} del \textbf{model actual}. Per exemple, ens interessa obtenir la diferencia entre les hores que hauria de fer un professor i les hores que realment fa, és a dir, el \textit{saldo} \footnote{Dada molt rellevant del \textbf{model actual}.} del professor $i\in I$; $D_i:=p'_i-p_i$.
 
-El \textit{saldo} podrà prendre valors tan positius com negatius. En cas de que un professor fes més hores, el resultat  serà positiu (en hores) $D_i>0$. En cas contrari, és a dir, $D_i<0$ , obtindrem un resultat negatiu, indicant així, que el professor no arriba al nombre d'hores que ha de fer. També voldrem saber totes les hores que s'estan fent de forma \textit{extra} i totes les que no s'arriben a fer.  També sumarem aquests dos valors per obtenir el saldo total.\footnote{Per veure/consultar les dades recomanem visitar el fitxer \cod{saldo.c.}}
+El \textit{saldo} pot prendre valors tant positius com negatius. En cas de que un professor fes més hores, el resultat  serà positiu $D_i>0$. En cas contrari, és a dir, $D_i<0$ , obtindrem un resultat negatiu, indicant així, que el professor no arriba al nombre d'hores que ha de fer. També volem saber totes les hores que s'estan fent de forma \textit{extra} i totes les que no s'arriben a fer, i sumarem aquests dos valors per obtenir el saldo total.\footnote{Per veure/consultar les dades recomanem visitar el fitxer \cod{saldo.c.}}
 
 Els resultats més rellevants com a valors numèrics són:
 \begin{itemize}
@@ -365,7 +367,7 @@ Es fa evident doncs que el model és propens a reduir el nombre d'hores que s'ha
 		\begin{enumerate}
 		    \item La variància del \textit{Saldo} sembla ser \textit{millorable}.
 			\item El model actual funciona prou bé, fixa normes generals i fa un tractament diferent per cada cas, aconseguint més satisfacció en les assignacions. Per tant podem aprofitar molt del model actual. 
-			\item Les particularitats \textit{bones} del model, entre altres, són el tractament prou adaptable a la \textit{biodiversitat} del professorat.
+			\item Les particularitats \textit{bones} del model, entre altres, són el tractament prou adaptable a la \textit{diversitat} del professorat.
 			\item Els aspectes negatius del model no són clars llevat de la \textit{alta} dedicació que requereix. La necessitat d' un temps de dedicació considerable per fer quadrar totes les assignacions satisfactòriament potser sembla ser un preu. \textit{massa alt}
 			\item No analitzem la satisfacció del professorat amb el model actual, però la considerem la \textit{millor} fins el moment. 
 		\end{enumerate}
@@ -390,7 +392,7 @@ tal que com \textit{més baix} sigui $F(a)$ (donat $a \in I^o$) millor serà l'a
 
 Un cop haguem trobat una funció que compleixi això, trobar una alternativa bona passarà a ser un problema d'optimització, el qual tractarem amb una filosofia \textbf{heurística} a la secció 3.2 (Optimització).
 
-És a dir, farem servir la \textit{típica estratègia} elemental de investigació d'operacions:
+És a dir, farem servir la \textit{típica estratègia} elemental d'investigació d'operacions:
 \vspace{3 mm}
 
 \begin{tcolorbox}
@@ -400,26 +402,26 @@ Un cop haguem trobat una funció que compleixi això, trobar una alternativa bon
 	\\
 	\text{ } \hspace{10mm} \texttt{\textbf{restriccions}}
 \end{tcolorbox}
-En aquest cas, \textbf{minimitzarem} la funció $F$ encara per definir.
+En aquest cas, \textbf{minimitzarem} la funció $F$ encara a definir.
 \vspace{3mm}
 
-\subsection{Definició o Ontología de la funció objectiu}
-Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre les  \textbf{alternatives} que estan \textit{prohibides} pel sistema (com per exemple: un professor assignat a dos classes que es realitzin simultàniament), de manera que ens aquests casos la funció donarà infinit o bé els descartara. En els altres casos, en els que hem de determinar la qualitat d'una \textbf{alternativa factible} ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor aquesta funció seria diferent i hem de balancejar els desitjos d'uns professors amb els dels altres, ja que en molts casos ens trobarem que una \textbf{alternativa} que és \textit{millor} per a uns, és \textit{pitjor} pels altres. Hi ha diverses possibles sortides a aquesta problemàtica:
+\subsection{Definició o Ontologia de la funció objectiu}
+Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre les  \textbf{alternatives} que estan \textit{prohibides} pel sistema (com per exemple: un professor assignat a dos classes que es realitzin simultàniament), de manera que ens aquests casos la funció donarà infinit o bé els descartara. En els altres casos, en els quals hem de determinar la qualitat d'una \textbf{alternativa factible} ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor aquesta funció seria diferent i hem d'equilibrar els desitjos d'uns professors amb els dels altres, ja que en molts casos ens trobarem que una \textbf{alternativa} que és \textit{millor} per a uns, és \textit{pitjor} pels altres. Hi ha diverses possibles sortides a aquesta problemàtica:
 \begin{enumerate}
-	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  d'alternatives prèvies, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la \textbf{funció implícita} que es va utilitzar per \textit{avaluar} les \textbf{alternatives}. És a dir, buscar, utilitzant aproximacions de funcions, una funció sobre les \textbf{dades base} \footnote{De nou aquestes estarien basades en l'historial recuperable  que esdevindria el dels  últims cinc anys.} tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una \textbf{alternativa} el més semblant possible a la solució que es va utilitzar aquell any. 
-	\item \textbf{Obtenció de dades mitjançant enquesta} preguntant als professors directament que valoren més i creant una funció de forma artesanal basant-nos en els resultats.
+	\item \textbf{Basar-nos en dades Històriques} fent un recull de l'\textit{historial}  d'alternatives prèvies, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la \textbf{funció implícita} que es va utilitzar per \textit{avaluar} les \textbf{alternatives}. És a dir, buscar, utilitzant aproximacions de funcions, una funció sobre les \textbf{dades base} \footnote{De nou aquestes estarien basades en l'historial recuperable  que esdevindria el dels  últims cinc anys.} tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una \textbf{alternativa} el més semblant possible a la solució que es va utilitzar aquell any. 
+	\item \textbf{Obtenció de dades mitjançant enquesta} preguntant als professors directament què valoren més i creant una funció de forma artesanal basant-nos en els resultats.
 	\item \textbf{Funcions personalitzables} a nivell individual per cada professor. A partir d'aquestes funcions individuals podem crear una funció global que estigui formada per un sumatori d'aquestes funcions tal que al optimitzar aquesta funció global estarem optimitzant les funcions individuals en conjunt.
 \end{enumerate} 
 \begin{figure}
 	\centering
 	\includegraphics[width=9cm]{algor_bl}
-	\caption{ \footnotesize Esquema que il·lustra les diferents \textit{vies} que és podrien considerar per l'hora de concretar aquesta funció que valores \textit{com de bona}  és una assignació donada d'assignatures entre el professorat. El \textit{hexàgon irregular}   (en un color més clar) representa un algoritme d'optimització concret  Simulated annealing $\cong$ (SA) que té origen en l'industria metal·lúrgica i està pensat per buscar \textbf{solucions optimes} en \textit{espais de cerca} grans. La seva presencia és \textit{oportunista} però no compromet la idea general ja que podríem encaixar, en el mateix esquema, qualsevol altre algorisme d'optimització, cosa que farem en la subsecció 3.5 ( resultats del model).}
+	\caption{ \footnotesize Esquema que il·lustra les diferents \textit{vies} que es podrien considerar per l'hora de concretar aquesta funció que valorés \textit{com de bona}  és una assignació donada d'assignatures entre el professorat. El \textit{hexàgon irregular}   (en un color més clar) representa un algorisme d'optimització concret  Simulated annealing $\cong$ (SA) que té origen en l'industria metal·lúrgica i està pensat per buscar \textbf{solucions optimes} en \textit{espais de cerca} grans. La seva presència és \textit{oportunista} però no compromet la idea general ja que podríem encaixar, en el mateix esquema, qualsevol altre algorisme d'optimització, cosa que farem en la subsecció 3.5 ( resultats del model).}
 	\label{fig:4}
 \end{figure}
-A la figura \ref{fig:4} observem un esquema que il·lustra la problemàtica i els tres punts comentats on  l'\textit{idea clau} és respondre a la pregunta.
+A la figura \ref{fig:4} observem un esquema que il·lustra la problemàtica i els tres punts esmentats on  l'\textit{idea clau} és respondre la pregunta.
 \vspace{1mm}
 
-\textit{Com justifiquem que els criteris que fixem i definiran la funció són bons o és corresponen amb el desig del professorat ?} 
+\textit{Com justifiquem que els criteris que fixem i definiran la funció són bons o es corresponen amb el desig del professorat ?} 
  
 \vspace{1mm}
 En el nostre cas \textit{apostem} per un \textit{mix} entre el punt 2 i 3. Personalització limitada per restriccions, però adaptable a les \textit{particularitats} del Departament i les \textit{preferències}. La idea és facilitar una \textit{Biblioteca} de funcions per definir la funció final com a la suma d'una selecció d'aquestes.
@@ -433,7 +435,7 @@ F: I^o \longrightarrow \R \qquad \quad  \\
 a\longmapsto \displaystyle \sum_{i=1}^{k}f_i(a) \\
 \end{matrix}
 $$
-On cada $f_i$ representa un \textit{criteri matematitzat} que  valorar un aspecte concret. D'aquesta manera podem fer que la funció tingui en compte tants criteris com volguem i que el fet de \textit{suprimir-ne} un  o \textit{afegir-ne} un altre no impliqui definir de nou la funció.
+On cada $f_i$ representa un \textit{criteri matematitzat} que  valora un aspecte concret. D'aquesta manera podem fer que la funció tingui en compte tants criteris com vulguem i que el fet de \textit{suprimir-ne} un  o \textit{afegir-ne} un altre no impliqui definir de nou la funció.
 Això respon \textit{fortament} a {\color{violet!60}$\blacksquare$}$^{(05)}$.
 
 La pregunta ara doncs és, quina mena de funcions podem donar ? De fet aquesta pregunta és massa ambiciosa, però donem alguns del exemples de funcions que hem vist \textit{raonables} i \textit{interessants}, i a més poden facilitar la tasca. De fet d'ara en endavant ens referirem a un conjunt de \textbf{subfuncions} concretes com a \textbf{Biblioteca}.
@@ -449,17 +451,15 @@ La pregunta ara doncs és, quina mena de funcions podem donar ? De fet aquesta p
 		\textbf{Comentari (B:1):}& Aconseguir minimitzar el nombre d'assignatures que fa cada professor. Si volem ficar més pes només hem d'augmentar el grau del \textit{monomi}.\\
 		\hline
 	\end{tabular}
-   \vspace{3mm}
     \includegraphics[width=8.5cm]{asig_mf}
     \\ 
     {
     \textbf{Figura (B:1):} 
     {\footnotesize Gràfic de la funció $f_1(x)=x^3$.}}
-\vspace{3mm}
 \item 
 \begin{tabular}{|c|m{5cm}|}
 	\hline
-	\textbf{Criteri (B:2):}& Limitar el nombre d'hores de classe per dia.\\
+	\textbf{Criteri (B:2):}& Limitar el nombre d'hores  de classe per dia.\\
 	\hline
 	\textbf{Funció (B:2):}& \footnotesize $\begin{matrix} \\ f_2(x):=\left\lbrace 
 	\begin{matrix}
@@ -467,7 +467,7 @@ La pregunta ara doncs és, quina mena de funcions podem donar ? De fet aquesta p
 		0& \text{ si}& x\leq 500& \end{matrix}
 	\right.\\ \\ \end{matrix}$\\
 	\hline
-	\textbf{Comentari (B:2):}& La funció a trossos contínua penalitza \textit{fortament} qualsevol assignació que per faci que un docent hagi de fer més de 500 min de classe en un dia \\
+	\textbf{Comentari (B:2):}& La funció a trossos contínua penalitza \textit{fortament} qualsevol assignació que  faci que un docent hagi de fer més de 500 min de classe en un dia \\
 	\hline
 \end{tabular}
 \includegraphics[width=8.5cm]{timeday_mf}
@@ -479,57 +479,43 @@ La pregunta ara doncs és, quina mena de funcions podem donar ? De fet aquesta p
 			(x-500)^2 \text{ si } x>500\text{ ,} \\
 			0  \qquad \qquad \text{ si } x\leq 500\end{matrix}
 		\right.\\ $.}}
+
+
 \item \begin{tabular}{|c|m{50mm}|}
 	\hline
-	\textbf{Criteri (B:3):}& Moderar els saldos molt alts en valor absolut.\\
+	\textbf{Criteri (B:3):}& \\
 	\hline
-	\textbf{Funció (B:3):}& $\begin{matrix} \\ f_3(x)=x^2 \\ \\ \end{matrix}$ \\
+	\textbf{Funció (B:3):}& \\
 	\hline
-	\textbf{Comentari (B:3):}& Agafant la noció de \textit{saldo} del \textbf{model actual}. La idea és aconseguir que no hi hagi saldos molt \textit{grans} ja que d'aquesta forma aconseguim adequar les hores que ha de fer cada professor a la llarga. També evitem la acumulació de \textit{deutes} que a la llarga serien insalvables.\\
+	\textbf{Comentari (B:3):}& \\
 	\hline
 \end{tabular}
-    \includegraphics[width=8.5cm]{D_mf}
-    \\ 
-    {
-	\textbf{Figura (B:3):} 
-	{\footnotesize Gràfic de la funció $f_3(x)=x^2$.}}
-\\
-\includegraphics[width=8.5cm]{inter_mf} 
-{\textbf{Diagrama (B:4):} {\footnotesize Diagrama que il·lustra  la distància \textit{en temps} entre les hores de classe de diferents docents (cada color representa un docent) les fletxes (en el mateix color, diferent per cada docent) il·lustren la distància entre les assignatures que han de impartir  en diferents dies d'una setmana.}}
 \item \begin{tabular}{|c|m{50mm}|}
 	\hline
-	\textbf{Criteri (B:4):}& Temps entre classes \textit{desagradables} o \textit{inviables}\\
+	\textbf{Criteri (B:4):}& \\
 	\hline
-	\textbf{Funció (B:4):}& \footnotesize $\begin{matrix} \\ f_2(x):=\left\lbrace 
-	\begin{matrix}
-    x^2\\ x \\ ln(x)\end{matrix}
-	\right.\\ \\ \end{matrix}$\\
+	\textbf{Funció (B:4):}& \\
 	\hline
-	\textbf{Comentari (B:4):}& Aquest \textit{subfunció}  definida a trossos evita  temps \textit{inviables} entre classe com acabar una classe i començar la següent de forma \textit{instantània} (Aquest seria l'us \textit{ics} quadrat); o bé temps molt distants (Evitant així casos com tenir  únicament dues assignatures  en un mateix dia separades potser per 5 hores $\approx 300 \esp min$).\\
+	\textbf{Comentari (B:4):}& \\
 	\hline
 \end{tabular}
-\includegraphics[width=8.5cm]{interc_mf}
-\\ 
-{
-	\textbf{Figura (B:4):} 
-	{\footnotesize Gràfic de la funció $f_4(x)=...$.}} \nehh{On começa cada una}
-\\
 \end{itemize}
+
 \subsection{Optimització}
-Optimitzar aquesta funció resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \footnote{Altrament $ \approx 10^{1000}$}
+Optimitzar aquesta funció resulta un problema molt difícil, ja que tenim  $\approx 100^{500}$ opcions possibles. \footnote{Altrament $ \approx 10^{1000}$}
 Inicialment vam utilitzar \textit{Simulated Annealing} amb control de mínims locals per tal d'optimitzar 
 \begin{enumerate}
 	\item \textbf{Simulated Annealing:}
-	\item \textbf{Algoritmes genètics:}
-	\item \textbf{Altres algoritmes d'optimització:}
+	\item \textbf{algorismes genètics:}
+	\item \textbf{Altres algorismes d'optimització:}
 \end{enumerate}
 \nehh{Queda pendent acabar aquesta secció}
 \subsection{Limitacions del model}
 \subsection{Resultats del model}
 Els resultats més rellevants d'aquest model són:
 \begin{enumerate}
-	\item Possibilitar la cerca de \textbf{solucions factibles}\footnote{Enteses com a assignacions que complexen amb les \textbf{restriccions} imposades. }
-	\item Possibilitat de millorar optimització d'alguns aspectes del \textit{model actual}.
+	\item Possibilitar la cerca de \textbf{solucions factibles}\footnote{Enteses com a assignacions que compleixen amb les \textbf{restriccions} imposades. }
+	\item Possibilitat de millorar la optimització d'alguns aspectes del \textit{model actual}.
 \end{enumerate}
 Tal com podem veure en els gràfics de la figura [??] el model de la funció garanteix millors optimitzacions i a més ....
 
@@ -545,7 +531,7 @@ Tal com podem veure en els gràfics de la figura [??] el model de la funció gar
 \lettrine{E}n aquesta secció abordarem la problemàtica d'assignacions mitjançant l'estructura de subhasta, pensant, com en les seccions anteriors, en la seva aplicació final. La intenció  és construir un mètode sobre l'estructura de subhasta que permeti  donar solució al problema dels repartiments.
 \subsection{Problemàtiques i beneficis de les subhastes}
 Aquí va una part de Talloc
-\subsection{Un model minimalista, els \textit{Kiwis}}
+\subsection{Un primer model, els \textit{Kiwis}}
 \subsubsection{Repartiment kiwis}
 Per a tal de fer més justa la repartició d'assignatures i de premiar l'esforç del professorat i la qualitat de la seva feina, proposem un model de subhastes on la moneda de canvi, els kiwis, siguin repartits entre els pujadors de la següent manera:
 Cada professor parteix de 10 Kiwis.
@@ -591,7 +577,7 @@ Amb aquesta nova revalorització horària, es repartiran les matèries no assign
 	\caption{En aquesta figura veiem una icona del format d'arxiu \texttt{.eps}}
 	\label{fig:3}
 \end{figure}
-Aquí tenim un resum de les problemàtiques que ha de soluciona'l el model de subhasta que considerem construir 
+Aquí tenim un resum de les problemàtiques que ha de solucionar el model de subhasta que volem construir 
 \begin{tcolorbox}[colback=black!1,title=\textbf{Llista problemàtiques subhastes},coltitle=black,colbacktitle=black!10]
 \begin{enumerate}
 	\item Les subhastes seran \textbf{seqüencials} o \textbf{simultànies}? Ja que les simultànies  poden implicar un \textbf{bloqueig de moneda} i les seqüencials poden implicar la inviabilitat de les \textbf{sol·licituds condicionals} i \nehh{no recordo}, almenys \textit{ a priori}.
@@ -616,7 +602,7 @@ De forma constructiva, i aprofitant la subsecció prèvia, construirem un model 
 	\item Realitzem subhastes -> Eliminem assignacions que sobrepassin hores -> Realitzem subhastes -> ...
 \end{itemize}
 
-Algoritme
+algorisme
 \begin{enumerate}
 	\item Els professors entren totes les seves puges (que poden estar condicionades sobre altres pujes)
 	\item Executar totes les subhastes una rer l'altra. En cas de trobar un apuja condicionada sobre una subhasta que no s'ha executat es considera la puja com a bona i s'executa la subhasta com si fos una puja normal, depsrés es fa una anotació marcant que aquesta puja depén de els resultats futurs d'una altra subhasta futura. Quan l'altra subhasta s'executi, al obtenir els resultats es revisita la subhasta depenent i, en cas que la puja condicional ja no sigui vàlida, aquesta subhasta és tornar a executar ignorant la puja invalidada. Aquestes invalidacions es propaguen sobre totes les subhastes depenents.
@@ -665,7 +651,7 @@ Algoritme
 %                                                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
-	\section{Conclusions revalora}
+	\section{Conclusions reveladores}
 \end{tcolorbox}
 \end{enumerate}
 Dogmes de criteris
