@@ -571,34 +571,47 @@ Resumint aquestes podem observar la següent taula amb els resultats
 	\end{tabular}
 }
 \end{tcolorbox}
-\noindent \textbf{Taula 1:} \small{Suma del valor absolut dels saldos dels professors  i la seva variància, tant del \textit{model actual} (primera columna), com dels models d'optimització de $F$ tant amb \textit{Simulated annealing} (tercera columna) com amb \textit{algorismes genètics} (quarta columna)}
-	\begin{figure}[ht]
+\noindent \textbf{Taula 1:} \small{Suma del valor absolut dels saldos dels professors  i la seva variància, tant del \textit{model actual} (primera columna), com dels models d'optimització de $F$ tant amb \textit{Simulated annealing} (tercera columna) com amb \textit{algorismes genètics} (quarta columna).}
+\vspace{3mm}
+\normalsize
+Concloem doncs que els models resultat
+	\begin{figure}[!]
 		\centering
 		\includegraphics[width=9cm]{sorted_mo}
 		\caption{ \small Saldo \texttt{TOTAL}  del professorat en l'any 2018 amb ({\color{blue!70}$\blacksquare$}) \textit{model actual}  i ({\color{orange!70!red!90}$\blacksquare$}) \textit{model Optimització amb SA} (Simulated annealing). Cada columna representa el saldo d'un professor, les columnes han sigut ordenades de més petita a més gran tenint en compte el signe, respecte el \textit{model actual}. }
 		\label{fig:6}
 	\end{figure}
-	\begin{figure}[ht]
+	\begin{figure}[!]
 		\centering
 		\includegraphics[width=9cm]{sorted2_mo}
 		\caption{ \small Saldo \texttt{TOTAL}  del professorat en l'any 2018 amb ({\color{blue!70}$\blacksquare$}) \textit{model actual}  i ({\color{yellow!70!gray!90}$\blacksquare$}) \textit{model Optimització amb GA} (Algorismes genètics). Cada columna representa el saldo d'un professor, les columnes han sigut ordenades de més petita a més gran tenint en compte el signe, respecte el \textit{model actual}. }
 		\label{fig:64}
 	\end{figure}
-	\begin{figure}[ht]
+	\begin{figure}[!]
 		\centering
 		\includegraphics[width=9cm]{disp_sorted_sa}
 		\caption{ \small Nombre \textit{d'assignatures} que fa el professorat en l'any 2018 amb  ({\color{blue!70}$\blacksquare$}) \textit{model actual} i ({\color{orange!70!red!90}$\blacksquare$}) \textit{model Optimització amb SA} (Simulated annealing). Cada columna representa el nombre d'assignatures que fa un docent, les columnes han sigut ordenades de més petita a més gran tenint en compte el signe, respecte el \textit{model actual}. }
 		\label{fig:sor}
 	\end{figure}
-	\begin{figure}[ht]
+	\begin{figure}[!]
 		\centering
 		\includegraphics[width=9cm]{disp_sorted_ga}
 		\caption{ \small  Nombre \textit{d'assignatures} que fa el professorat en l'any 2018 amb  ({\color{blue!70}$\blacksquare$}) \textit{model actual} i ({\color{yellow!70!gray!90}$\blacksquare$}) \textit{model Optimització amb GA} (Algorismes genètics). Cada columna representa el nombre d'assignatures que fa un docent, les columnes han sigut ordenades de més petita a més gran tenint en compte el signe, respecte el \textit{model actual}. }
 		\label{fig:sorted_mo}
 	\end{figure}
+\newpage
 \subsection{Alguns detalls sobre el procés d'elaboració dels algoritmes genètics}
+\normalsize
 Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles solucions a bass de recombinar i mutar solucions ja existents. Aquests mecanismes abstractes, així com la codificació de la solució sobre la qual operen, admeten moltes possibles variacions, les quals s'han d'adaptar al problema per aconseguir el màxim rendiment.En la nostra implementació de l'algoritme genètic, hem optat per representar el fenotip (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a una assignatura diferent. La mutació es implemenlumna representasignció d'una assignatura aleatòria a un professor aleatori, per altra part la recombinació crea noves solucions a partir d'agafar dos solucions triades aleatoriameant entre les millors (la élit) i generant una nova solució que tingui part de les assignacions d'assigatures d'una i part de l'altra. Altres parametres, com la mida de la població, s'han triat 
 A més a més, el nostre algoritme utilitza elitisme, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=9cm]{progress_ga}
+	\caption{ \small  \nehh{Albert has de ficar coses aquí6}. }
+	\label{fio}
+\end{figure}
+
+
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
