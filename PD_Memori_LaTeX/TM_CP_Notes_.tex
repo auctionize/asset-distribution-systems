@@ -483,7 +483,7 @@ La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet 
 	\hline
 	\textbf{Funció (B:3):}& $\begin{matrix} \\ f_3(x)=x^2 \\ \\ \end{matrix}$ \\
 	\hline
-	\textbf{Comentari (B:3):}& Agafant la noció de \textit{saldo} del \textbf{model actual}. La idea és aconseguir que no hi hagi saldos molt \textit{grans}, ja que d'aquesta forma aconseguim adequar les hores que ha de fer cada professor a la llarga. També evitem la acumulació de \textit{deutes} que a la llarga serien \textit{insalvables}.\\
+	\textbf{Comentari (B:3):}& Agafant la noció de \textit{saldo} del \textbf{model actual}. La idea és aconseguir que no hi hagi saldos molt \textit{grans}, ja que d'aquesta forma aconseguim adequar les hores que ha de fer cada professor o professora a la llarga. També evitem la acumulació de \textit{deutes} que a la llarga serien \textit{insalvables}.\\
 	\hline
 \end{tabular}
     \includegraphics[width=8.5cm]{D_mf}
@@ -498,22 +498,32 @@ La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet 
 	\hline
 	\textbf{Criteri (B:4):}& Temps entre classes \textit{desagradables} o \textit{inviables}.\\
 	\hline
-	\textbf{Funció (B:4):}& \footnotesize$
-	 f_4(x):= \begin{cases}
-    \left(2\cdot(15-x)\right)^2& \text{ si } 0 \leq x \leq 15 \\
-     x-15&   \text{ si } 15 \leq x \leq 300\\
-      ln(x-1) \end{cases}
-	\right.$\\ 
+	\textbf{Funció (B:4):}& \footnotesize
+	 $\esp$
+	 
+	 $f_4(x):=$
+	 
+	 $\esp$
+	 
+	 
+	$\begin{cases}
+    \left(2\cdot(15-x)\right)^2 &\text{ si } 0 \leq x \leq 15 \\
+     x-15 &\text{ si } 15 \leq x \leq 300\\
+     30\log{\left(\cfrac{x}{300}\right)}+285 &\text{ si } 300 \leq x \\ 
+      \end{cases}$
+      
+      $\esp$
+	\\ 
 \hline
-	\textbf{Comentari (B:4):}& Aquest \textit{subfunció}  definida a trossos evita  temps \textit{inviables} entre classe com acabar una classe i començar la següent de forma \textit{instantània} (Aquest seria l'us \textit{ics} quadrat); o bé temps molt distants (Evitant així casos com tenir  únicament dues assignatures  en un mateix dia separades potser per 5 hores $\approx 300 \esp min$).\\
+	\textbf{Comentari (B:4):}& Aquest \textit{subfunció}  definida a trossos evita  temps \textit{inviables} entre classe. Com per exemple: acabar una classe i començar la següent de forma \textit{instantània} (Aquest seria l'us \textit{ics} quadrat); o bé temps molt distants (Evitant així casos com tenir  únicament dues assignatures  en un mateix dia separades potser per 5 hores $\approx 300 \esp min$).\\
 	\hline
 \end{tabular}
 \includegraphics[width=8.5cm]{interc_mf}
 \\ 
 {
 	\textbf{Figura (B:4):} 
-	{\footnotesize Gràfic de la funció $f_4(x)=...$.}} \nehh{On começa cada una}
-\\
+	{\footnotesize Gràfic de la funció $f_4(x)$ definida a trossos.
+		}}
 \end{itemize}
 \subsection{Optimització}
 Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \textbf{alternatives} \footnote{Altrament $ \approx 10^{1000}$.} Inicialment vam utilitzar \textit{Simulated Annealing} (Algorisme d'Optimització apropiat per a grans \textbf{espais de cerca} ) amb control de mínims locals per tal d'optimitzar  la funció $F$ en un temps \textit{raonable}. Però, donada la \textit{filosofia} del treball, vam voler  optimitzar la \textbf{funció objectiu} de forma pròpia mitjançant selecció d'algoritmes genètics.   
@@ -535,26 +545,26 @@ Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100
 \subsection{Limitacions del model}
 És clar que en primera instancia una estratègia prou pràctica com els \textit{algorismes} per optimitzar el model es podria tirar per terra argumentant que cap d'aquest mètodes (\textit{simulated annealing} i \textit{Algorismes genètics}) podran trobar el mínim absolut de la funció a optimitzar $F$. 
 
-Tot i que no és la \textit{filosofia del treball}. Això no ens resulta problemàtic, ja que només ens cal que la \textbf{solució} sigui \textit{bona}, entenent com a bon que sigui: \textbf{factible} , que consumeixi un temps \textit{raonable} en ser trobada i que sigui \textit{substancialment millor} que la del \textbf{model actual}. I això és pot comprovar amb fàcilment com farem en la subsecció de 3.5 Resultats
+Un argument així no \textit{correspon} amb la \textit{filosofia del treball}. Això no ens resulta problemàtic, ja que només ens cal que la \textbf{solució} sigui \textit{bona}, entenent com a bon que sigui: \textbf{factible} , que consumeixi un temps \textit{raonable} en ser trobada i que sigui \textit{substancialment millor} que la del \textbf{model actual}. I això és pot comprovar fàcilment com farem en la subsecció de 3.5 Resultats.
 
-De fet només hem donat una \textit{definició constructiva}, és a dir, hem donat una \textit{idea} de com construir $F$ però no l'hem explicitat ja que la \textit{màgia} d'aquesta és que es pugui adaptar a restriccions i criteris diferents. Cosa que respon a  {\color{green!60}$\blacksquare$}$^{(03)}$ {\color{cyan!60}$\blacksquare$}$^{(01)}${\color{violet!60}$\blacksquare$}$^{(05)}$.
+De fet només hem donat una \textit{definició constructiva}, és a dir, hem donat una \textit{idea} de com construir $F$, però no l'hem explicitat ja que la \textit{màgia} d'aquesta és que es pugui adaptar a restriccions i criteris diferents. Cosa que respon \textit{fortament} a  {\color{green!60}$\blacksquare$}$^{(03)}$, {\color{cyan!60}$\blacksquare$}$^{(01)}$ i {\color{violet!60}$\blacksquare$}$^{(05)}$.
 \subsection{Resultats del model}
 Els resultats més rellevants d'aquest model són:
 \begin{enumerate}
 	\item Possibilitar la cerca de \textbf{solucions factibles}\footnote{Enteses com a assignacions que compleixen amb les \textbf{restriccions} imposades. }
-	\item Possibilitat de millorar optimització d'alguns aspectes del \textit{model actual}.
+	\item Possibilitat de millorar optimització d'alguns aspectes del \textbf{model actual}.
 \end{enumerate}
 Comparant aquest model, \textbf{model d'investigacions operatives}, amb el \textbf{model actual} agafant com a \textbf{funció objectiu} :
 $$
 F=\sum_{i=1}^{2}(f_i)(a) 
 $$
 $$\text{ amb } \qquad f_1(a)=\sum_{j=1}^{111} (x_j-x'_j)^2 \qquad \text{ i }$$  
-on $x_j$ serien les hores de classe que hauria de fer un professor $j \in \{1,\cdots,111\}$ i $x_j'$ les hores que farà amb l'assignació $a$ el professor $j \in \{1,\cdots,111\}$.
+on $x_j$ serien les hores de classe que hauria de fer un professora o professor $j \in \{1,\cdots,111\}$ i $x_j'$ les hores que farà amb l'assignació $a$ el professor $j \in \{1,\cdots,111\}$.
 $$\text{ amb }  \qquad f_2(a)=\sum_{j=1}^{111} (y_j)^3$$
 on $y_j$ serien el nombre de matèries docents que hauria de fer un professor $j \in \{1,\cdots,111\}$   amb \textbf{alternativa} $a$. 
 
 Això seria el que actualment s'intenta minimitzar. Programant en Python (amb els dos algorismes per \textit{minimitzar}) obtenim els resultats que es veuen en les figures 4 i 5 (per el saldo); i 6 i 7 (pel nombre d'assignatures).
-Resumint aquestes podem observar la següent taula amb els resultats
+Resumint aquestes podem observar Taula 1. 
 \vspace{3mm}
 
 \begin{tcolorbox}[colback=white,coltitle=black,colframe=white, colback=white]
@@ -573,8 +583,9 @@ Resumint aquestes podem observar la següent taula amb els resultats
 \end{tcolorbox}
 \noindent \textbf{Taula 1:} \small{Suma del valor absolut dels saldos dels professors  i la seva variància, tant del \textit{model actual} (primera columna), com dels models d'optimització de $F$ tant amb \textit{Simulated annealing} (tercera columna) com amb \textit{algorismes genètics} (quarta columna).}
 \vspace{3mm}
+
 \normalsize
-Concloem doncs que els models resultat
+Concloem doncs que els models resultat donen una \textbf{solució bona}. És milloren els resultats del \textbf{model actual}.
 	\begin{figure}[!]
 		\centering
 		\includegraphics[width=9cm]{sorted_mo}
