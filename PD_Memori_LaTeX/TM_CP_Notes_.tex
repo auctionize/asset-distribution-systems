@@ -552,19 +552,53 @@ $$\text{ amb } \qquad f_1(a)=\sum_{j=1}^{111} (x_j-x'_j)^2 \qquad \text{ i }$$
 on $x_j$ serien les hores de classe que hauria de fer un professor $j \in \{1,\cdots,111\}$ i $x_j'$ les hores que farà amb l'assignació $a$ el professor $j \in \{1,\cdots,111\}$.
 $$\text{ amb }  \qquad f_2(a)=\sum_{j=1}^{111} (y_j)^3$$
 on $y_j$ serien el nombre de matèries docents que hauria de fer un professor $j \in \{1,\cdots,111\}$   amb \textbf{alternativa} $a$. 
-\begin{figure}
-	\centering
-	\includegraphics[width=9cm]{sorted_mo}
-	\caption{Saldo \texttt{TOTAL}  \textit{ordenat} del professorat any 2018 amb \textit{model actual} {\color{blue!70}$\blacksquare$} i \textit{model optimització} {\color{orange!70!red!90}$\blacksquare$}. Cada columna representa el saldo d'un professor, les columnes han sigut ordenades de més petita a més gran tenint en compte el signe, respecte el \textit{model actual}. }
-	\label{fig:6}
-\end{figure}
-Això seria el que actualment s'intenta minimitzar. Programant en Python obtenim els resultats que es veuen en les figures 4 i 5.
 
-Tal com podem veure en els gràfics de la figura [??] el model de la funció garanteix millors optimitzacions i a més ....
+Això seria el que actualment s'intenta minimitzar. Programant en Python (amb els dos algorismes per \textit{minimitzar}) obtenim els resultats que es veuen en les figures 4 i 5 (per el saldo); i 6 i 7 (pel nombre d'assignatures).
+Resumint aquestes podem observar la següent taula amb els resultats
+\vspace{3mm}
 
-Per tant podem concloure que 
+\begin{tcolorbox}[colback=white,coltitle=black,colframe=white, colback=white]
+{\centering
+	\small
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+     \textbf{Model}&\textbf{actual}&\textbf{$F$+(SA)}&\textbf{$F$+(GA)}\\
+     \hline
+     Variància&737'0676&14'7221&124'70397\\
+     \hline
+     Suma absoluta&2498&1156&1461\\
+     \hline
+	\end{tabular}
+}
+\end{tcolorbox}
+\noindent \textbf{Taula 1:} \small{Suma del valor absolut dels saldos dels professors  i la seva variància, tant del \textit{model actual} (primera columna), com dels models d'optimització de $F$ tant amb \textit{Simulated annealing} (tercera columna) com amb \textit{algorismes genètics} (quarta columna)}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=9cm]{sorted_mo}
+		\caption{ \small Saldo \texttt{TOTAL}  del professorat en l'any 2018 amb ({\color{blue!70}$\blacksquare$}) \textit{model actual}  i ({\color{orange!70!red!90}$\blacksquare$}) \textit{model Optimització amb SA} (Simulated annealing). Cada columna representa el saldo d'un professor, les columnes han sigut ordenades de més petita a més gran tenint en compte el signe, respecte el \textit{model actual}. }
+		\label{fig:6}
+	\end{figure}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=9cm]{sorted2_mo}
+		\caption{ \small Saldo \texttt{TOTAL}  del professorat en l'any 2018 amb ({\color{blue!70}$\blacksquare$}) \textit{model actual}  i ({\color{yellow!70!gray!90}$\blacksquare$}) \textit{model Optimització amb GA} (Algorismes genètics). Cada columna representa el saldo d'un professor, les columnes han sigut ordenades de més petita a més gran tenint en compte el signe, respecte el \textit{model actual}. }
+		\label{fig:64}
+	\end{figure}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=9cm]{disp_sorted_sa}
+		\caption{ \small Nombre \textit{d'assignatures} que fa el professorat en l'any 2018 amb  ({\color{blue!70}$\blacksquare$}) \textit{model actual} i ({\color{orange!70!red!90}$\blacksquare$}) \textit{model Optimització amb SA} (Simulated annealing). Cada columna representa el nombre d'assignatures que fa un docent, les columnes han sigut ordenades de més petita a més gran tenint en compte el signe, respecte el \textit{model actual}. }
+		\label{fig:sor}
+	\end{figure}
+	\begin{figure}[r]
+		\centering
+		\includegraphics[width=9cm]{disp_sorted_ga}
+		\caption{ \small  Nombre \textit{d'assignatures} que fa el professorat en l'any 2018 amb  ({\color{blue!70}$\blacksquare$}) \textit{model actual} i ({\color{yellow!70!gray!90}$\blacksquare$}) \textit{model Optimització amb GA} (Algorismes genètics). Cada columna representa el nombre d'assignatures que fa un docent, les columnes han sigut ordenades de més petita a més gran tenint en compte el signe, respecte el \textit{model actual}. }
+		\label{fig:sorted_mo}
+	\end{figure}
 \subsection{Alguns detalls sobre el procés d'elaboració dels algoritmes genètics}
-Com hem explicat 
+ 
+\newpage
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
