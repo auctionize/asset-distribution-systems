@@ -621,7 +621,7 @@ Concloem doncs que els models d'optimització donen una \textbf{solució bona}. 
 \newpage
 \subsection{Alguns detalls sobre el procés d'elaboració dels algoritmes genètics}
 \normalsize
-Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles \textbf{solucions} a base de recombinar i mutar solucions ja existents. Aquests mecanismes abstractes, així com la codificació de la solució sobre la qual operen, admeten moltes possibles variacions, les quals s'han d'adaptar al problema per aconseguir el \textit{màxim rendiment}.
+Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles \textbf{solucions} a base de recombinar i mutar solucions ja existents\cite{ga}. Aquests mecanismes abstractes, així com la codificació de la solució sobre la qual operen, admeten moltes possibles variacions, les quals s'han d'adaptar al problema per aconseguir el \textit{màxim rendiment}.
 
 En la nostra implementació dels algoritmes genètics, hem optat per representar el fenotip (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a cada assignatura diferent. La mutació es implementada com una assignació d'una assignatura aleatòria a un professor aleatori; per altra part la recombinació crea noves solucions a partir de dos solucions triades aleatoriameant entre les millors (la élit), generant una nova solució que tingui part de les assignacions d'assigatures d'una i part de l'altra. Altres parametres, com la mida de la població, la probabilitat de recombinació o la de mutació, s'han triat de forme empírica a base d'executar l'algorisme i buscar les constants que donaven els millors resultats.
 
@@ -832,7 +832,7 @@ Algorisme
 %                                                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
-	\section{Conclusions reveladores}
+	\section{Conclusions}
 \end{tcolorbox}
 \end{enumerate}
 Dogmes de criteris
