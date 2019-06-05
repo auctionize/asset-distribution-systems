@@ -585,7 +585,7 @@ Resumint aquestes podem observar Taula 1.
 \vspace{3mm}
 
 \normalsize
-Concloem doncs que els models resultat donen una \textbf{solució bona}. És milloren els resultats del \textbf{model actual}.
+Concloem doncs que els models d'optimització donen una \textbf{solució bona}. Es milloren els resultats del \textbf{model actual}.
 	\begin{figure}[!]
 		\centering
 		\includegraphics[width=9cm]{sorted_mo}
@@ -620,7 +620,7 @@ A més a més, el nostre algoritme utilitza elitisme, de manera que les millors 
 Comparant els resultats obtinguts en l'optimització en que hem utilitzat Simulated Annealing i en la d'Algoritmes Genètics, és trivial veure que els resultats de SA són molt millors, ja que s'assoleixen assignacions amb diferències d'hores més ben distribuïdes. Aixó és així perque hem executat els algoritmes durant poc temps (menys de 20 minuts) i el fet que les iteracions en GA són molt més lentes ha portat a que no s'aconseguís arribar a un mínim local.
 Creeiem que en d'executar l'algoritme durant períodes de temps més llargs, les capacitats per evitar mínims locals dels GAs mitjançant l'especiació portaran a una millora de resultats respecte al SA, ja que l'exploració realitzada pel GA cobrirà molt més espai.
 
-\begin{figure}[ht]
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=9cm]{progress_ga}
 	\caption{ \small  \nehh{Albert has de ficar coses aquí6}. }
@@ -634,6 +634,9 @@ Creeiem que en d'executar l'algoritme durant períodes de temps més llargs, les
 \end{figure}
 \subsection{Revalorització d'assignatures}
 
+\newpage
+$$
+$$
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -647,6 +650,12 @@ Creeiem que en d'executar l'algoritme durant períodes de temps més llargs, les
 \lettrine{E}n aquesta secció abordarem la problemàtica d'assignacions mitjançant l'estructura de subhasta, pensant, com en les seccions anteriors, en la seva aplicació final. La intenció  és construir un mètode sobre l'estructura de subhasta que permeti  donar solució al problema dels repartiments.
 \subsection{Problemàtiques i beneficis de les subhastes}
 Aquí va una part de Talloc
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=9cm]{subs}
+	\caption{ \footnotesize farem en la subsecció 3.5 ( resultats del model).}
+	\label{fig:4}
+\end{figure}
 \subsection{Un model minimalista, els \textit{Kiwis}}
 \subsubsection{Repartiment kiwis}
 Per a tal de fer més justa la repartició d'assignatures i de premiar l'esforç del professorat i la qualitat de la seva feina, proposem un model de subhastes on la moneda de canvi, els kiwis, siguin repartits entre els pujadors de la següent manera:
