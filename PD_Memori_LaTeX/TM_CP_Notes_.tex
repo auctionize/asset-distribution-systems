@@ -611,6 +611,10 @@ Concloem doncs que els models d'optimització donen una \textbf{solució bona}. 
 \normalsize
 Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles \textbf{solucions} a base de recombinar i mutar solucions ja existents. Aquests mecanismes abstractes, així com la codificació de la solució sobre la qual operen, admeten moltes possibles variacions, les quals s'han d'adaptar al problema per aconseguir el \textit{màxim rendiment}.
 
+En la nostra implementació dels algoritmes genètics, hem optat per representar el fenotip (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a cada assignatura diferent. La mutació es implementada com una assignació d'una assignatura aleatòria a un professor aleatori; per altra part la recombinació crea noves solucions a partir de dos solucions triades aleatoriameant entre les millors (la élit), generant una nova solució que tingui part de les assignacions d'assigatures d'una i part de l'altra. Altres parametres, com la mida de la població, la probabilitat de recombinació o la de mutació, s'han triat de forme empírica a base d'executar l'algorisme i buscar les constants que donaven els millors resultats.
+
+A més a més, el nostre algoritme utilitza elitisme, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que noves generacions sempre millorin la funció de cost.
+
 En la nostra implementació dels algoritmes genètics, hem optat per representar el \textbf{fenotip} (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a cada assignatura diferent. La \textbf{mutació} es implementada com una assignació d'una assignatura aleatòria a un professor aleatori; per altra part la recombinació crea noves solucions a partir de dos solucions triades aleatoriameant entre les millors (la \textbf{élit}), generant una nova solució que tingui part de les assignacions d'assigatures d'una i part de l'altra. Altres paràmetres, com la mida de la població, la probabilitat de recombinació o la de mutació, s'han triat de forme empírica a base d'executar l'algorisme i buscar les constants que donaven els millors resultats.
 
 A més a més, el nostre algoritme utilitza \textit{elitisme}, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que noves generacions sempre millorin la funció de cost.
@@ -632,11 +636,33 @@ Creiem que en d'executar l'algoritme durant períodes de temps més llargs, les 
 	\label{firo}
 \end{figure}
 \subsection{Revalorització d'assignatures}
+Durant l'optimització, els models actuals ja revaloritzen les assignatures de forma íntrinseca per tal d'aconseguir que la satisfacció de tots els professors sigui màxima. No obstant, ens interessa obtenir una valorització explícita, ja que aquest es un dels requísits que ha de complir el model d'acord amb l'enunciat del treball.
+
+Per tal d'obtenir aquesta valoració, intentarem extreure aquesta valoració íntrinsica que es realitza durant l'optimització basant-nos en una comparació entre l'avaluació de l'estat actual d'un professor i el de la resta de professors.
+
+Així doncs, començarem separant l'avaluació de l'estat d'un professor del de la resta en la funció d'avaluació de una assignació. Això ho podem fer perque totes les funcions que formen part d'aquesta funció d'avaluació, que realment és un sumatori de les primeres funcions, són independents entre elles i s'apliquen sobre només un professor. D'aquesta manera, dividim la funció d'avaluació:
+$$F(a)= \displaystyle \sum_{p\in professors} \sum_{f_i\in funcions} f_i(p) = $$
+$$= \displaystyle \sum_{p\in professors} f(p)$$
+On és trivial observar que:
+$$f(p)=\sum_{i\in funcions} f_i(p)$$
+
+A partir d'aquí podem aplicar $f$ sobre l'estat de tots els professors i obtenir la mitja $\mu$ i la desviació típica $\sigma$ de la distribució d'aquests valors. 
+
+A continuació calculem els següents valors, que ens permeten obtenir una aproximació de com de bo és l'estat d'un professor respecte la resta. A més, al dividir per sigma, obtenim un valor adimensional que rectifica les unitats que estiguem utilitzant (de manera que utilitzar unitats amb valors molt grans o molt petits no afectarà funcionalment el resultat final) i ens normalitza el resultat respecte a la variancia de les dades, de manera que un resultat podrà ser molt alt només si es extremadament diferent a la resta de dades.
+
+$$\phi(p)=\dfrac{f(p)-\mu}{\sigma}$$
+
+Finalment, revaloritzem les assignatures amb el següent càlcul:
+
+$$h_{nou_a}=h_{vell_a}(1+\phi(p)\alpha) \forall a \in A_p$$
+
+on $A_p$ és el conjunt d'assignatures realitzades pel professor $p$, i $\alpha$ és un paràmetre constant modificable que serveix per a modificar la intensitat de la revalorització per tal que s'adapti al funcionament esperat pels usuaris.
+
 
 \newpage
 $$
+\esp
 $$
-
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
