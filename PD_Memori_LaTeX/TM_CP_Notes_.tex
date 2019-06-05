@@ -384,7 +384,7 @@ Fins ara s'utilitzava una mesura no definida basada en el \textit{coneixement im
 
 $$F: I^o \longrightarrow \R$$
 
-tal que com \textit{més baix} sigui $F(a) \in \R$ (donat $a \in I^o$) millor serà l'alternativa $a$.
+tal que com \textit{més baix} sigui $F(a)$ (donat $a \in I^o$) millor serà l'alternativa $a$.
 
 Un cop haguem trobat una funció que compleixi això, trobar una alternativa bona passarà a ser un problema d'optimització, el qual tractarem amb una filosofia \textbf{heurística} a la secció 3.2 (Optimització).
 
@@ -406,7 +406,7 @@ Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que 
 \begin{enumerate}
 	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  d'alternatives prèvies, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la \textbf{funció implícita} que es va utilitzar per \textit{avaluar} les \textbf{alternatives}. És a dir, buscar, utilitzant aproximacions de funcions, una funció sobre les \textbf{dades base} \footnote{De nou aquestes estarien basades en l'historial recuperable, d'almenys,cinc anys enrere.} tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una \textbf{alternativa} el més semblant possible a la solució que es va utilitzar aquell any. 
 	\item \textbf{Obtenció de dades mitjançant enquesta} preguntant als professors directament què valoren més i creant una funció de forma artesanal basant-nos en els resultats.
-	\item \textbf{Funcions personalitzables} a nivell individual per cada professor. A partir d'aquestes funcions individuals podem crear una funció global que estigui formada per un sumatori d'aquestes funcions tal que al optimitzar aquesta funció global estarem optimitzant les funcions individuals en conjunt. Això a la pràctica és pot traduir en contemplar tots els criteris a la vegada i en cas de que un criteri estigues més present augmentar-ne el \textit{pes} en la \textbf{funció objectiu} $F$ per a cada professor.
+	\item \textbf{Funcions personalitzables} a nivell individual per cada professor. A partir d'aquestes funcions individuals podem crear una funció global que estigui formada per un sumatori d'aquestes funcions tal que al optimitzar aquesta funció global estarem optimitzant les funcions individuals en conjunt. Això a la pràctica és pot traduir en contemplar tots els criteris a la vegada i en cas de que un criteri estigues més present augmentar-ne el \textit{pes} en la \textbf{funció objectiu} $F$.
 \end{enumerate} 
 \begin{figure}
 	\centering
@@ -490,7 +490,7 @@ La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet 
     \\ 
     {
 	\textbf{Figura (B:3):} 
-	{\footnotesize Graaaàfic de la funció $f_3(x)=x^2$.}}
+	{\footnotesize Gràfic de la funció $f_3(x)=x^2$.}}
 \\
 \includegraphics[width=8.5cm]{inter_mf} 
 {\textbf{Diagrama (B:4):} {\footnotesize Diagrama que il·lustra  la distància \textit{en temps} entre les hores de classe de diferents docents (cada color representa un docent) on les fletxes (en el mateix color, diferent per cada docent) il·lustren la distància entre les assignatures que han d'impartir  en diferents dies d'una setmana.}}
@@ -535,16 +535,16 @@ Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100
 \subsection{Limitacions del model}
 És clar que en primera instancia una estratègia prou pràctica com els \textit{algorismes} per optimitzar el model es podria tirar per terra argumentant que cap d'aquest mètodes (\textit{simulated annealing} i \textit{Algorismes genètics}) podran trobar el mínim absolut de la funció a optimitzar $F$. 
 
-Tot i que no és la \textit{filosofia del treball}. Això no ens resulta problemàtic, ja que només ens cal que la \textbf{solució} sigui \textit{bona}, entenent com a bon que sigui: \textbf{factible} , que consumeixi un temps \textit{raonable} en ser trobada i que sigui \textit{substancialment millor} que la del \textbf{model actual}. I això és pot comprovar fàcilment com veurem en la subsecció 3.5 Resultats.
+Tot i que no és la \textit{filosofia del treball}. Això no ens resulta problemàtic, ja que només ens cal que la \textbf{solució} sigui \textit{bona}, entenent com a bon que sigui: \textbf{factible} , que consumeixi un temps \textit{raonable} en ser trobada i que sigui \textit{substancialment millor} que la del \textbf{model actual}. I això és pot comprovar amb fàcilment com farem en la subsecció de 3.5 Resultats
 
-De fet només hem donat una \textit{definició constructiva}, és a dir, hem donat una \textit{idea} de com construir $F$ però no l'hem explicitat, ja que la \textit{màgia} d'aquesta és que es pugui adaptar a restriccions i criteris diferents. Cosa que respon a  {\color{green!60}$\blacksquare$}$^{(03)}$ {\color{cyan!60}$\blacksquare$}$^{(01)}${\color{violet!60}$\blacksquare$}$^{(05)}$.
+De fet només hem donat una \textit{definició constructiva}, és a dir, hem donat una \textit{idea} de com construir $F$ però no l'hem explicitat ja que la \textit{màgia} d'aquesta és que es pugui adaptar a restriccions i criteris diferents. Cosa que respon a  {\color{green!60}$\blacksquare$}$^{(03)}$ {\color{cyan!60}$\blacksquare$}$^{(01)}${\color{violet!60}$\blacksquare$}$^{(05)}$.
 \subsection{Resultats del model}
-Els resultats més rellevants d'aquest model/ mètode són:
+Els resultats més rellevants d'aquest model són:
 \begin{enumerate}
 	\item Possibilitar la cerca de \textbf{solucions factibles}\footnote{Enteses com a assignacions que compleixen amb les \textbf{restriccions} imposades. }
 	\item Possibilitat de millorar optimització d'alguns aspectes del \textit{model actual}.
 \end{enumerate}
-Comprant aquest model, \textbf{model d'investigacions operatives}, amb el \textbf{model actual} agafant com a \textbf{funció objectiu} :
+Comparant aquest model, \textbf{model d'investigacions operatives}, amb el \textbf{model actual} agafant com a \textbf{funció objectiu} :
 $$
 F=\sum_{i=1}^{2}(f_i)(a) 
 $$
@@ -597,8 +597,8 @@ Resumint aquestes podem observar la següent taula amb els resultats
 		\label{fig:sorted_mo}
 	\end{figure}
 \subsection{Alguns detalls sobre el procés d'elaboració dels algoritmes genètics}
- 
-\newpage
+Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles solucions a bass de recombinar i mutar solucions ja existents. Aquests mecanismes abstractes, així com la codificació de la solució sobre la qual operen, admeten moltes possibles variacions, les quals s'han d'adaptar al problema per aconseguir el màxim rendiment.En la nostra implementació de l'algoritme genètic, hem optat per representar el fenotip (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a una assignatura diferent. La mutació es implemenlumna representasignció d'una assignatura aleatòria a un professor aleatori, per altra part la recombinació crea noves solucions a partir d'agafar dos solucions triades aleatoriameant entre les millors (la élit) i generant una nova solució que tingui part de les assignacions d'assigatures d'una i part de l'altra. Altres parametres, com la mida de la població, s'han triat 
+A més a més, el nostre algoritme utilitza elitisme, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
@@ -611,12 +611,6 @@ Resumint aquestes podem observar la següent taula amb els resultats
 \lettrine{E}n aquesta secció abordarem la problemàtica d'assignacions mitjançant l'estructura de subhasta, pensant, com en les seccions anteriors, en la seva aplicació final. La intenció  és construir un mètode sobre l'estructura de subhasta que permeti  donar solució al problema dels repartiments.
 \subsection{Problemàtiques i beneficis de les subhastes}
 Aquí va una part de Talloc
-\begin{figure}
-	\centering
-	\includegraphics[width=10.7cm]{subs}
-	\caption{ \footnotesize Esquema que il·lustra les diferents \textit{vies} que és podrien considerar a l'hora de concretar aquesta funció $F$ que valores \textit{com de bona}  és una assignació d'assignatures entre el professorat. El \textit{hexàgon irregular}   (en un color més clar) representa un algoritme d'optimització concret. Simulated annealing, o de forma abreujada (SA), té origen en l'industria metal·lúrgica i està pensat per buscar \textbf{solucions optimes} en \textit{espais de cerca} grans. La seva presencia és \textit{oportunista} però no compromet la idea general ja que podríem encaixar, en el mateix esquema, qualsevol altre algorisme d'optimització, cosa que farem en la subsecció 3.5 ( resultats del model).}
-	\label{fig:4}
-\end{figure}
 \subsection{Un model minimalista, els \textit{Kiwis}}
 \subsubsection{Repartiment kiwis}
 Per a tal de fer més justa la repartició d'assignatures i de premiar l'esforç del professorat i la qualitat de la seva feina, proposem un model de subhastes on la moneda de canvi, els kiwis, siguin repartits entre els pujadors de la següent manera:
@@ -676,6 +670,7 @@ Amb aquesta nova revalorització horària, es repartiran les matèries no assign
 \subsection{Subhastes condicionals i n-dimensionals}
 \subsubsection{Problemàtiques de les  subhastes}
 \begin{figure}
+	\centering
 	\includegraphics[width=4cm]{eps}
 	\caption{En aquesta figura veiem una icona del format d'arxiu \texttt{.eps}}
 	\label{fig:3}
