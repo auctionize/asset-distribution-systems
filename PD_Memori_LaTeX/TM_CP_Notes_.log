@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.23)  30 MAY 2019 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.23)  5 JUN 2019 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2173,6 +2173,12 @@ LaTeX Font Info:    Font shape `T1/erewhon-TLF/b/it' will be
 (Font)              scaled to size 10.0pt on input line 2.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
 (Font)              scaled to size 10.0pt on input line 7.
+
+Underfull \hbox (badness 2181) in paragraph at lines 16--16
+ [][] [][]\T1/erewhon-TLF/m/n/10 Alguns de-talls so-bre el pro-cés d'e-la-bo-ra
+-ció 
+ []
+
 )
 \tf@toc=\write8
 \openout8 = `TM_CP_Notes_.toc'.
@@ -2184,14 +2190,14 @@ LaTeX Font Info:    Font shape `T1/erewhon-TLF/b/it' will be
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/sc' will be
 (Font)              scaled to size 10.0pt on input line 183.
 
-Underfull \hbox (badness 5446) in paragraph at lines 183--185
-[][]\T1/erewhon-TLF/m/n/10 nades les dis-per-ses ide-às que hem ob-tin-gut al
+Underfull \hbox (badness 1112) in paragraph at lines 183--185
+\T1/erewhon-TLF/m/n/10 de tal for-ma que ca-da sec-ció tin-gui un cert grau
  []
 
 
-Underfull \hbox (badness 4168) in paragraph at lines 183--185
-\T1/erewhon-TLF/m/n/10 lec-tu-ra per-mu-ta-da de les sec-ci-ons re-co-ma-nem el
- or-dre
+Underfull \hbox (badness 1097) in paragraph at lines 183--185
+\T1/erewhon-TLF/m/n/10 Tot i po-der fer-se una lec-tu-ra per-mu-ta-da de les se
+c-ci-ons
  []
 
 
@@ -2237,18 +2243,6 @@ LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/n' will be
 Underfull \hbox (badness 1052) in paragraph at lines 213--214
 [][]$\U/msa/m/n/10 ^^D$[]$[]$[]\T1/erewhon-TLF/m/it/10 Un de-par-ta-ment d'u-na
  uni-ver-si-tat té di-fe-rents
- []
-
-
-Underfull \hbox (badness 5637) in paragraph at lines 226--227
-[]\T1/erewhon-TLF/m/n/10 El pro-ble-ma abs-trac-te con-sis-teix en una tas-ca d
-e
- []
-
-
-Underfull \hbox (badness 2865) in paragraph at lines 226--227
-\T1/erewhon-TLF/b/n/10 a re-par-tir \T1/erewhon-TLF/m/n/10 són les tas-ques do-
-cents que han de ser
  []
 
 
@@ -2308,20 +2302,20 @@ TLF.
 LaTeX Font Info:    Font shape `TS1/erewhon-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 289.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/b/it' will be
-(Font)              scaled to size 12.0pt on input line 317.
+(Font)              scaled to size 12.0pt on input line 315.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/b/sl' will be
-(Font)              scaled to size 10.0pt on input line 324.
+(Font)              scaled to size 10.0pt on input line 322.
  [3]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 334.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 332.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 339.
+(Font)              scaled to size 8.0pt on input line 337.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 347.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 345.
 Package epstopdf Info: Source file: <D_ma.eps>
 (epstopdf)                    date: 2019-05-11 22:07:59
 (epstopdf)                    size: 26430 bytes
@@ -2330,16 +2324,16 @@ Package epstopdf Info: Source file: <D_ma.eps>
 (epstopdf)                    size: 11033 bytes
 (epstopdf)             Command: <repstopdf --outfile=D_ma-eps-converted-to.pdf 
 D_ma.eps>
-(epstopdf)             \includegraphics on input line 354.
+(epstopdf)             \includegraphics on input line 352.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./D_ma-eps-converted-to.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<D_ma-eps-converted-to.pdf, id=199, 685.56125pt x 385.44pt>
+<D_ma-eps-converted-to.pdf, id=200, 685.56125pt x 385.44pt>
 File: D_ma-eps-converted-to.pdf Graphic file (type pdf)
 <use D_ma-eps-converted-to.pdf>
-Package pdftex.def Info: D_ma-eps-converted-to.pdf  used on input line 354.
+Package pdftex.def Info: D_ma-eps-converted-to.pdf  used on input line 352.
 (pdftex.def)             Requested size: 256.0748pt x 143.97504pt.
 Package epstopdf Info: Source file: <dis_ma.eps>
 (epstopdf)                    date: 2019-05-12 02:47:52
@@ -2349,18 +2343,23 @@ Package epstopdf Info: Source file: <dis_ma.eps>
 (epstopdf)                    size: 8562 bytes
 (epstopdf)             Command: <repstopdf --outfile=dis_ma-eps-converted-to.pd
 f dis_ma.eps>
-(epstopdf)             \includegraphics on input line 360.
+(epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./dis_ma-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<dis_ma-eps-converted-to.pdf, id=200, 455.7025pt x 255.95625pt>
+<dis_ma-eps-converted-to.pdf, id=201, 455.7025pt x 255.95625pt>
 File: dis_ma-eps-converted-to.pdf Graphic file (type pdf)
 <use dis_ma-eps-converted-to.pdf>
-Package pdftex.def Info: dis_ma-eps-converted-to.pdf  used on input line 360.
+Package pdftex.def Info: dis_ma-eps-converted-to.pdf  used on input line 358.
 (pdftex.def)             Requested size: 256.0748pt x 143.83443pt.
 [4 <./D_ma-eps-converted-to.pdf> <./dis_ma-eps-converted-to.pdf>] [5]
+Underfull \hbox (badness 3792) in paragraph at lines 407--407
+[][][]\T1/erewhon-TLF/m/n/8 De nou aques-tes es-ta-ri-en ba-sa-des en l'-his-to
+-ri-al re-cu-pe-ra-ble, d'al-
+ []
+
 Package epstopdf Info: Source file: <algor_bl.eps>
 (epstopdf)                    date: 2019-05-29 14:50:22
 (epstopdf)                    size: 40309 bytes
@@ -2369,22 +2368,22 @@ Package epstopdf Info: Source file: <algor_bl.eps>
 (epstopdf)                    size: 13551 bytes
 (epstopdf)             Command: <repstopdf --outfile=algor_bl-eps-converted-to.
 pdf algor_bl.eps>
-(epstopdf)             \includegraphics on input line 415.
+(epstopdf)             \includegraphics on input line 413.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./algor_bl-eps-converted-to.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<algor_bl-eps-converted-to.pdf, id=237, 552.0625pt x 552.0625pt>
+<algor_bl-eps-converted-to.pdf, id=239, 552.0625pt x 552.0625pt>
 File: algor_bl-eps-converted-to.pdf Graphic file (type pdf)
 <use algor_bl-eps-converted-to.pdf>
-Package pdftex.def Info: algor_bl-eps-converted-to.pdf  used on input line 415.
+Package pdftex.def Info: algor_bl-eps-converted-to.pdf  used on input line 413.
 
 (pdftex.def)             Requested size: 256.0748pt x 256.08304pt.
 LaTeX Font Info:    Font shape `TS1/erewhon-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 416.
+(Font)              scaled to size 8.0pt on input line 414.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 416.
+(Font)              scaled to size 8.0pt on input line 414.
 [6 <./algor_bl-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <asig_mf.eps>
 (epstopdf)                    date: 2019-05-23 12:14:24
@@ -2394,24 +2393,24 @@ Package epstopdf Info: Source file: <asig_mf.eps>
 (epstopdf)                    size: 12928 bytes
 (epstopdf)             Command: <repstopdf --outfile=asig_mf-eps-converted-to.p
 df asig_mf.eps>
-(epstopdf)             \includegraphics on input line 453.
+(epstopdf)             \includegraphics on input line 451.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./asig_mf-eps-converted-to.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<asig_mf-eps-converted-to.pdf, id=254, 433.62pt x 289.08pt>
+<asig_mf-eps-converted-to.pdf, id=255, 433.62pt x 289.08pt>
 File: asig_mf-eps-converted-to.pdf Graphic file (type pdf)
 <use asig_mf-eps-converted-to.pdf>
-Package pdftex.def Info: asig_mf-eps-converted-to.pdf  used on input line 453.
+Package pdftex.def Info: asig_mf-eps-converted-to.pdf  used on input line 451.
 (pdftex.def)             Requested size: 241.84842pt x 161.23528pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 443--460
+Underfull \hbox (badness 10000) in paragraph at lines 441--458
 [][]
  []
 
 
-Overfull \hbox (7.04614pt too wide) in paragraph at lines 464--469
+Overfull \hbox (7.04614pt too wide) in paragraph at lines 462--467
 []|$ [] $| 
  []
 
@@ -2423,21 +2422,26 @@ Package epstopdf Info: Source file: <timeday_mf.eps>
 (epstopdf)                    size: 12880 bytes
 (epstopdf)             Command: <repstopdf --outfile=timeday_mf-eps-converted-t
 o.pdf timeday_mf.eps>
-(epstopdf)             \includegraphics on input line 473.
+(epstopdf)             \includegraphics on input line 471.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./timeday_mf-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<timeday_mf-eps-converted-to.pdf, id=255, 433.62pt x 289.08pt>
+<timeday_mf-eps-converted-to.pdf, id=256, 433.62pt x 289.08pt>
 File: timeday_mf-eps-converted-to.pdf Graphic file (type pdf)
 <use timeday_mf-eps-converted-to.pdf>
 Package pdftex.def Info: timeday_mf-eps-converted-to.pdf  used on input line 47
-3.
+1.
 (pdftex.def)             Requested size: 241.84842pt x 161.23528pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 460--482
+Underfull \hbox (badness 10000) in paragraph at lines 458--480
 [][]
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 486--487
+\T1/erewhon-TLF/m/n/10 ja que d'a-ques-ta for-ma acon-se-
  []
 
 Package epstopdf Info: Source file: <D_mf.eps>
@@ -2448,44 +2452,42 @@ Package epstopdf Info: Source file: <D_mf.eps>
 (epstopdf)                    size: 11825 bytes
 (epstopdf)             Command: <repstopdf --outfile=D_mf-eps-converted-to.pdf 
 D_mf.eps>
-(epstopdf)             \includegraphics on input line 491.
+(epstopdf)             \includegraphics on input line 489.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./D_mf-eps-converted-to.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<D_mf-eps-converted-to.pdf, id=256, 433.62pt x 289.08pt>
+<D_mf-eps-converted-to.pdf, id=257, 433.62pt x 289.08pt>
 File: D_mf-eps-converted-to.pdf Graphic file (type pdf)
 <use D_mf-eps-converted-to.pdf>
-Package pdftex.def Info: D_mf-eps-converted-to.pdf  used on input line 491.
+Package pdftex.def Info: D_mf-eps-converted-to.pdf  used on input line 489.
 (pdftex.def)             Requested size: 241.84842pt x 161.23528pt.
-<inter_mf.png, id=257, 722.7pt x 426.393pt>
+<inter_mf.png, id=258, 722.7pt x 426.393pt>
 File: inter_mf.png Graphic file (type png)
 <use inter_mf.png>
-Package pdftex.def Info: inter_mf.png  used on input line 497.
+Package pdftex.def Info: inter_mf.png  used on input line 495.
 (pdftex.def)             Requested size: 241.84842pt x 142.688pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--499
+Underfull \hbox (badness 10000) in paragraph at lines 480--497
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--499
+Underfull \hbox (badness 10000) in paragraph at lines 480--497
 []
- []
-
-
-Underfull \hbox (badness 2384) in paragraph at lines 482--499
-\T1/erewhon-TLF/b/n/10 Di-a-gra-ma (B:4): \T1/erewhon-TLF/m/n/8 Di-a-gra-ma que
- il\TS1/erewhon-TLF/m/n/8 ·\T1/erewhon-TLF/m/n/8 lustra la dis-tàn-cia \T1/erew
-hon-TLF/m/it/8 en temps
  []
 
 [7 <./asig_mf-eps-converted-to.pdf> <./timeday_mf-eps-converted-to.pdf> <./D_mf
 -eps-converted-to.pdf> <./inter_mf.png>]
-Underfull \hbox (badness 2799) in paragraph at lines 501--502
+Underfull \hbox (badness 2799) in paragraph at lines 499--500
 []|\T1/erewhon-TLF/m/n/10 Temps en-tre clas-ses \T1/erewhon-TLF/m/it/10 des-a-g
 ra-da-
+ []
+
+
+Overfull \hbox (18.81853pt too wide) in paragraph at lines 501--507
+[]|$ [] $| 
  []
 
 
@@ -2510,10 +2512,10 @@ Underfull \hbox (badness 1400) in paragraph at lines 508--509
  []
 
 Package epstopdf Info: Source file: <interc_mf.eps>
-(epstopdf)                    date: 2019-05-23 12:14:41
+(epstopdf)                    date: 2019-06-05 14:53:00
 (epstopdf)                    size: 20737 bytes
 (epstopdf)             Output file: <interc_mf-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-05-30 12:10:56
+(epstopdf)                    date: 2019-06-05 14:53:00
 (epstopdf)                    size: 11783 bytes
 (epstopdf)             Command: <repstopdf --outfile=interc_mf-eps-converted-to
 .pdf interc_mf.eps>
@@ -2523,57 +2525,59 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./interc_mf-eps-converted-to.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<interc_mf-eps-converted-to.pdf, id=356, 433.62pt x 289.08pt>
+<interc_mf-eps-converted-to.pdf, id=358, 433.62pt x 289.08pt>
 File: interc_mf-eps-converted-to.pdf Graphic file (type pdf)
 <use interc_mf-eps-converted-to.pdf>
 Package pdftex.def Info: interc_mf-eps-converted-to.pdf  used on input line 511
 .
 (pdftex.def)             Requested size: 241.84842pt x 161.23528pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--517
+Underfull \hbox (badness 10000) in paragraph at lines 497--517
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--517
+Underfull \hbox (badness 10000) in paragraph at lines 497--517
 
  []
 
-[8 <./interc_mf-eps-converted-to.pdf>]
-<eps.png, id=399, 411.136pt x 411.136pt>
+LaTeX Font Info:    Font shape `TS1/erewhon-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 521.
+[8 <./interc_mf-eps-converted-to.pdf>] [9]
+<eps.png, id=414, 411.136pt x 411.136pt>
 File: eps.png Graphic file (type png)
 <use eps.png>
-Package pdftex.def Info: eps.png  used on input line 590.
+Package pdftex.def Info: eps.png  used on input line 622.
 (pdftex.def)             Requested size: 113.81102pt x 113.80614pt.
 LaTeX Font Info:    Font shape `TS1/erewhon-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 597.
+(Font)              scaled to size 10.0pt on input line 629.
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--599
+Underfull \hbox (badness 10000) in paragraph at lines 630--631
 []\T1/erewhon-TLF/m/n/10 Com as-sig-nem les as-sig-na-tu-res que no ha
  []
 
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 603.
+(Font)              scaled to size 7.0pt on input line 635.
 LaTeX Font Info:    Font shape `T1/erewhon-TLF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 603.
-[9 <./eps.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 626--628
+(Font)              scaled to size 6.0pt on input line 635.
+[10 <./eps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 658--660
 
  []
 
-[10]
-Underfull \hbox (badness 2035) in paragraph at lines 642--645
+
+Underfull \hbox (badness 2035) in paragraph at lines 674--677
 []\T1/erewhon-TLF/m/n/10 L'assignació de les as-sig-na-tu-res en-tre el pro-fes
 -
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 642--645
+Underfull \hbox (badness 1478) in paragraph at lines 674--677
 \T1/erewhon-TLF/m/n/10 so-rat s'-hau-ria d'a-cos-tar el mà-xim pos-si-ble a les
 
  []
 
-(./TM_CP_Notes_.bbl
+[11] (./TM_CP_Notes_.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 11--16
 []\T1/erewhon-TLF/m/n/8 D. au-tors, ``> el de-par-ta-ment.'' []$\T1/cmtt/m/n/8 
 https : / / www . uab . cat / web /
@@ -2585,58 +2589,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--16
 erewhon-TLF/m/n/8 , Abril
  []
 
-) [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 680.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 680.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 712.
+ [12
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 712.
  (./TM_CP_Notes_.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 680.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 680.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 712.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 712.
 Package rerunfilecheck Info: File `TM_CP_Notes_.out' has not changed.
-(rerunfilecheck)             Checksum: 6BBF6B0FDBF53B69E004E1BE413C1061;2030.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 680.
+(rerunfilecheck)             Checksum: 3EC57D5080227687BA6837E293A3670F;2155.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 712.
  ) 
 Here is how much of TeX's memory you used:
- 38515 strings out of 492982
- 719128 string characters out of 6134896
- 965907 words of memory out of 5000000
- 41290 multiletter control sequences out of 15000+600000
- 600221 words of font info for 121 fonts, out of 8000000 for 9000
+ 38527 strings out of 492982
+ 719270 string characters out of 6134896
+ 964907 words of memory out of 5000000
+ 41292 multiletter control sequences out of 15000+600000
+ 600936 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,27n,73p,10364b,700s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/erewhon/zut1_53cvlj.enc}{/usr/
-share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/erewhon/zut1_q4j5e2.enc}{/usr/share/texlive/texmf-dist/fon
-ts/enc/dvips/erewhon/zut1_5gd3w7.enc}{/usr/share/texlive/texmf-dist/fonts/enc/d
-vips/erewhon/zut1_7onvyn.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ere
-whon/zut1_geqeyh.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/
-Erewhon-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erew
-hon-BoldItalic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Er
-ewhon-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erew
-hon-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewh
-on-RegularSlanted.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/initial
-s/GoudyIn.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cme
-x10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/wasy2-ps/wasy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/yhmath/yhcmex.pfb>
-Output written on TM_CP_Notes_.pdf (11 pages, 604466 bytes).
+share/texlive/texmf-dist/fonts/enc/dvips/erewhon/zut1_d2bm6z.enc}{/usr/share/te
+xmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fon
+ts/enc/dvips/erewhon/zut1_q4j5e2.enc}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/erewhon/zut1_5gd3w7.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ere
+whon/zut1_7onvyn.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/erewhon/zut
+1_geqeyh.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-
+Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-Bold
+Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-It
+alic.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-Regu
+lar.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/erewhon/Erewhon-Regul
+arSlanted.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/initials/GoudyI
+n.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/wasy2-ps/wasy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/yhmath/
+yhcmex.pfb>
+Output written on TM_CP_Notes_.pdf (12 pages, 594379 bytes).
 PDF statistics:
- 559 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 110 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 577 PDF objects out of 1000 (max. 8388607)
+ 420 compressed objects within 5 object streams
+ 118 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
