@@ -172,6 +172,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tableofcontents
 \vspace{5mm}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
 %    #00        Introdució/comentari/\cdots       %%
@@ -181,11 +182,6 @@
 	\section{\textit{Comentari per a la lectura}}
 \end{tcolorbox}
 \lettrine{D}onades les  diverses idees  que hem obtingut al llarg de les sessions de treball hem estructurat el treball de tal forma que cada secció tingui un cert grau \textit{d'independència} respecte les altres. Això es veu reflectit en el fet de que cada secció té les seves pròpies conclusions. Tot i poder fer-se una lectura permutada de les seccions recomanem l'ordre facilitat. 
-\\ 
-\newpage
-$$
-\esp
-$$
 \\ 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -613,12 +609,15 @@ Concloem doncs que els models d'optimització donen una \textbf{solució bona}. 
 \newpage
 \subsection{Alguns detalls sobre el procés d'elaboració dels algoritmes genètics}
 \normalsize
-Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles solucions a base de recombinar i mutar solucions ja existents. Aquests mecanismes abstractes, així com la codificació de la solució sobre la qual operen, admeten moltes possibles variacions, les quals s'han d'adaptar al problema per aconseguir el màxim rendiment.
-En la nostra implementació dels algoritmes genètics, hem optat per representar el fenotip (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a cada assignatura diferent. La mutació es implementada com una assignació d'una assignatura aleatòria a un professor aleatori; per altra part la recombinació crea noves solucions a partir de dos solucions triades aleatoriameant entre les millors (la élit), generant una nova solució que tingui part de les assignacions d'assigatures d'una i part de l'altra. Altres parametres, com la mida de la població, la probabilitat de recombinació o la de mutació, s'han triat de forme empírica a base d'executar l'algorisme i buscar les constants que donaven els millors resultats.
-A més a més, el nostre algoritme utilitza elitisme, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que noves generacions sempre millorin la funció de cost.
+Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles \textbf{solucions} a base de recombinar i mutar solucions ja existents. Aquests mecanismes abstractes, així com la codificació de la solució sobre la qual operen, admeten moltes possibles variacions, les quals s'han d'adaptar al problema per aconseguir el \textit{màxim rendiment}.
 
-Comparant els resultats obtinguts en l'optimització en que hem utilitzat Simulated Annealing i en la d'Algoritmes Genètics, és trivial veure que els resultats de SA són molt millors, ja que s'assoleixen assignacions amb diferències d'hores més ben distribuïdes. Aixó és així perque hem executat els algoritmes durant poc temps (menys de 20 minuts) i el fet que les iteracions en GA són molt més lentes ha portat a que no s'aconseguís arribar a un mínim local.
-Creeiem que en d'executar l'algoritme durant períodes de temps més llargs, les capacitats per evitar mínims locals dels GAs mitjançant l'especiació portaran a una millora de resultats respecte al SA, ja que l'exploració realitzada pel GA cobrirà molt més espai.
+En la nostra implementació dels algoritmes genètics, hem optat per representar el \textbf{fenotip} (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a cada assignatura diferent. La \textbf{mutació} es implementada com una assignació d'una assignatura aleatòria a un professor aleatori; per altra part la recombinació crea noves solucions a partir de dos solucions triades aleatoriameant entre les millors (la \textbf{élit}), generant una nova solució que tingui part de les assignacions d'assigatures d'una i part de l'altra. Altres paràmetres, com la mida de la població, la probabilitat de recombinació o la de mutació, s'han triat de forme empírica a base d'executar l'algorisme i buscar les constants que donaven els millors resultats.
+
+A més a més, el nostre algoritme utilitza \textit{elitisme}, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que noves generacions sempre millorin la funció de cost.
+
+Comparant els resultats obtinguts en l'optimització en que hem utilitzat \textit{Simulated Annealing} i en la d'Algoritmes Genètics, és trivial veure que els resultats de SA són molt millors, ja que s'assoleixen assignacions amb diferències d'hores més ben distribuïdes. Aixó és així perquè hem executat els algoritmes durant poc temps (menys de 20 minuts) i el fet que les iteracions en GA són molt més lentes ha portat a que no s'aconseguís arribar a un mínim local.
+
+Creiem que en d'executar l'algoritme durant períodes de temps més llargs, les capacitats per evitar mínims locals dels GAs mitjançant l'especiació portaran a una millora de resultats respecte al SA, ja que l'exploració realitzada pel GA cobrirà molt més \textbf{espai}.
 
 \begin{figure}[!]
 	\centering
