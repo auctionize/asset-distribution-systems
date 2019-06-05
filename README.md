@@ -5,7 +5,23 @@
 
 ## Albert una cosa
 - He pensat que estaría bé ficar un gràfic discret: eix x (en min i en segons): 10,20,...,100 i 10,100,1000... (eix y): resultats del algoritme genetic per optimitzar funció. Tinc molta curiositat per saber quin tipude de creixement té la eficiencia dels selecció genetica dels algoritmes.
-
+- Publicació 	
+Corunya : Universidade da Coruña. Servizo de Publicacións, 2010
+Descripció 	
+76 p. ; 24 cm
+Bibliografia 	
+Referències bibliogràfiques
+Col·lecció 	
+Monografías (Universidad de La Coruña)
+Matèria 	
+Algorismes genètics
+Programació genètica (Informàtica)
+Autor addicional 	
+Gestal, Marcos
+ISBN 	
+9788497494229
+Classificació 	
+51 
 
 
 
