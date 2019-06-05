@@ -384,7 +384,7 @@ Fins ara s'utilitzava una mesura no definida basada en el \textit{coneixement im
 
 $$F: I^o \longrightarrow \R$$
 
-tal que com \textit{més baix} sigui $F(a)$ (donat $a \in I^o$) millor serà l'alternativa $a$.
+tal que com \textit{més baix} sigui $F(a) \in \R$ (donat $a \in I^o$) millor serà l'alternativa $a$.
 
 Un cop haguem trobat una funció que compleixi això, trobar una alternativa bona passarà a ser un problema d'optimització, el qual tractarem amb una filosofia \textbf{heurística} a la secció 3.2 (Optimització).
 
@@ -406,7 +406,7 @@ Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que 
 \begin{enumerate}
 	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  d'alternatives prèvies, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la \textbf{funció implícita} que es va utilitzar per \textit{avaluar} les \textbf{alternatives}. És a dir, buscar, utilitzant aproximacions de funcions, una funció sobre les \textbf{dades base} \footnote{De nou aquestes estarien basades en l'historial recuperable, d'almenys,cinc anys enrere.} tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una \textbf{alternativa} el més semblant possible a la solució que es va utilitzar aquell any. 
 	\item \textbf{Obtenció de dades mitjançant enquesta} preguntant als professors directament què valoren més i creant una funció de forma artesanal basant-nos en els resultats.
-	\item \textbf{Funcions personalitzables} a nivell individual per cada professor. A partir d'aquestes funcions individuals podem crear una funció global que estigui formada per un sumatori d'aquestes funcions tal que al optimitzar aquesta funció global estarem optimitzant les funcions individuals en conjunt. Això a la pràctica és pot traduir en contemplar tots els criteris a la vegada i en cas de que un criteri estigues més present augmentar-ne el \textit{pes} en la \textbf{funció objectiu} $F$.
+	\item \textbf{Funcions personalitzables} a nivell individual per cada professor. A partir d'aquestes funcions individuals podem crear una funció global que estigui formada per un sumatori d'aquestes funcions tal que al optimitzar aquesta funció global estarem optimitzant les funcions individuals en conjunt. Això a la pràctica és pot traduir en contemplar tots els criteris a la vegada i en cas de que un criteri estigues més present augmentar-ne el \textit{pes} en la \textbf{funció objectiu} $F$ per a cada professor.
 \end{enumerate} 
 \begin{figure}
 	\centering
@@ -490,7 +490,7 @@ La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet 
     \\ 
     {
 	\textbf{Figura (B:3):} 
-	{\footnotesize Gràfic de la funció $f_3(x)=x^2$.}}
+	{\footnotesize Graaaàfic de la funció $f_3(x)=x^2$.}}
 \\
 \includegraphics[width=8.5cm]{inter_mf} 
 {\textbf{Diagrama (B:4):} {\footnotesize Diagrama que il·lustra  la distància \textit{en temps} entre les hores de classe de diferents docents (cada color representa un docent) on les fletxes (en el mateix color, diferent per cada docent) il·lustren la distància entre les assignatures que han d'impartir  en diferents dies d'una setmana.}}
@@ -515,7 +515,7 @@ La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet 
 	{\footnotesize Gràfic de la funció $f_4(x)=...$.}} \nehh{On começa cada una}
 \\
 \end{itemize}
-\subsection{O=====ptimització}
+\subsection{Optimització}
 Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \textbf{alternatives} \footnote{Altrament $ \approx 10^{1000}$.} Inicialment vam utilitzar \textit{Simulated Annealing} (Algorisme d'Optimització apropiat per a grans \textbf{espais de cerca} ) amb control de mínims locals per tal d'optimitzar  la funció $F$ en un temps \textit{raonable}. Però, donada la \textit{filosofia} del treball, vam voler  optimitzar la \textbf{funció objectiu} de forma pròpia mitjançant selecció d'algoritmes genètics.   
 \begin{enumerate}
 	\item \textbf{Simulated Annealing:} Algorisme  basat en el mètode de Montecarlo \textit{refinat} apropiat per \textbf{espais de cerca} grans. Té origen en una tècnica de l'industria metal·lúrgica i es sol aplicar en \textit{intel·ligència artificial}. Es troba implementat en Python en el paquet \textit{simanneal}, tot i que és relativament \textit{senzill} d'implementar.
@@ -536,15 +536,31 @@ Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100
 \subsection{Limitacions del model}
 És clar que en primera instancia una estratègia prou pràctica com els \textit{algorismes} per optimitzar el model es podria tirar per terra argumentant que cap d'aquest mètodes (\textit{simulated annealing} i \textit{Algorismes genètics}) podran trobar el mínim absolut de la funció a optimitzar $F$. 
 
-Tot i que no és la \textit{filosofia del treball}. Això no ens resulta problemàtic, ja que només ens cal que la \textbf{solució} sigui \textit{bona}, entenent com a bon que sigui: \textbf{factible} , que consumeixi un temps \textit{raonable} en ser trobada i que sigui \textit{substancialment millor} que la del \textbf{model actual}. I això és pot comprovar amb fàcilment com farem en la subsecció de 3.5 Resultats
+Tot i que no és la \textit{filosofia del treball}. Això no ens resulta problemàtic, ja que només ens cal que la \textbf{solució} sigui \textit{bona}, entenent com a bon que sigui: \textbf{factible} , que consumeixi un temps \textit{raonable} en ser trobada i que sigui \textit{substancialment millor} que la del \textbf{model actual}. I això és pot comprovar fàcilment com veurem en la subsecció 3.5 Resultats.
 
-De fet només hem donat una \textit{definició constructiva}, és a dir, hem donat una \textit{idea} de com construir $F$ però no l'hem explicitat ja que la \textit{màgia} d'aquesta és que es pugui adaptar a restriccions i criteris diferents. Cosa que respon a  {\color{green!60}$\blacksquare$}$^{(03)}$ {\color{cyan!60}$\blacksquare$}$^{(01)}${\color{violet!60}$\blacksquare$}$^{(05)}$.
+De fet només hem donat una \textit{definició constructiva}, és a dir, hem donat una \textit{idea} de com construir $F$ però no l'hem explicitat, ja que la \textit{màgia} d'aquesta és que es pugui adaptar a restriccions i criteris diferents. Cosa que respon a  {\color{green!60}$\blacksquare$}$^{(03)}$ {\color{cyan!60}$\blacksquare$}$^{(01)}${\color{violet!60}$\blacksquare$}$^{(05)}$.
 \subsection{Resultats del model}
-Els resultats més rellevants d'aquest model són:
+Els resultats més rellevants d'aquest model/ mètode són:
 \begin{enumerate}
 	\item Possibilitar la cerca de \textbf{solucions factibles}\footnote{Enteses com a assignacions que compleixen amb les \textbf{restriccions} imposades. }
 	\item Possibilitat de millorar optimització d'alguns aspectes del \textit{model actual}.
 \end{enumerate}
+Comprant aquest model, \textbf{model d'investigacions operatives}, amb el \textbf{model actual} agafant com a \textbf{funció objectiu} :
+$$
+F=\sum_{i=1}^{2}(f_i)(a) 
+$$
+$$\text{ amb } \qquad f_1(a)=\sum_{j=1}^{111} (x_j-x'_j)^2 \qquad \text{ i }$$  
+on $x_j$ serien les hores de classe que hauria de fer un professor $j \in \{1,\cdots,111\}$ i $x_j'$ les hores que farà amb l'assignació $a$ el professor $j \in \{1,\cdots,111\}$.
+$$\text{ amb }  \qquad f_2(a)=\sum_{j=1}^{111} (y_j)^3$$
+on $y_j$ serien el nombre de matèries docents que hauria de fer un professor $j \in \{1,\cdots,111\}$   amb \textbf{alternativa} $a$. 
+\includegraphics[width=8.5cm]{interc_mf}
+\\ 
+{
+	\textbf{Figura (B:4):} 
+	{\footnotesize Gràfic de la funció $f_4(x)=...$.}} \nehh{On começa cada una}
+\\
+Això seria el que actualment s'intenta minimitzar. Programant en Python obtenim els resultats que es veuen en les figures [] i [].
+
 Tal com podem veure en els gràfics de la figura [??] el model de la funció garanteix millors optimitzacions i a més ....
 \subsection{Alguns detalls sobre el procés d'elaboració dels algoritmes genètics}
 \newpage
