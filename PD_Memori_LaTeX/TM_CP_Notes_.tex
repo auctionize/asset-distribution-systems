@@ -518,8 +518,8 @@ La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet 
 \subsection{Optimització}
 Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \textbf{alternatives} \footnote{Altrament $ \approx 10^{1000}$.} Inicialment vam utilitzar \textit{Simulated Annealing} (Algorisme d'Optimització apropiat per a grans \textbf{espais de cerca} ) amb control de mínims locals per tal d'optimitzar  la funció $F$ en un temps \textit{raonable}. Però, donada la \textit{filosofia} del treball, vam voler  optimitzar la \textbf{funció objectiu} de forma pròpia mitjançant selecció d'algoritmes genètics.   
 \begin{enumerate}
-	\item \textbf{Simulated Annealing:} Algorisme  basat en el mètode de Montecarlo \textit{refinat} apropiat per \textbf{espais de cerca} grans. Té origen en una tècnica de l'industria metal·lúrgica i es sol aplicar en \textit{intel·ligència artificial}. Es troba implementat en Python en el paquet \textit{simanneal}, tot i que és relativament \textit{senzill} d'implementar.
-	\item \textbf{Algorismes genètics:} La selecció d'algoritmes genètics, de forma molt simplificada, consisteix en l' estratègia  de davant un problema donat, i partint d'un nombre concret d'algorismes que hi donen una solució, trobar un algorisme \textit{combinació} dels altres amb o sense modificacions aleatòries o \textbf{mutacions} que aconsegueixi un resultat molt millor que els seus algoritmes de partida o \textit{algoritmes antecessors}, imitant així la \textit{selecció natural biològica}.
+	\item \textbf{Simulated Annealing:} Algorisme  basat en el mètode de Montecarlo \textit{refinat}, és apropiat per \textbf{espais de cerca} grans. Té origen en una tècnica de l'industria metal·lúrgica i es sol aplicar en \textit{optimització}.
+	\item \textbf{Algorisme genètic:} Els algoritmes genètics, els quals es basen en el procés evolutiu, de forma molt simplificada consisteixen en generar solucions per a un problema mitjançant la recombinació de solucions anteriors i l'aplicació de mutacions aleatories sobre la solució, per després evaluar les solucions obtingudes i elegir les millors, millorant respecte les \textit{solucions anteriors} i imitant així la \textit{selecció natural biològica}.
 	\item \textbf{Altres algorismes d'optimització de funcions no lineals meta-heurístics:} També és podrien haver fet servir algorismes com:  
 	\begin{enumerate}
 		\item Optimització d'eixam de partícules
@@ -532,7 +532,6 @@ Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100
 		\item Túnels estocàstics
 	\end{enumerate}
 \end{enumerate}
-\nehh{Queda pendent acabar aquesta secció}
 \subsection{Limitacions del model}
 És clar que en primera instancia una estratègia prou pràctica com els \textit{algorismes} per optimitzar el model es podria tirar per terra argumentant que cap d'aquest mètodes (\textit{simulated annealing} i \textit{Algorismes genètics}) podran trobar el mínim absolut de la funció a optimitzar $F$. 
 
@@ -563,6 +562,7 @@ Això seria el que actualment s'intenta minimitzar. Programant en Python obtenim
 
 Tal com podem veure en els gràfics de la figura [??] el model de la funció garanteix millors optimitzacions i a més ....
 \subsection{Alguns detalls sobre el procés d'elaboració dels algoritmes genètics}
+Com hem explicat 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
