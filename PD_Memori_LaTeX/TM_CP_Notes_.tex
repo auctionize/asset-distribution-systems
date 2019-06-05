@@ -104,7 +104,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Dades pael títol del nostre document
-\title{\emph{\color{redviolet!75!black} Lorem ipsum dolor sit amet.  Pla Docent {(PD)}}}
+\title{\emph{\color{redviolet!75!black}Pla Docent {(PD)}}}
 \author{ Taller de modelització \\ 2n. Grau en  Matemàtiques \\ Universitat Autònoma de Barcelona \\ Equip 15 (Grup A)\\ }
 \date{Versió: \today}
 
@@ -165,6 +165,18 @@
 \usepackage[nameinlink, capitalise, noabbrev]{cleveref}
 \begin{document}
 	
+\maketitle
+\newpage
+$$
+\esp
+$$
+\\ 
+\newpage
+$$
+\esp
+$$
+\\ 
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
 %    #-1        Portada TickZ i Abstract          %%
@@ -761,7 +773,7 @@ Aquí tenim un resum de les problemàtiques que ha de soluciona el model de subh
 \subsubsection{Construcció primer model}
 De forma constructiva, i aprofitant la subsecció prèvia, construirem un model que compleixi les condicions  de la llista anterior.
 
-\subsubsection{Model nasi}
+\subsubsection{Model de subhastes condicionals}
 % Porque hitlur solo queria pintar cuadros
 \begin{itemize}
 	\item Subhastes multidimensionals en que es tenen en compte diverses coses per a decidir el guanyador de la subhasta
@@ -794,13 +806,14 @@ Algorisme
 		\item La quantitat d'assignatures assignades a cada professors ha de ser baixa. 
 		{\color{gray}  Per evitar el cas de que part del professorat tingui un nombre elevat de matèries a impartir, malgrat contin poc cadascuna ja que puntualment és pot tenir un sobrevolem de treball.} \textbf{(minimitzar)}
 		\item L'assignació de les assignatures entre el professorat s'hauria d'acostar el màxim possible a les sol·licituds particulars demandades. {\color{gray}  L'elecció ja és justificació prou per argumentar que és una \textbf{alternativa} desitjable.} \textbf{(maximitzar)}
-		\item 
+		\item S'hauria d'evitar que el nombre total d'hores de classe al dia d'un professor superés certs límits per a tots els dies.
+		\item Les assignatures assignades a un mateix professor han de tenir certa localitat temporal, és a dir, que hi hagi poca diferència temporal entre el final d'una i el començament de la següent.
 %{\color{gray} El motiu d'aquesta mesura és incentivar al professorat a invertir (opcionalment) en l'elaboració de material docent que malgrat el primer any de docencia li comporti un mayor esforç a la llarga sigui compensat, a més de millorar la docencia és clar.}
 	\end{itemize}
     \item \textbf{Restriccions} (com a criteris)
     \begin{itemize}
     	\item No pot haver solapament d'hores entre les assignatures que ha d'impartir un mateix docent . {\color{gray} En essència això evita entre d'altres coses que un mateix docent hages d'estar a dos llocs diferents al'hora .} \textbf{(Restricció de existència)} 
-    	\item El interval de temps entre el final d'una sessió de treball i el inici d'una altre ,impartides per un mateix professional docent, a diferents facultats ha de ser major o igual a 20 minuts. {\color{gray} Un model que no contemples la pèrdua de temps en efectuar desplaçaments físics difícilment serà eficient i probablement precari.} \textbf{(Restricció d'ordre)} 
+    	\item El interval de temps entre el final d'una sessió de treball i el inici d'una altre, impartides per un mateix professional docent, a diferents facultats ha de ser major o igual a 20 minuts. {\color{gray} Un model que no contemples la pèrdua de temps en efectuar desplaçaments físics difícilment serà eficient i probablement precari.} \textbf{(Restricció d'ordre)} 
     	\item Les assignatures dels graus:
     	\begin{enumerate} 
     		\item Grau de Matemàtiques.
@@ -819,7 +832,7 @@ Algorisme
 %                                                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
-	\section{Conclusions revalores}
+	\section{Conclusions reveladores}
 \end{tcolorbox}
 \end{enumerate}
 Dogmes de criteris
