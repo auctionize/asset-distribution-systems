@@ -795,7 +795,28 @@ Aquí tenim un resum de les problemàtiques que ha de soluciona el model de subh
 \end{enumerate}
 \end{tcolorbox}
 \subsubsection{Construcció primer model}
+
+Molts d'aquests problemes es poden solucionar utilitzant un concepte ja molt desenvolupat en la matemàtica, les subhastes combinatorials, aquest tipus de subhastes es basen en la idea de que les pujes es realitzen sobre blocs d'objectes, així es realitzen pujes sobre un conjunt d'objectes de manera que si el participant aconsegueix guanyar tots els objectes la puja s'executa però si hi ha algun dels objectes del bloc que el participant no pot obtenir tota la puja queda invalidada.
+
+És clar veure que una realització en paralel d'aquestes pujes soluciona tots els nostres problemes, ja que eliminem la necessitat de bloquejar moneda, acomoda lo possibilitat de que els participants tinguin dependencies entre objectes a subhasta (ex: només els interessa el objecte A si poden obtenir el B), generen assignacions óptimes, i aplicant subhastes de Vickrey també resoldriem el problema de evitar l'especulació, ja que incentivaríem als participants als a que pujessin el preu que creuen que val l'objecte (està demostrat\footnote{https://en.wikipedia.org/wiki/Vickrey\_auction
+	\#Proof\_of\_dominance\_of\_truthful\_bidding}).
+
+No obstant, el problema d'aquestes subhastes es que, donades les pujes, determinar els guanyadors de cada objecte subhastat tal que l'assignació sigui óptima requereix l'aplicació d'un algoritme NP-complet, concretament un algoritme que creix de forma factorial respecte el nombre de pujes. Aquesta complexitat fa que l'aplicació de l'algoritme sigui totalment inviable per al nostre problema, ja que requeriría un temps de comput superior a la vida de l'univers.
+
+Per solucionar aquest problema, hem dissenyat un nou tipus de subhasta, la subhasta condicional, a partir de la qual podem crear un sistema que ens permeti aconseguir els beneficis de les subhastes combinatorials a la vegada que evitem el problema de la explosió en complexitat.
+
+Definim una subhasta condicional com una subhasta on les pujes poden dependre dels resultats d'altres pujes. En aquest sistema podem crear pujes que només siguin valides si $n$ altres pujes diferents acaben guanyant les seves subhastes corresponents. Un exemple d'aquest tipus de puja seria una, que anomenarem $P$ que només seria considerada pel sistema si dos altres pujes $A$ i $B$ acaben sent pujes guanyadores, això significa que si una altra puja que no fos $A$ acabés guanyant la subhasta de la que $A$ és part, $P$ quedaria invalidada i seria com si mai hagués existit, mentres que si $A$ i $B$ ambdós guanyessin $P$ actuaría com una puja normal en altres sistemes.
+
+Una de les propietats interessants d'aquest sistema es que es pot demostrar que, com es problema, és equivalent al problema del guanyador en les pujes. En altres paraules, existeix un algoritme polinomial que permet transformar qualsevol dels dos problemes en l'altre i també permet transformar una solució correcta de un en el seu problema equivalent\footnote{Estem en procés d'escriure un paper amb la demostració d'aquest fet i la majoria de les altres afirmacions que realitzarem sobre les subhastes condicionals, quan estigui acabat el paper també serviria com a extensió d'aquest treball, però no hem sigut capaços d'acabar-lo a temps.}. 
+
+Aixó es molt important, ja que com els dos problemes són intercanviables, si aconseguim trobar una forma de solucionar el problema del gunayador en subhastes condicionals haurem aconseguit, per extensió, resoldre el mateix problema en subhastes combinatories. I en cas de haber-lo resolt en temps polinomial directament tindríem una demostració de que $P=NP$. La part més emocionant es que efectivament la idea de plantejar pujes condicionals és nova en la literatura, de manera que estem pensant el problema com mai ningú l'ha pensat abans\footnote{Almenys que haguem descobert nosaltres amb les nostres eines de búsqueda una mica primitives}, de forma que es possible que trobem alguna intuició nova.
+
+
+
 De forma constructiva, i aprofitant la subsecció prèvia, construirem un model que compleixi les condicions  de la llista anterior.
+
+\subsubsection{Recerca futura}
+Mercat
 
 \subsubsection{Model de subhastes condicionals}
 % Porque hitlur solo queria pintar cuadros
@@ -813,8 +834,16 @@ Algorisme
 	\item Buscar els professors als que els hi ha sigut assignat assignatures que superen el nombre d'hores que haurien de realitzar, desassignar-lis suficients assignatures com per a que el nombre d'hores totals de les assignatures assignades a ells sigui semblant al nombre d'hores que han de fer. A continuació, aquests professors, les seves pujes i les assignatures que encara tenen assignades són eliminats del sistema.
 	\item Si en el pas anterior s'han eliminat professors del sistema tornar al pas 2. En cas contrari, ja hem acabat i l'assignació final ja està feta (queda assignar les asisgnatures que no ha volgut ningú i vigilar que no hi hagi professors que hagin quedat amb molt poques assignatures assignades)
 \end{enumerate}
-ñ
-\\
+
+\subsubsection{Model de subhastes multidimensionals}
+Una altra possible idea que es pot aplicar juntament amb les altres idees donades és la de les subhastes multidimensionals, en les quals assignem un vector a cada puja on cada dimensió del vector representa un part de la puja diferent: Alguns elements poden estar directament definits per l'usuari, com la quantitat de diners que puja, i altres són directament calculats en funció de l'estat, com podria ser un valor que és el saldo en hores de l'usuari en l'assignació de l'any anterior.
+
+En aquest espai de vectors de pujes es podria definir una norma que ens donés un valor escalar a partir del vector, finalment utilitzaríem aquest valor escalar per a realitzar les subhastes de la mateixa manera que actualment les subhastes es basen en la suma ecónomica de cada puja.
+
+Aquesta sistema tindrà l'avantatge de poder incorporar diversos factors a les subhastes, permetent així una distribució més flexible i justa, a la vegada que és totalment compatible amb tots els sistemes de subhasta actual, de forma que es podria aplicar a qualsevol subhasta simplement com a una extensió d'aquesta.
+
+
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
