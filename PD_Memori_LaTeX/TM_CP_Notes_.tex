@@ -686,8 +686,24 @@ $$
 \end{tcolorbox}
 \lettrine{E}n aquesta secció abordarem la problemàtica d'assignacions mitjançant l'estructura de subhasta, pensant, com en les seccions anteriors, en la seva aplicació final. La intenció  és construir un mètode sobre l'estructura de subhasta que permeti  donar solució al problema dels repartiments.
 \subsection{Problemàtiques i beneficis de les subhastes}
-Aquí va una part de Talloc
-\begin{figure}[ht]
+Tots tenim una idea intuïtiva de subhasta.Més enlla de les conegudes subhastes de \textit{eBay}  ni'ha de molts tipus altres tipus, que no només poden ser classificades per un únic criteri sinó per molts. Explicitem algunes d'aquestes classificacions.
+
+Les \textbf{subhastes simultànies o paral·leles} són aquelles que és \textit{resolen} a la vegada, és a dir, només cal un \textit{instant} per determinar els guanyadors. Per conta les \textbf{subhastes seqüencials } són aquelles que decideixen \textit{una per una}. 
+
+Les \textbf{subhastes a cegues} són aquelles en que les puges que fa cada participant de la subhasta no són públiques, en canvi, en les \textbf{subhastes públiques} sí.
+
+Les \textbf{subhastes a l'alça} són aquelles en les qui guanya el participant que ofereix el major preu, en canvi les \textbf{subhastes a la baixa}, són guanyades pel participant que  ofereix el menor preu. Un exemple d'aquesta ultima podria ser el preu mínim que està disposat a rebré un \textit{participant} per fer  una tasca.
+
+L'objectiu principal de la majoria de \textbf{subhastes} és vendre \textit{objectes} al preu més alt possible (suposant que fossin subhastes a l'alça),és a dir, maximitzen el \textit{guany} però en un cas com en el de repartir les assignatures entre el professorat del departament d'una facultat això no té sentit, ni és un bon plantejament, ja que no hi ha objectiu de guany, sinó únicament de repartiment.
+
+Per tant una subhasta típica no seria pas una bona solució al problema de repartiment. No obstant hi ha un tipus de subhasta que no maximitza el benefici de \textit{venedor} sinó dels \textit{participants}, és a dir, en maximitza \textbf{l'utilitat} d'aquests. 
+
+Aquest tipus de subhasta, que de fet és l'única que farem servir tot i donar dos models completament diferents basats en subhastes, es coneixen com a subhastes de \textbf{Vickrey}. Les \textbf{subhastes de Vickrey} són subhastes  simultànies a a cegues on el guanyador d'una subhasta és qui ofereix el preu més alt (suposant subhastes a l'alça) pagant el preu de la segona puja més alta.
+
+En Teoria de jocs es pot demostrar que aquests tipus de subhasta és totalment eficient, que tal com havíem dit abans maximitza l'\textbf{utilitat} dels participants i incentiva de fer pugues \textit{racionals}, és a dir, pagar el que és creu correcte o \textit{just}.   
+
+
+\begin{figure}[!]
 	\centering
 	\includegraphics[width=9cm]{subs}
 	\caption{ \footnotesize farem en la subsecció 3.5 ( resultats del model).}
