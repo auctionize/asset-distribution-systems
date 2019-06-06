@@ -853,6 +853,15 @@ Respecte a la segona ineficiencia descrita, podem deduïr que els casos en que s
 
 Tot això ens permet concloure que, si bé es cert que els algoritmes proposats no arriben a ser óptims, la pérdua d'optimalitat que causaràn serà baixa de forma que la seva aplicació acabarà generant assignacions que estaràn molt aprop de l'óptim, de forma que, per definició, seran assignacions molt bones.
 
+\subsubsection{Algoritme 2}
+Un altra possible solució al problema de les subhastes combinatories és la realització de subhastes angleses (totes les pujes són públiques i la puja més alta guanya, pagant el preu d'aquesta mateixa puja) utilitzant el concepte de pujes condicionals explicat anteriorment.
+
+Es pot demostrar que aquest sistema genera una assignació óptima, definint óptim com a maximització del guany del venedor, però el problema sorgeix en que també es pot demostrar que es possible que aquestes subhastes mai convergeixin, donat que aquest sistema fa possible l'existència de bucles en les pujes.
+
+Una solució per combatre aquesta falta de convergencia es l'aplicació de sistemes externs que forcin la convergencia, com l'aplicació d'una tasa sobre les pujes (per cada nova puja realitzada el participant ha de pagar una tasa) o la imposició d'una data límit a les subhastes, de manera que a partir d'aquesta data és tanquin.
+
+Aquestes solucions no són perfectes ja que trenquen les assumpcions que permetien que les assignacions que generava el sistema fossin óptimes, però és possible que aquesta pérdua d'optimalitat sigui inferior a les dels altres sistemes presentats en aquest treball. Per a saber-ho del cert s'hauria de realitzar un anàlisis més profund de l'algoritme, el qual no està dins de l'alcanç d'aquest treball.
+
 \subsubsection{Recerca futura}
 No ho hem pogut investigar per falta de temps, però creiem que afegir un mercat lliure post-subhasta on es permeti l'intercanvi d'assignatures entre professors podria aportar un element equilibrador al sistema que, juntament amb un sistema de subhasta ben calibrat, permetés assolir l'optimalitat.
 
