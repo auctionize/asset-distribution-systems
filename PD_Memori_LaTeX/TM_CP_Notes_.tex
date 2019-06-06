@@ -702,12 +702,21 @@ Aquest tipus de subhasta, que de fet és l'única que farem servir tot i donar d
 
 En Teoria de jocs es pot demostrar que aquests tipus de subhasta és totalment eficient, que tal com havíem dit abans maximitza l'\textbf{utilitat} dels participants i incentiva de fer pugues \textit{racionals}, és a dir, pagar el que és creu correcte o \textit{just}.   
 
-No obstant una implementació \textit{a priori} de subhastes de Vickrey per obtenir una subhasta optima o satisfactòria no podria ser  per ser factible no hauria de ser seqüencial ja que llavor l'experiència del usuari podria ser desagradable ja que cada \textit{assignatura} hauria d'estar 
+No obstant una implementació \textit{a priori} de subhastes de Vickrey, per obtenir una subhasta optima o satisfactòria, no podria ser pas factible  ja que no hauria de ser seqüencial ja que llavor l'experiència del usuari (UX) podria ser desagradable ja que cada \textit{assignatura} hauria d'estar activa en períodes de temps disjunts. A més si fos simultània també tindríem problemes, ja que llavors, podria haver problemes de \textbf{bloqueig de moneda}. Tal com il·lustra el Exemple \# 1. La Solució queda per subhastar blocs d'assignatures en períodes disjunts de temps.
 
+\begin{tcolorbox}[colback=black!1,title=\textbf{Exemple \# 1},coltitle=black,colbacktitle=black!10]
+\begin{itemize}
+	\item En Grothendieck vol pujar per l'assignatura $A$, $B$, $C$.
+	\item Té un total de 10 monedes.
+	\item Puja 5 monedes per $A$, 3 monedes per $B$ i 2 monedes per $C$.
+	\item Finalment totes les assignatures subhastades és venen per 6 monedes i en Grothendieck no en guanya cap.
+	\item Si s'hagessin subhastat una per una, evidentment en Grothendieck hauria aconseguit com a mínim una en l'ultima puja, les seves monedes estaven bloquejades per altres puges. \item Aquest fenomen es coneix com a \textbf{bloqueig de moneda}.
+\end{itemize}
+\end{tcolorbox}
 \begin{figure}[!]
 	\centering
 	\includegraphics[width=9cm]{subs}
-	\caption{ \footnotesize farem en la subsecció 3.5 ( resultats del model).}
+	\caption{ \footnotesize Diagram que il·lustra la problemàtica d'aplicar directament \textbf{Subhastes de Vickrey} al problema plantejat.}
 	\label{fig:4}
 \end{figure}
 \subsection{Un model minimalista, els \textit{Kiwis}}
@@ -774,12 +783,7 @@ Una vegada tenim les constants $c_i$ ens cal determinar $a,b$ de les funcions pe
 Amb aquesta nova revalorització horària, es repartiran les matèries no assignades mitjançant el mètode de la funció entre els professors que tinguin de moment cobert un valor inferior a $\frac{2M}{3}$ hores, on M són les hores que ha de realitzar aquell professor.
 \subsection{Subhastes condicionals i n-dimensionals}
 \subsubsection{Problemàtiques de les  subhastes}
-\begin{figure}
-	\centering
-	\includegraphics[width=4cm]{eps}
-	\caption{En aquesta figura veiem una icona del format d'arxiu \texttt{.eps}}
-	\label{fig:3}
-\end{figure}
+
 Aquí tenim un resum de les problemàtiques que ha de soluciona el model de subhasta que considerem construir 
 \begin{tcolorbox}[colback=black!1,title=\textbf{Llista problemàtiques subhastes},coltitle=black,colbacktitle=black!10]
 \begin{enumerate}
@@ -869,3 +873,9 @@ Dogmes de criteris
 \bibliography{Bib.bib}
 \end{document}
 %https://youtu.be/mANIqat5IC8
+\begin{figure}
+	\centering
+	\includegraphics[width=4cm]{eps}
+	\caption{En aquesta figura veiem una icona del format d'arxiu \texttt{.eps}}
+	\label{fig:3}
+\end{figure}
