@@ -884,7 +884,7 @@ Aquesta sistema tindrà l'avantatge de poder incorporar diversos factors a les s
 \section*{Apèndix}
 \begin{enumerate}
 	\item \textbf{Paràmetres a optimitzar } (com a criteris) 
-	\begin{itemize}
+	\begin{enumerate}
 		\item La diferencia entre el nombre d'hores que \textit{hauria de fer} un professor i les hores que \textit{finalment farà} ha de ser el més petita possible. {\color{gray} Considerem que és l'estat més ideal.} \textbf{(minimitzar)} 
 		\item La quantitat d'assignatures assignades a cada professors ha de ser baixa. 
 		{\color{gray}  Per evitar el cas de que part del professorat tingui un nombre elevat de matèries a impartir, malgrat contin poc cadascuna ja que puntualment és pot tenir un sobrevolem de treball.} \textbf{(minimitzar)}
@@ -892,7 +892,7 @@ Aquesta sistema tindrà l'avantatge de poder incorporar diversos factors a les s
 		\item S'hauria d'evitar que el nombre total d'hores de classe al dia d'un professor superés certs límits per a tots els dies.
 		\item Les assignatures assignades a un mateix professor han de tenir certa localitat temporal, és a dir, que hi hagi poca diferència temporal entre el final d'una i el començament de la següent.
 %{\color{gray} El motiu d'aquesta mesura és incentivar al professorat a invertir (opcionalment) en l'elaboració de material docent que malgrat el primer any de docencia li comporti un mayor esforç a la llarga sigui compensat, a més de millorar la docencia és clar.}
-	\end{itemize}
+	\end{enumerate}
     \item \textbf{Restriccions} (com a criteris)
     \begin{itemize}
     	\item No pot haver solapament d'hores entre les assignatures que ha d'impartir un mateix docent . {\color{gray} En essència això evita entre d'altres coses que un mateix docent hages d'estar a dos llocs diferents al'hora .} \textbf{(Restricció de existència)} 
@@ -908,7 +908,8 @@ Aquesta sistema tindrà l'avantatge de poder incorporar diversos factors a les s
     	\item  . {\color{gray} .} \textbf{(minimitzar)} 
     	\item La resta d'assignatures dels vint-i-sis graus restants estarà limitada a quatre anys seguits de docència per un mateix docent. {\color{gray} Això per una banda implica un compromís de cara a la matèria impartida per cada docent, i per altra banda garanteix una estabilitat en el temari impartit de cara als estudiants.} \textbf{(Restricció d'ordre)} 
     	\item  Les matèries  dels cursos tercer i quart impartides als tres graus propis del departament \footnote{Grau de Matemàtiques, grau d'Estadística Aplicada, grau de Matemàtica Computacional i Analítica de Dades}. Sols podran ser impartides per docents que pertanyin a la unitat/subdepartament més proper a la matèria.   {\color{gray} La justificació és prou raonable, donada la actual \textit{especificació} inherent a la ciència en la actualitat. Un exemple seria que l'assignatura de Topologia sols pot ser impartida per docents de \textit{l'unitat} o \textit{subdepartament} de Geometria i Topologia \footnote{Veure secció de  \textit{model actual}.} .} \textbf{(Restricció d'ordre)} 
-    \end{itemize}																								
+    \end{itemize}
+\end{enumerate}																							
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
 %    #07            Conclusions                   %%
@@ -931,7 +932,26 @@ Aquesta sistema tindrà l'avantatge de poder incorporar diversos factors a les s
 	L'agrupament d'un sistema de subhastes juntament amb métodes d'optimitzacó, creant un sistema que faci una primera assignació utilitzant subhastes per després emplenar els forats en aquesta utilitzant models d'optimització sembla la millor opció, ja que aconseguim solucionar un dels problemes de les subhastes, l'assignació d'assignatures que no han rebut pujes (la qual la realitzem directament per optimització), a la vegada que solucionem el problema principal dels métodes d'optimització: l'espai de cerca massa gran, ja que, al haver realitzat subhastes abans, el nombre d'assignatures i professors que quedaràn per assignar haurà estat reduït dràsticament de manera que estarem optimitzant sobre espais tractables sobre els quals podrem trobar el mínim global o aproximacions bones d'aquest.
 	
 
-\end{enumerate}
+\subsection{Exemple final}
+\begin{itemize}
+	\item Un exemple d'aplicació del \textbf{model d'investigació d'operacions} s'ha donat en la subsecció 3.5 Resultats.
+	\item Donem ara un petit exemple per visualitzar les diferents parts del \textbf{model hibrid} proposat
+	\begin{enumerate}
+		\item Imaginem que tenim un departament amb 10 professors format per tres subdepartaments 
+		\begin{itemize}
+			\item {\color{red!60}$\blacksquare$} Subdepartament d'Anàlisis.
+			\item {\color{green!60}$\blacksquare$} Subdepartament d'Àlgebra.
+			\item {\color{blue!60}$\blacksquare$} Subdepartament de Matemàtica aplicada.
+		\end{itemize}
+		 \item Imaginem que en proporció 5:1 han de repartir-se les assignatures que els hi demanada la universitat, en aquest cas 50. \\ \texttt{[assignatures assignades 00]}
+		 \item Pel \textbf{model actual} els docents que estiguin impartint assignatures amb prioritat tindran preferència per repetir l'assignatura si no han assolit el nombre màxim de temps que poden estar impartint-les. \\ \texttt{[assignatures assignades 10]}
+		 \item Es promourà una \textbf{primera ronda de subhasta} (d'algun dels tipus comentats) revalorant les assignatures per la seva demanda. \\ \texttt{[assignatures assignades 30]}
+		 \item Hi haurà una \textbf{segona ronda de subhastes} per decidir empats i incentivar l'adquisició d'assignatures no sol·licitades amb una petita recompensa (augment del nombre d'hores d'una assignatura) per incentivar al professorat.\\ \texttt{[assignatures assignades 45]}
+		 \item Els casos restants d'assignatures que no s'hagin pogut assignar a cap professor s'assignaran de forma automatica mitjançant el \textbf{model de la funció F o d'Optimització} \\ \texttt{[assignatures assignades 50]}
+		 \item Finalment es facilitara canvis \textit{d'ultima hora} si són justificats tal com es fa amb el \textbf{model actual}. \\ \texttt{[assignatures assignades 50-2+2]}
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
 %    #06_2   	       Bibliografia 	          %%
@@ -942,6 +962,11 @@ Aquesta sistema tindrà l'avantatge de poder incorporar diversos factors a les s
 \bibliography{Bib.bib}
 \end{document}
 %https://youtu.be/mANIqat5IC8
+
+
+
+
+
 \begin{figure}
 	\centering
 	\includegraphics[width=4cm]{eps}
