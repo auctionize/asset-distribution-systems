@@ -796,20 +796,27 @@ Amb aquesta nova revalorització horària, es repartiran les matèries no assign
 \subsubsection{Problemàtiques de les  subhastes}
 Aquí tenim un resum de les problemàtiques que ha de soluciona el model de subhasta que considerem construir 
 \begin{tcolorbox}[colback=black!1,title=\textbf{Llista problemàtiques subhastes},coltitle=black,colbacktitle=black!10]
-\begin{enumerate}
+\begin{itemize}
 	\item Les subhastes seran \textbf{seqüencials} o \textbf{simultànies}? Ja que les simultànies  poden implicar un \textbf{bloqueig de moneda} i les seqüencials poden implicar la inviabilitat de les \textbf{sol·licituds condicionals} i  massa temps en executar-se, almenys \textit{ a priori}.
 	\item Com assignem les assignatures que no ha sol·licitat ningú?
 	\item Les situacions de condicionals, com ara la puja de fer una assignatura condicionada a si  és compleix una condició.{\color{black!70} Per exemple impartir amb un docent amb qui es té  \textit{bon tracte}, o bé tenir interès en un conjunt d'assignatures com a global i no per separat, és a dir, per conveniència horària}.
-	\item Cas pràctic. Elegir assignatures per conveniència horària més  que per preferència de la matèria a impartir, sota la suposició de ser un criteri raonable i \textit{comú} en les dades històriques. {\color{black!70} Per exemple voler impartir classe el menor nombre de dies per dificultats en el transport.}  
+		\item Cas pràctic. Elegir assignatures per conveniència horària més  que per preferència de la matèria a impartir, sota la suposició de ser un criteri raonable i \textit{comú} en les dades històriques. {\color{black!70} Per exemple voler impartir classe el menor nombre de dies per dificultats en el transport.}
+			\item Tot sistema que incentivi a mentir afavorira la especulació que farà poc \textbf{eficient} l'assignació final.
+		\item Una assignació \textbf{optima} en tot cas haurà de  minimitzar la diferencia entre les \textbf{hores reals} i les \text{hores ideals}. 
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=black!1]
+\begin{itemize} 
 	\item Tot sistema que incentivi a mentir afavorira la especulació que farà poc \textbf{eficient} l'assignació final.
 	\item Una assignació \textbf{optima} en tot cas haurà de  minimitzar la diferencia entre les \textbf{hores reals} i les \text{hores ideals}.
 	\item Com desitgem una \textbf{revaloració} \footnote{Que pot ser la mateixa o no.} de cada matèria docent subhastada assumim que ha de ser necessari que la subhasta influeixi en el valor final de cada assignatura, en principi el valor en hores s'haurà de modificar.
 	\item Situació de empat. {{\color{black!70}En cas de \textbf{subhasta simultània} .}}
-\end{enumerate}
+\end{itemize}
 \end{tcolorbox}
 \subsubsection{Construcció primer model}
 
-Molts d'aquests problemes es poden solucionar utilitzant un concepte ja molt desenvolupat en la matemàtica, les \textbf{subhastes combinatorials}, aquest tipus de subhastes es basen en la idea de que les pujes es realitzen sobre blocs d'objectes, així es realitzen pujes sobre un conjunt d'objectes de manera que si el participant aconsegueix guanyar tots els objectes la puja s'executa però si hi ha algun dels objectes del bloc que el participant no pot obtenir tota la puja queda invalidada.
+Molts d'aquests problemes es poden solucionar utilitzant un concepte ja molt desenvolupat en la matemàtica, les \textbf{subhastes combinatorials}\cite{CA}, aquest tipus de subhastes es basen en la idea de que les pujes es realitzen sobre blocs d'objectes, així es realitzen pujes sobre un conjunt d'objectes de manera que si el participant aconsegueix guanyar tots els objectes la puja s'executa però si hi ha algun dels objectes del bloc que el participant no pot obtenir tota la puja queda invalidada.
 
 És clar veure que una realització en paral·lel d'aquestes pujes soluciona tots els nostres problemes, ja que eliminem la necessitat de \textbf{bloquejar moneda}, acomoda la possibilitat de que els participants tinguin dependències entre objectes a subhasta (ex: només els interessa el objecte A si poden obtenir el B), generen assignacions òptimes, i aplicant \textbf{subhastes de Vickrey} també resoldríem el problema de evitar l'especulació, ja que incentivaríem als participants als  que pujessin el preu que creuen que val l'objecte (està demostrat\footnote{https://en.wikipedia.org/wiki/Vickrey\_auction \\
 	\#Proof\_of\_dominance\_of\_truthful\_bidding}).
@@ -874,42 +881,7 @@ Aquesta sistema tindrà l'avantatge de poder incorporar diversos factors a les s
 
 
 
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                 %%
-%    #06_1     Criteris o dades recopilació       %%
-%                                                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Apèndix}
-\begin{enumerate}
-	\item \textbf{Paràmetres a optimitzar } (com a criteris) 
-	\begin{enumerate}
-		\item La diferencia entre el nombre d'hores que \textit{hauria de fer} un professor i les hores que \textit{finalment farà} ha de ser el més petita possible. {\color{gray} Considerem que és l'estat més ideal.} \textbf{(minimitzar)} 
-		\item La quantitat d'assignatures assignades a cada professors ha de ser baixa. 
-		{\color{gray}  Per evitar el cas de que part del professorat tingui un nombre elevat de matèries a impartir, malgrat contin poc cadascuna ja que puntualment és pot tenir un sobrevolem de treball.} \textbf{(minimitzar)}
-		\item L'assignació de les assignatures entre el professorat s'hauria d'acostar el màxim possible a les sol·licituds particulars demandades. {\color{gray}  L'elecció ja és justificació prou per argumentar que és una \textbf{alternativa} desitjable.} \textbf{(maximitzar)}
-		\item S'hauria d'evitar que el nombre total d'hores de classe al dia d'un professor superés certs límits per a tots els dies.
-		\item Les assignatures assignades a un mateix professor han de tenir certa localitat temporal, és a dir, que hi hagi poca diferència temporal entre el final d'una i el començament de la següent.
-%{\color{gray} El motiu d'aquesta mesura és incentivar al professorat a invertir (opcionalment) en l'elaboració de material docent que malgrat el primer any de docencia li comporti un mayor esforç a la llarga sigui compensat, a més de millorar la docencia és clar.}
-	\end{enumerate}
-    \item \textbf{Restriccions} (com a criteris)
-    \begin{itemize}
-    	\item No pot haver solapament d'hores entre les assignatures que ha d'impartir un mateix docent . {\color{gray} En essència això evita entre d'altres coses que un mateix docent hages d'estar a dos llocs diferents al'hora .} \textbf{(Restricció de existència)} 
-    	\item El interval de temps entre el final d'una sessió de treball i el inici d'una altre, impartides per un mateix professional docent, a diferents facultats ha de ser major o igual a 20 minuts. {\color{gray} Un model que no contemples la pèrdua de temps en efectuar desplaçaments físics difícilment serà eficient i probablement precari.} \textbf{(Restricció d'ordre)} 
-    	\item Les assignatures dels graus:
-    	\begin{enumerate} 
-    		\item Grau de Matemàtiques.
-    		\item Grau d'Estadística Aplicada.
-    		\item Grau de Matemàtica Computacional i Analítica de Dades.
-    	\end{enumerate}
-      No podran ser impartides pel mateix docent durant més de tres anys seguits.
-      {\color{gray} Aquesta restricció té justificació per imposició de dades històriques i pràctiques.} \textbf{(Restricció d'ordre)} 
-    	\item  . {\color{gray} .} \textbf{(minimitzar)} 
-    	\item La resta d'assignatures dels vint-i-sis graus restants estarà limitada a quatre anys seguits de docència per un mateix docent. {\color{gray} Això per una banda implica un compromís de cara a la matèria impartida per cada docent, i per altra banda garanteix una estabilitat en el temari impartit de cara als estudiants.} \textbf{(Restricció d'ordre)} 
-    	\item  Les matèries  dels cursos tercer i quart impartides als tres graus propis del departament \footnote{Grau de Matemàtiques, grau d'Estadística Aplicada, grau de Matemàtica Computacional i Analítica de Dades}. Sols podran ser impartides per docents que pertanyin a la unitat/subdepartament més proper a la matèria.   {\color{gray} La justificació és prou raonable, donada la actual \textit{especificació} inherent a la ciència en la actualitat. Un exemple seria que l'assignatura de Topologia sols pot ser impartida per docents de \textit{l'unitat} o \textit{subdepartament} de Geometria i Topologia \footnote{Veure secció de  \textit{model actual}.} .} \textbf{(Restricció d'ordre)} 
-    \end{itemize}
-\end{enumerate}																							
+\newpage															
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
 %    #07            Conclusions                   %%
@@ -950,8 +922,41 @@ Aquesta sistema tindrà l'avantatge de poder incorporar diversos factors a les s
 		 \item Els casos restants d'assignatures que no s'hagin pogut assignar a cap professor s'assignaran de forma automatica mitjançant el \textbf{model de la funció F o d'Optimització} \\ \texttt{[assignatures assignades 50]}
 		 \item Finalment es facilitara canvis \textit{d'ultima hora} si són justificats tal com es fa amb el \textbf{model actual}. \\ \texttt{[assignatures assignades 50-2+2]}
 		\end{enumerate}
-	\end{itemize}
 \end{itemize}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                 %%
+%    #06_1     Criteris o dades recopilació       %%
+%                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Apèndix}
+\begin{enumerate}
+	\item \textbf{Paràmetres a optimitzar } (com a criteris) 
+	\begin{enumerate}
+		\item La diferencia entre el nombre d'hores que \textit{hauria de fer} un professor i les hores que \textit{finalment farà} ha de ser el més petita possible. {\color{gray} Considerem que és l'estat més ideal.} \textbf{(minimitzar)} 
+		\item La quantitat d'assignatures assignades a cada professors ha de ser baixa. 
+		{\color{gray}  Per evitar el cas de que part del professorat tingui un nombre elevat de matèries a impartir, malgrat contin poc cadascuna ja que puntualment és pot tenir un sobrevolem de treball.} \textbf{(minimitzar)}
+		\item L'assignació de les assignatures entre el professorat s'hauria d'acostar el màxim possible a les sol·licituds particulars demandades. {\color{gray}  L'elecció ja és justificació prou per argumentar que és una \textbf{alternativa} desitjable.} \textbf{(maximitzar)}
+		\item S'hauria d'evitar que el nombre total d'hores de classe al dia d'un professor superés certs límits per a tots els dies.
+		\item Les assignatures assignades a un mateix professor han de tenir certa localitat temporal, és a dir, que hi hagi poca diferència temporal entre el final d'una i el començament de la següent.
+		%{\color{gray} El motiu d'aquesta mesura és incentivar al professorat a invertir (opcionalment) en l'elaboració de material docent que malgrat el primer any de docencia li comporti un mayor esforç a la llarga sigui compensat, a més de millorar la docencia és clar.}
+	\end{enumerate}
+	\item \textbf{Restriccions} (com a criteris)
+	\begin{itemize}
+		\item No pot haver solapament d'hores entre les assignatures que ha d'impartir un mateix docent . {\color{gray} En essència això evita entre d'altres coses que un mateix docent hages d'estar a dos llocs diferents al'hora .} \textbf{(Restricció de existència)} 
+		\item El interval de temps entre el final d'una sessió de treball i el inici d'una altre, impartides per un mateix professional docent, a diferents facultats ha de ser major o igual a 20 minuts. {\color{gray} Un model que no contemples la pèrdua de temps en efectuar desplaçaments físics difícilment serà eficient i probablement precari.} \textbf{(Restricció d'ordre)} 
+		\item Les assignatures dels graus:
+		\begin{enumerate} 
+			\item Grau de Matemàtiques.
+			\item Grau d'Estadística Aplicada.
+			\item Grau de Matemàtica Computacional i Analítica de Dades.
+		\end{enumerate}
+		No podran ser impartides pel mateix docent durant més de tres anys seguits.
+		{\color{gray} Aquesta restricció té justificació per imposició de dades històriques i pràctiques.} \textbf{(Restricció d'ordre)} 
+		\item La resta d'assignatures dels vint-i-sis graus restants estarà limitada a quatre anys seguits de docència per un mateix docent. {\color{gray} Això per una banda implica un compromís de cara a la matèria impartida per cada docent, i per altra banda garanteix una estabilitat en el temari impartit de cara als estudiants.} \textbf{(Restricció d'ordre)} 
+		\item  Les matèries  dels cursos tercer i quart impartides als tres graus propis del departament \footnote{Grau de Matemàtiques, grau d'Estadística Aplicada, grau de Matemàtica Computacional i Analítica de Dades}. Sols podran ser impartides per docents que pertanyin a la unitat/subdepartament més proper a la matèria.   {\color{gray} La justificació és prou raonable, donada la actual \textit{especificació} inherent a la ciència en la actualitat. Un exemple seria que l'assignatura de Topologia sols pot ser impartida per docents de \textit{l'unitat} o \textit{subdepartament} de Geometria i Topologia \footnote{Veure secció de  \textit{model actual}.} .} \textbf{(Restricció d'ordre)} 
+	\end{itemize}
+\end{enumerate}								
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
 %    #06_2   	       Bibliografia 	          %%
