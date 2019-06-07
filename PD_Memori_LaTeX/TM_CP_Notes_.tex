@@ -414,10 +414,10 @@ En aquest cas, \textbf{minimitzarem} la funció $F$ encara a definir.
 \vspace{3mm}
 
 \subsection{Definició o Ontologia de la funció objectiu}
-Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre les  \textbf{alternatives} que estan \textit{prohibides} pel sistema (com per exemple: un professor assignat a dos classes que es realitzin simultàniament), de manera que ens aquests casos la funció donarà infinit o bé els descartara. En els altres casos, en els que hem de determinar la qualitat d'una \textbf{alternativa factible} ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor aquesta funció seria diferent i hem de balancejar els desitjos d'uns professors amb els dels altres, ja que en molts casos ens trobarem que una \textbf{alternativa} que és \textit{millor} per a uns, és \textit{pitjor} pels altres. Hi ha diverses possibles sortides a aquesta problemàtica:
+Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que aquesta està lligada al criteri subjectiu de cada professor. Malgrat això, podem aplicar diverses \textbf{restriccions} sobre les  \textbf{alternatives} que estan \textit{prohibides} pel sistema (com per exemple: un professor assignat a dos classes que es realitzin simultàniament), de manera que ens aquests casos la funció donarà infinit o bé els descartara. En els altres casos, en els que hem de determinar la qualitat d'una \textbf{alternativa factible} ens trobem amb l'ambigüitat que havíem comentat anteriorment, ja que per cada professor, aquesta funció seria diferent i hem de balancejar els desitjos d'uns professors amb els dels altres, ja que en molts casos ens trobarem que una \textbf{alternativa} que és \textit{millor} per a uns, és \textit{pitjor} pels altres. Hi ha diverses possibles sortides a aquesta problemàtica:
 \begin{enumerate}
-	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  d'alternatives prèvies, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la \textbf{funció implícita} que es va utilitzar per \textit{avaluar} les \textbf{alternatives}. És a dir, buscar, utilitzant aproximacions de funcions, una funció sobre les \textbf{dades base} \footnote{De nou aquestes estarien basades en l'historial recuperable, d'almenys,cinc anys enrere.} tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una \textbf{alternativa} el més semblant possible a la solució que es va utilitzar aquell any. 
-	\item \textbf{Obtenció de dades mitjançant enquesta} preguntant als professors directament què valoren més i creant una funció de forma artesanal basant-nos en els resultats.
+	\item \textbf{Basar-nos en dades Històriques} fent un recull del \textit{historial}  d'alternatives prèvies, juntament amb les dades base que es van utilitzar per crear-les, podem intentar trobar la \textbf{funció implícita} que es va utilitzar per \textit{avaluar} les \textbf{alternatives}. És a dir, buscar, utilitzant aproximacions de funcions, una funció sobre les \textbf{dades base} \footnote{De nou aquestes estarien basades en l'historial recuperable, d'almenys, cinc anys enrere.} tal que, al optimitzar-la sobre cada un dels conjunts de dades base de cada any, doni una \textbf{alternativa} el més semblant possible a la solució que es va utilitzar aquell any. Aquesta opció és descarta amb l'argument que aquest criteris poden variar \textit{molt} en funció del temps.
+	\item \textbf{Obtenció de dades mitjançant enquesta} preguntant als professors directament què valoren més i creant una funció de forma artesanal basant-nos en els resultats. L'argument per menysprear part d'aquesta font  per seleccionar els criteris resideix en que, pot haver interès en mentir a aquestes respostes per afavorir \textit{possibles} \textbf{estratègies guanyadores}.
 	\item \textbf{Funcions personalitzables} a nivell individual per cada professor. A partir d'aquestes funcions individuals podem crear una funció global que estigui formada per un sumatori d'aquestes funcions tal que al optimitzar aquesta funció global estarem optimitzant les funcions individuals en conjunt. Això a la pràctica és pot traduir en contemplar tots els criteris a la vegada i en cas de que un criteri estigues més present augmentar-ne el \textit{pes} en la \textbf{funció objectiu} $F$.
 \end{enumerate} 
 \begin{figure}
@@ -432,7 +432,7 @@ A la figura \ref{fig:4} observem un esquema que il·lustra la problemàtica i el
 \textit{Com justifiquem que els criteris que fixem i definiran la funció són bons o es corresponen amb el desig del professorat ?} 
  
 \vspace{1mm}
-En el nostre cas \textit{apostem} per un \textit{mix} entre el punt 2 i 3. Personalització limitada per restriccions, però adaptable a les \textit{particularitats} del Departament i les \textit{preferències}. La idea és facilitar una \textit{Biblioteca} de funcions per definir la funció final com a la suma d'una selecció d'aquestes.
+En el nostre cas \textit{apostem} per un \textit{mix} entre el punt 2 i 3. Personalització limitada per \textbf{restriccions}, però adaptable a les \textit{particularitats} del Departament i les \textit{preferències}. La idea és facilitar una \textit{Biblioteca} de funcions per definir la funció final $F$ com a la suma d'una selecció d'aquestes.
 
 \subsection{Ventall de criteris i Biblioteca de \textit{subfuncions}}
 Definirem de forma additiva la funció $F$, és a dir, direm com es pot construir a partir d'altres \textit{subfuncions} i perquè ho fem així. Amb notació anterior tenim:
@@ -446,7 +446,7 @@ $$
 On cada $f_i$ representa un \textit{criteri matematitzat} que  valora un aspecte concret. D'aquesta manera podem fer que la funció tingui en compte tants criteris com vulguem i que el fet de \textit{suprimir-ne} un  o \textit{afegir-ne} un altre no impliqui definir de nou la funció.
 Això respon \textit{fortament} a {\color{violet!60}$\blacksquare$}$^{(05)}$.
 
-La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet aquesta pregunta és massa ambiciosa, però donem alguns del exemples de funcions que hem vist \textit{raonables} i \textit{interessants}, i a més poden facilitar la tasca. De fet d'ara en endavant ens referirem a un conjunt de \textbf{subfuncions} concretes com a \textbf{Biblioteca}.
+La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet aquesta pregunta és massa ambiciosa, però donem alguns dels exemples de funcions que hem vist \textit{raonables} i \textit{interessants}, que a més poden facilitar la tasca. De fet d'ara en endavant ens referirem a un conjunt de \textbf{subfuncions} concretes com a \textbf{Biblioteca}.
 \vspace{3mm}
 
 \begin{itemize}[$\RHD$]
@@ -538,11 +538,11 @@ La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet 
 		}}
 \end{itemize}
 \subsection{Optimització}
-Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \textbf{alternatives} \footnote{Altrament $ \approx 10^{1000}$.} Inicialment vam utilitzar \textit{Simulated Annealing} (Algorisme d'Optimització apropiat per a grans \textbf{espais de cerca} ) amb control de mínims locals per tal d'optimitzar  la funció $F$ en un temps \textit{raonable}. Però, donada la \textit{filosofia} del treball, vam voler  optimitzar la \textbf{funció objectiu} de forma pròpia mitjançant selecció d'algoritmes genètics.   
+Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \textbf{alternatives} \footnote{Altrament $ \approx 10^{1000}$.} Inicialment vam utilitzar \textit{Simulated Annealing} (Algorisme d'Optimització apropiat per a grans \textbf{espais de cerca} ) amb control de mínims locals per tal d'optimitzar  la funció $F$ en un temps \textit{raonable}. Però, donada la \textit{filosofia} del treball, vam voler  optimitzar la \textbf{funció objectiu} de forma pròpia mitjançant \textbf{selecció d'algoritmes genètics}.   
 \begin{enumerate}
-	\item \textbf{Simulated Annealing:} Algorisme  basat en el mètode de Montecarlo \textit{refinat}, és apropiat per \textbf{espais de cerca} grans. Té origen en una tècnica de l'industria metal·lúrgica i es sol aplicar en \textit{optimització}.
+	\item \textbf{Simulated Annealing:} Algorisme basat en el mètode de Montecarlo \textit{refinat}, és apropiat per \textbf{espais de cerca} grans. Té origen en una tècnica de l'industria metal·lúrgica i es sol aplicar en \textit{optimització} per cercar mínims i màxims d'una funció donada.
 	\item \textbf{Algorisme genètic:} Els algoritmes genètics, els quals es basen en el procés evolutiu, de forma molt simplificada consisteixen en generar solucions per a un problema mitjançant la recombinació de solucions anteriors i l'aplicació de mutacions aleatories sobre la solució, per després evaluar les solucions obtingudes i elegir les millors, millorant respecte les \textit{solucions anteriors} i imitant així la \textit{selecció natural biològica}.
-	\item \textbf{Altres algorismes d'optimització de funcions no lineals meta-heurístics:} També és podrien haver fet servir algorismes com:  
+	\item \textbf{Altres algorismes meta-heurístics d'optimització de funcions no lineals:} També és podrien haver fet servir algorismes com:  
 	\begin{enumerate}
 		\item Optimització d'eixam de partícules
 		\item Cerca de cucut
@@ -557,25 +557,25 @@ Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100
 \subsection{Limitacions del model}
 És clar que en primera instancia una estratègia prou pràctica com els \textit{algorismes} per optimitzar el model es podria tirar per terra argumentant que cap d'aquest mètodes (\textit{simulated annealing} i \textit{Algorismes genètics}) podran trobar el mínim absolut de la funció a optimitzar $F$. 
 
-Un argument així no \textit{correspon} amb la \textit{filosofia del treball}. Això no ens resulta problemàtic, ja que només ens cal que la \textbf{solució} sigui \textit{bona}, entenent com a bon que sigui: \textbf{factible} , que consumeixi un temps \textit{raonable} en ser trobada i que sigui \textit{substancialment millor} que la del \textbf{model actual}. I això és pot comprovar fàcilment com farem en la subsecció de 3.5 Resultats.
+Un argument així no \textit{correspon} amb la \textit{filosofia del treball}. Això no ens resulta problemàtic, ja que només ens cal que la \textbf{solució} sigui \textit{bona}, entenent com a bon que sigui: \textbf{factible} , que consumeixi un temps \textit{raonable} en ser trobada i que sigui \textit{substancialment millor} que la del \textbf{model actual}. I això és pot comprovar fàcilment com farem en la subsecció 3.5 Resultats.
 
-De fet només hem donat una \textit{definició constructiva}, és a dir, hem donat una \textit{idea} de com construir $F$, però no l'hem explicitat ja que la \textit{màgia} d'aquesta és que es pugui adaptar a restriccions i criteris diferents. Cosa que respon \textit{fortament} a  {\color{green!60}$\blacksquare$}$^{(03)}$, {\color{cyan!60}$\blacksquare$}$^{(01)}$ i {\color{violet!60}$\blacksquare$}$^{(05)}$.
+De fet només hem donat una \textit{definició constructiva}, és a dir, hem donat una \textit{idea} de com construir $F$, però no l'hem explicitat ja que la \textit{màgia} d'aquesta és que es pugui adaptar a \textbf{restriccions} i criteris (a partir els quals definir les esmentades \textit{subfuncions}) diferents. Cosa que respon \textit{fortament} a  {\color{green!60}$\blacksquare$}$^{(03)}$, {\color{cyan!60}$\blacksquare$}$^{(01)}$ i {\color{violet!60}$\blacksquare$}$^{(05)}$.
 \subsection{Resultats del model}
 Els resultats més rellevants d'aquest model són:
 \begin{enumerate}
 	\item Possibilitar la cerca de \textbf{solucions factibles}\footnote{Enteses com a assignacions que compleixen amb les \textbf{restriccions} imposades. }
-	\item Possibilitat de millorar optimització d'alguns aspectes del \textbf{model actual}.
+	\item Possibilitat de millorar la \textbf{optimització} d'alguns aspectes del \textbf{model actual}.
 \end{enumerate}
 Comparant aquest model, \textbf{model d'investigacions operatives}, amb el \textbf{model actual} agafant com a \textbf{funció objectiu} :
 $$
 F=\sum_{i=1}^{2}(f_i)(a) 
 $$
 $$\text{ amb } \qquad f_1(a)=\sum_{j=1}^{111} (x_j-x'_j)^2 \qquad \text{ i }$$  
-on $x_j$ serien les hores de classe que hauria de fer un professora o professor $j \in \{1,\cdots,111\}$ i $x_j'$ les hores que farà amb l'assignació $a$ el professor $j \in \{1,\cdots,111\}$.
+on $x_j$ serien les hores de classe que hauria de fer un professora o professor $j \in \{1,\cdots,111\}$ i $x_j'$ les hores que farà amb l'assignació $a$ el professor $j \in \{1,\cdots,111\}$ (Hi ha 111 professors).
 $$\text{ amb }  \qquad f_2(a)=\sum_{j=1}^{111} (y_j)^3$$
 on $y_j$ serien el nombre de matèries docents que hauria de fer un professor $j \in \{1,\cdots,111\}$   amb \textbf{alternativa} $a$. 
 
-Això seria el que actualment s'intenta minimitzar. Programant en Python (amb els dos algorismes per \textit{minimitzar}) obtenim els resultats que es veuen en les figures 4 i 5 (per el saldo); i 6 i 7 (pel nombre d'assignatures).
+Això seria el que actualment s'intenta minimitzar. Programant en Python (amb els dos algorismes per \textit{minimitzar} $F$) obtenim els resultats que es veuen en les figures 4 i 5 (per el saldo); i 6 i 7 (pel nombre d'assignatures).
 Resumint aquestes podem observar Taula 1. 
 \vspace{3mm}
 
@@ -593,7 +593,7 @@ Resumint aquestes podem observar Taula 1.
 	\end{tabular}
 }
 \end{tcolorbox}
-\noindent \textbf{Taula 1:} \small{Suma del valor absolut dels saldos dels professors  i la seva variància, tant del \textit{model actual} (primera columna), com dels models d'optimització de $F$ tant amb \textit{Simulated annealing} (tercera columna) com amb \textit{algorismes genètics} (quarta columna).}
+\noindent \textbf{Taula 1:} \small{Suma del valor absolut dels saldos dels professors  i la seva variància, tant del \textit{model actual} (primera columna), com dels models d'optimització de $F$ tant amb \textit{Simulated annealing} (tercera columna) com amb \textit{Algorismes genètics} (quarta columna).}
 \vspace{3mm}
 
 \normalsize
@@ -625,36 +625,36 @@ Concloem doncs que els models d'optimització donen una \textbf{solució bona}. 
 \newpage
 \subsection{Alguns detalls sobre el procés d'elaboració dels algoritmes genètics}
 \normalsize
-Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles \textbf{solucions} a base de recombinar i mutar solucions ja existents\cite{ga}. Aquests mecanismes abstractes, així com la codificació de la solució sobre la qual operen, admeten moltes possibles variacions, les quals s'han d'adaptar al problema per aconseguir el \textit{màxim rendiment}.
+Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles \textbf{solucions} a base de recombinar i mutar solucions ja existents\cite{ga}. Aquests mecanismes \textit{abstractes}, així com la codificació de la solució sobre la qual operen, admeten moltes possibles variacions, les quals s'han d'adaptar al problema per aconseguir el \textit{màxim rendiment}.
 
-A més a més, el nostre algoritme utilitza elitisme, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que noves generacions sempre millorin la funció de cost.
+A més a més, el nostre algoritme utilitza \textbf{elitisme}, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que noves generacions sempre \textit{millorin} la funció de cost.
 
 En la nostra implementació dels algoritmes genètics, hem optat per representar el \textbf{fenotip} (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a cada assignatura diferent. La \textbf{mutació} es implementada com una assignació d'una assignatura aleatòria a un professor aleatori; per altra part la recombinació crea noves solucions a partir de dos solucions triades aleatoriameant entre les millors (la \textbf{élit}), generant una nova solució que tingui part de les assignacions d'assigatures d'una i part de l'altra. Altres paràmetres, com la mida de la població, la probabilitat de recombinació o la de mutació, s'han triat de forme empírica a base d'executar l'algorisme i buscar les constants que donaven els millors resultats.
 
-A més a més, el nostre algoritme utilitza \textit{elitisme}, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que noves generacions sempre millorin la funció de cost.
-
 Comparant els resultats obtinguts en l'optimització en que hem utilitzat \textit{Simulated Annealing} i en la d'Algoritmes Genètics, és trivial veure que els resultats de SA són molt millors, ja que s'assoleixen assignacions amb diferències d'hores més ben distribuïdes. Aixó és així perquè hem executat els algoritmes durant poc temps (menys de 20 minuts) i el fet que les iteracions en GA són molt més lentes ha portat a que no s'aconseguís arribar a un mínim local.
 
-Creiem que en executar l'algoritme durant períodes de temps més llargs, les capacitats per evitar mínims locals dels GAs mitjançant l'especiació portaran a una millora de resultats respecte al SA, ja que l'exploració realitzada pel GA cobrirà molt més \textbf{espai}.
+Creiem que en executar l'algoritme durant períodes de temps més llargs, les capacitats per evitar mínims locals dels GAs mitjançant l'\textbf{especiació} portaran a una millora de resultats respecte al SA, ja que l'exploració realitzada pel GA cobrirà molt més \textbf{espai}.
 
 \begin{figure}[!]
 	\centering
 	\includegraphics[width=9cm]{progress_ga}
-	\caption{ \small Gràfica de l'evolució de la qualitat de la millor assignació de cada generació respecte al temps acumulat d'execució de l'algorisme genètic. }
+	\caption{ \small Gràfica de l'evolució de la qualitat de la millor assignació de cada generació respecte al temps  acumulat d'execució de l'algorisme genètic.}
 	\label{fio}
 \end{figure}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=9cm]{recombinacio}
-	\caption{ \small Diagrama que il·lustra l'aplicació de l'operador de recombinació. }
+	\caption{ \small Diagrama que il·lustra l'aplicació de l'\textbf{operador} de recombinació. }
 	\label{firo}
 \end{figure}
 \subsection{Revalorització d'assignatures}
-Durant l'optimització, els \textbf{models d'optimització} ja revaloritzen les assignatures de forma intrínseca per tal d'aconseguir que la satisfacció de tots els professors sigui màxima. No obstant, ens interessa obtenir una valorització \textit{explícita}, ja que aquest és un dels requisits que ha de complir el model d'acord amb l'enunciat del treball (concretament {\color{green!60}$\blacksquare$}$^{(03)}$).
+Durant l'optimització, els \textbf{models d'optimització} ja revaloritzen les assignatures de forma intrínseca per tal d'aconseguir que la satisfacció de tots els professors sigui màxima. 
 
-Per tal d'obtenir aquesta valoració, intentarem extreure'n aquesta de forma intrínseca quan es realitza l'optimització, basant-nos en una comparació entre l'avaluació de l'estat actual d'un professor i el de la resta de professors.
+No obstant, ens interessa obtenir una valorització \textit{explícita}, ja que aquest és un dels requisits que ha de complir el model d'acord amb l'enunciat del treball (concretament {\color{green!60}$\blacksquare$}$^{(03)}$).
 
-Així doncs, començarem separant l'avaluació de l'estat d'un professor del de la resta en la funció d'avaluació de una assignació. Això ho podem fer perque totes les funcions que formen part d'aquesta funció d'avaluació, que realment és un sumatori de les primeres funcions, són independents entre elles i s'apliquen sobre només un professor. D'aquesta manera, dividim la funció d'avaluació:
+Per tal d'obtenir aquesta \textbf{valoració}, intentarem extreure'n aquesta de forma intrínseca quan es realitza l'optimització, basant-nos en una comparació entre l'avaluació de l'estat actual d'un professor i el de la resta de professors.
+
+Així doncs, començarem separant l'avaluació de l'estat d'un professor del de la resta en la funció d'avaluació d'una assignació. Això ho podem fer perque totes les funcions que formen part d'aquesta funció d'avaluació, que realment és un sumatori de les primeres funcions, són independents entre elles i s'apliquen sobre només un professor. D'aquesta manera, dividim la funció d'avaluació:
 $$F(a)= \displaystyle \sum_{p\in professors} \sum_{f_i\in funcions} f_i(p) = $$
 $$= \displaystyle \sum_{p\in professors} f(p)$$
 On és fàcil observar que:
@@ -662,7 +662,7 @@ $$f(p)=\sum_{i\in funcions} f_i(p)$$
 
 A partir d'aquí podem aplicar $f$ sobre l'estat de tots els professors i obtenir la mitja $\mu$ i la desviació típica $\sigma$ de la distribució d'aquests valors. 
 
-A continuació calculem els següents valors, que ens permeten obtenir una aproximació de com de bo és l'estat d'un professor respecte la resta. A més, al dividir per sigma, obtenim un valor adimensional que rectifica les unitats que estiguem utilitzant (de manera que utilitzar unitats amb valors molt grans o molt petits no afectarà funcionalment el resultat final) i ens normalitza el resultat respecte a la variancia de les dades, de manera que un resultat podrà ser molt alt només si es extremadament diferent a la resta de dades.
+A continuació calculem els següents valors, que ens permeten obtenir una aproximació de com de bo és l'estat d'un professor respecte la resta. A més, al dividir per sigma, obtenim un \textbf{valor adimensional} que rectifica les unitats que estiguem utilitzant (de manera que utilitzar unitats amb valors molt grans o molt petits no afectarà funcionalment el resultat final) i ens normalitza el resultat respecte a la variancia de les dades, de manera que un resultat podrà ser molt alt només si es \textit{extremadament} diferent a la resta de dades.
 
 $$\phi(p)=\dfrac{f(p)-\mu}{\sigma}$$
 
@@ -673,11 +673,11 @@ $$h_{nou_a}=h_{vell_a}(1+\phi(p)\alpha) \quad \forall a \in A_p$$
 on $A_p$ és el conjunt d'assignatures realitzades pel professor $p$, i $\alpha$ és un paràmetre constant modificable que serveix per a modificar la \textit{intensitat} de la revalorització per tal que s'adapti al funcionament esperat pels usuaris.
 \subsection{Problemàtica típica de la \textit{subfuncions} personalitzables}
 
-Una problemàtica que mereix la pena tractar en detall és el fet de les funcions \textit{personalitzables problemàtiques}.
+Una problemàtica que \textit{mereix la pena} ser tractar en detall, és el fet de les \textit{subfuncions} \textit{personalitzables problemàtiques}.
 
-Imaginem que un docent \textit{amb certa mandrositat} decideix autodefinicir-se una \textbf{subfunció pròpia} que gairebé sempre retorna valor \textit{gegants} per  qualsevol assignació que se li dóna llevat de potser que se li dones l'assignació de no impartir cap assignatura. És clar que si avaluéssim directament aquesta \textit{subfunció} la millor assignació per aquest professor seria impartir zero assignatures, cosa que no resulta massa interessant pel model ni per la resta del professorat.
+Imaginem que un docent \textit{amb certa mandrositat} decideix definir-se una \textbf{subfunció pròpia} que gairebé sempre retorna valors \textit{gegants} per  qualsevol assignació que se li dóna, llevat  potser que se li dones l'assignació de no impartir cap assignatura. És clar que si avaluéssim directament aquesta \textit{subfunció} la millor assignació per aquest professor seria impartir zero assignatures, cosa que no resulta \textit{massa interessant} pel model ni per la resta del professorat.
 
-La solució que donem és prou senzilla però no per això menys bona. Per cada funció donada per un professor $f_j(a)$ considerem:
+La solució que donem és prou senzilla però no per això menys \textit{bona}. Per cada funció donada per un professor $f_j(a)$ considerem:
 $$
 f_j'(a):=
 \begin{cases}
@@ -699,39 +699,39 @@ $$
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
 	\section{Models d'assignacions per subhastes}
 \end{tcolorbox}
-\lettrine{E}n aquesta secció abordarem la problemàtica d'assignacions mitjançant l'estructura de subhasta, pensant, com en les seccions anteriors, en la seva aplicació final. La intenció  és construir un mètode sobre l'estructura de subhasta que permeti  donar solució al problema dels repartiments.
+\lettrine{E}n aquesta secció abordarem la problemàtica d'assignacions mitjançant l'estructura de subhasta, pensant, com en les seccions anteriors, en la seva aplicació final. La intenció  és \textit{construir} un \textbf{mètode} sobre l'estructura de subhasta que permeti  donar solució al problema dels repartiments.
 \subsection{Problemàtiques i beneficis de les subhastes}
-Tots tenim una idea intuïtiva de subhasta. Més enllà de les conegudes subhastes de \textit{eBay}  ni'ha de molts altres tipus, que no només poden ser classificades per un únic criteri sinó per molts. Explicitem algunes d'aquestes classificacions.
+Tots tenim una idea intuïtiva de subhasta. Més enllà de les conegudes subhastes d'\textit{eBay}  ni'ha de molts altres tipus, que no només poden ser classificades per un únic criteri sinó per molts. Explicitem algunes d'aquestes classificacions.
 
-Les \textbf{subhastes simultànies o paral·leles} són aquelles que és \textit{resolen} a la vegada, és a dir, només cal un \textit{instant} per determinar els guanyadors. Per conta les \textbf{subhastes seqüencials } són aquelles que decideixen \textit{una per una}. 
+Les \textbf{subhastes simultànies o paral·leles} són aquelles que és \textit{resolen} a la vegada, és a dir, només cal un \textit{instant} per determinar els guanyadors. Per conta les \textbf{subhastes seqüencials } són aquelles en que és decideixen \textit{una per una}. 
 
 Les \textbf{subhastes a cegues} són aquelles en que les puges que fa cada participant de la subhasta no són públiques, en canvi, en les \textbf{subhastes públiques} sí.
 
 Les \textbf{subhastes a l'alça} són aquelles en les qui guanya el participant que ofereix el major preu, en canvi les \textbf{subhastes a la baixa}, són guanyades pel participant que  ofereix el menor preu. Un exemple d'aquesta ultima podria ser el preu mínim que està disposat a rebré un \textit{participant} per realitzar una tasca.
 
-L'objectiu principal de la majoria de \textbf{subhastes} és vendre \textit{objectes} al preu més alt possible (suposant que fossin subhastes a l'alça),és a dir, maximitzen el \textit{guany} del \textit{venedor} però en un cas com en el de repartir les assignatures entre el professorat del departament d'una facultat això no té sentit, ni és un bon plantejament, ja que no hi ha objectiu de guany, sinó únicament de repartiment.
+L'objectiu principal de la majoria de \textbf{subhastes} és vendre \textit{objectes} al preu més alt possible (suposant que fossin subhastes a l'alça),és a dir, maximitzen el \textit{guany} del \textit{venedor}. En un cas com en el de repartir les assignatures entre el professorat del departament d'una facultat això no té sentit, ni és un bon plantejament, ja que no hi ha objectiu de guany, sinó únicament de repartiment.
 
-Per tant una subhasta típica no seria pas una bona solució al problema de repartiment. No obstant hi ha un tipus de subhasta que no maximitza el benefici de \textit{venedor} sinó dels \textit{participants}, és a dir, en maximitza \textbf{l'utilitat} d'aquests últims. 
+Per tant una subhasta típica no seria pas una bona solució al problema de repartiment. No obstant hi ha un tipus de subhasta que no maximitza el benefici del \textit{venedor} sinó el dels \textit{participants}, és a dir, en maximitza \textbf{l'utilitat} d'aquests últims. 
 
-Aquest tipus de subhasta, que de fet és l'única que farem servir tot i donar dos models completament diferents basats en subhastes, es coneixen com a subhastes de \textbf{Vickrey}. Les \textbf{subhastes de Vickrey} són subhastes  simultànies a a cegues on el guanyador d'una subhasta és qui ofereix el preu més alt (suposant subhastes a l'alça) pagant el preu de la segona puja més alta.
+Aquest tipus de subhasta, que de fet és l'única que farem servir tot i donar \textbf{tres} models completament diferents basats en subhastes, es coneixen com a subhastes de \textbf{Vickrey}. Les \textbf{subhastes de Vickrey} són subhastes  seqüencials (per evitar \textit{bloqueig de moneda}) a a cegues on el guanyador d'una subhasta és qui ofereix el preu més alt (suposant subhastes a l'alça) pagant el preu de la segona puja més alta.
 
-En Teoria de jocs es pot demostrar que aquests tipus de subhasta és totalment eficient, que tal com havíem dit abans maximitza l'\textbf{utilitat} dels participants i incentiva de fer pugues \textit{racionals}, és a dir, pagar el que és creu correcte o \textit{just}.   
+En \textbf{Teoria de jocs} es pot demostrar que aquests tipus de subhasta són totalment eficient, que tal com havíem dit abans maximitza l'\textbf{utilitat} dels participants i per tant incentiva a fer pugues \textit{racionals}, és a dir, pagar el que és creu correcte o \textit{just}.   
 
 No obstant una implementació \textit{a priori} de subhastes de Vickrey, per obtenir una subhasta optima o satisfactòria, no podria ser pas factible  ja que no hauria de ser seqüencial ja que llavor l'experiència del usuari (UX) podria ser desagradable ja que cada \textit{assignatura} hauria d'estar activa en períodes de temps disjunts. A més si fos simultània també tindríem problemes, ja que llavors, podria haver problemes de \textbf{bloqueig de moneda}. Tal com il·lustra el Exemple \# 1. La Solució queda per subhastar blocs d'assignatures en períodes disjunts de temps.
 
 \begin{tcolorbox}[colback=black!1,title=\textbf{Exemple \# 1},coltitle=black,colbacktitle=black!10]
 \begin{itemize}
 	\item En Grothendieck vol pujar per l'assignatura $A$, $B$, $C$.
-	\item Té un total de 10 monedes.
+	\item Ell té un total de 10 monedes.
 	\item Puja 5 monedes per $A$, 3 monedes per $B$ i 2 monedes per $C$.
 	\item Finalment totes les assignatures subhastades és venen per 6 monedes i en Grothendieck no en guanya cap.
-	\item Si s'hagessin subhastat una per una, evidentment en Grothendieck hauria aconseguit com a mínim una en l'ultima puja, les seves monedes estaven bloquejades per altres puges. \item Aquest fenomen es coneix com a \textbf{bloqueig de moneda}.
+	\item Si s'hagessin subhastat una per una, evidentment en Grothendieck hauria aconseguit com a mínim una en l'ultima puja, però no ha estat així  ja que les seves monedes estaven bloquejades per altres puges. \item Aquest fenomen es coneix com a \textbf{bloqueig de moneda}.
 \end{itemize}
 \end{tcolorbox}
 \begin{figure}[!]
 	\centering
 	\includegraphics[width=9cm]{subs}
-	\caption{ \footnotesize Diagram que il·lustra la problemàtica d'aplicar directament \textbf{Subhastes de Vickrey} al problema plantejat.}
+	\caption{ \footnotesize Diagram que il·lustra la problemàtica d'aplicar directament \textit{Subhastes de Vickrey} al problema plantejat.}
 	\label{fig:4}
 \end{figure}
 \subsection{Un model minimalista, els \textit{Kiwis}}
@@ -803,7 +803,7 @@ Aquí tenim un resum de les problemàtiques que ha de soluciona el model de subh
 \begin{itemize}
 	\item Les subhastes seran \textbf{seqüencials} o \textbf{simultànies}? Ja que les simultànies  poden implicar un \textbf{bloqueig de moneda} i les seqüencials poden implicar la inviabilitat de les \textbf{sol·licituds condicionals} i  massa temps en executar-se, almenys \textit{ a priori}.
 	\item Com assignem les assignatures que no ha sol·licitat ningú?
-	\item Les situacions de condicionals, com ara la puja de fer una assignatura condicionada a si  és compleix una condició.{\color{black!70} Per exemple impartir amb un docent amb qui es té  \textit{bon tracte}, o bé tenir interès en un conjunt d'assignatures com a global i no per separat, és a dir, per conveniència horària}.
+	\item Les situacions de condicionals, com ara la puja de fer una assignatura condicionada a si  és compleix una condició.{\color{black!70} Per exemple impartir amb un docent amb qui es té  \textit{bon tracte}, o bé tenir interès en un conjunt d'assignatures com a global i no per separat, per exemple, per conveniència horària}.
 		\item Cas pràctic. Elegir assignatures per conveniència horària més  que per preferència de la matèria a impartir, sota la suposició de ser un criteri raonable i \textit{comú} en les dades històriques. {\color{black!70} Per exemple voler impartir classe el menor nombre de dies per dificultats en el transport.}
 			\item Tot sistema que incentivi a mentir afavorira la especulació que farà poc \textbf{eficient} l'assignació final.
 		\item Una assignació \textbf{optima} en tot cas haurà de  minimitzar la diferencia entre les \textbf{hores reals} i les \text{hores ideals}. 
