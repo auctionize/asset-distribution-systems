@@ -736,7 +736,7 @@ No obstant una implementació \textit{a priori} de subhastes de Vickrey, per obt
 \end{figure}
 \subsection{Un model minimalista, els \textit{Kiwis}}
 \subsubsection{Repartiment kiwis}
-Per a tal de fer més justa la repartició d'assignatures i de premiar l'esforç del professorat i la qualitat de la seva feina, proposem un model de subhastes on la moneda de canvi, els kiwis, siguin repartits entre els pujadors de la següent manera:
+Per a tal de fer més justa la repartició d'assignatures i de premiar l'esforç del professorat i la qualitat de la seva fefirefoxina, proposem un model de subhastes on la moneda de canvi, els kiwis, siguin repartits entre els pujadors de la següent manera:
 
 Cada professor parteix de 10 Kiwis.
 Si el professor té acumulat un saldo positiu (ha fet més hores del que li pertoquen en els ultims 3 anys) se li sumen 5 Kiwis per cada 10 hores que tingui en el saldo : 
@@ -840,7 +840,7 @@ A partir del concepte de \textbf{subhastes condicionals} desenvolupem el següen
 \subsubsection{Algoritme 1}
 
 De forma constructiva, i aprofitant la subsecció prèvia, construirem un model que compleixi les condicions  de la llista anterior.
-L'algoritme proposat opera utilitzant subhastes a la baixa per hores (el professor que estigui disposat a fer una assignatura per menys hores se la queda), però seria trivial modificar-lo per utilitzar subhastes a l'alta amb kiwis o algun altre tipus de moneda.
+L'algoritme proposat opera utilitzant subhastes a la baixa per hores (el professor que estigui disposat a fer una assignatura per menys hores se la queda), però seria trivial modificar-lo per utilitzar subhastes a l'alta amb $kiwis$ o algun altre tipus de moneda.
 
 \begin{enumerate}
 	\item Els professors \textit{entren totes les seves pujes} (que poden estar condicionades sobre altres puges). No s'aplica \textbf{bloqueig de moneda} sobre les puges que pot realitzar un participant.
@@ -901,7 +901,7 @@ Aquesta sistema tindrà l'\textit{avantatge} de poder incorporar \textbf{diverso
 	
 	El \textbf{model dels kiwis} resulta ser un model \textbf{simple} que compleix amb tots els requisits, en el que els \textbf{usuaris} tenen \textbf{control directe} sobre el resultat. L'ús de subhastes permet crear un sistema poc complex sense problemes de complexitat intractable on arribem a aconseguir \textbf{certa optimalitat} en l'assignació gràcies al sistema d'incentius i la teoria de jocs que es desenvolupa al voltant d'aquestes subhastes. No obstant, com que les subhastes utilitzades no s'acaben d'adaptar al nostre cas d'ús, \textbf{observem diverses ineficiències} en el sistema que porten a pèrdues d'optimalitat per diversos aspectes.
 	
-	El model de \textbf{subhastes condicionals} aparèix com una solució als problemes d'eficiència del model dels kiwis. Basat en les subhastes combinatorials, soluciona el problema de la complexitat d'aquestes gràcies  a la creació d'un \textbf{algorisme} de decisió de guanyador juntament amb un \textbf{sistema d'incentius} que aconsegueix \textbf{eliminar alguns dels problemes} del sistema de kiwis i reduir les ineficiències presents en aquest. Però encara que obtenim una millora, aquest sistema no aconsegueix eliminar les ineficiències i augmenta considerablement la complexitat de la solució.
+	El model de \textbf{subhastes condicionals} aparèix com una solució als problemes d'eficiència del model dels $kiwis$. Basat en les subhastes combinatorials, soluciona el problema de la complexitat d'aquestes gràcies  a la creació d'un \textbf{algorisme} de decisió de guanyador juntament amb un \textbf{sistema d'incentius} que aconsegueix \textbf{eliminar alguns dels problemes} del sistema de $kiwis$ i reduir les ineficiències presents en aquest. Però encara que obtenim una millora, aquest sistema no aconsegueix eliminar les ineficiències i augmenta considerablement la complexitat de la solució.
 	
 	Com podem apreciar, cap dels models explicats es \textit{perfecte en tot}, no obstant, combinant-los podem crear nous models que agafin les millors parts de cada sistema.
 	
