@@ -105,7 +105,7 @@
 
 %Dades pael títol del nostre document
 \title{\emph{\color{redviolet!75!black}Pla Docent {(PD)}}}
-\author{ Taller de modelització \\ 2n. Grau en  Matemàtiques \\ Universitat Autònoma de Barcelona \\ Equip 15 (Grup A)\\ }
+\author{ Taller de modelització \\ 2n. Grau en  Matemàtiques \\ Universitat Autònoma de Barcelona \\ Equip 15 \\ }
 \date{Versió: \today}
 
 %Serveix per peus de pàgina i més
@@ -133,6 +133,8 @@
 \setcounter{DefaultLines}{3}%
 \usepackage{listings}
 \usepackage{yhmath}
+\renewcommand{\abstractname}{\textbf{A}bstract}
+\renewcommand{\abstract}{\textbf{A}bstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
@@ -166,17 +168,19 @@
 \begin{document}
 	
 \maketitle
+{
+\centering
+\begin{abstract}
+	
+\end{abstract}
+}
 \newpage
 $$
 \esp
 $$
 \\ 
 \newpage
-$$
-\esp
-$$
-\\ 
-\newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
 %    #-1        Portada TickZ i Abstract          %%
@@ -229,7 +233,7 @@ Influenciats per la lectura de \cite{tah} indexem l'enunciat de forma conceptual
 \textit{{\color{violet!60}$\blacksquare$}$^{(05)}${\color{black!80}S'haurien de tenir en compte algunes restriccions, com per exemple, que tothom faci la mateixa quantitat de docència o la restricció que hi hagi a cada departament.}}
 
 \end{tcolorbox}
-Fem  l'anàlisi o interpretació per blocs, mantenint el mateix codi d'indexació. Les paraules en negreta únicament tenen la finalitat de recordar els tecnicismes de \textit{investigació operativa} que ens faciliten l'abstracció del problema plantejat per l'enunciat.
+Fem  l'anàlisi o interpretació per blocs, mantenint el mateix codi d'indexació. Les paraules en negreta únicament tenen la finalitat de recordar els tecnicismes d' \textit{investigació operativa} que ens faciliten l'abstracció del problema plantejat per l'enunciat.
 \begin{itemize}
 \item[{ \color{cyan!60} \underline{\underline{\normalcolor (01)}}}] El problema abstracte consisteix en una tasca de repartiment o assignació. Concretament, les tasques docents són els \textbf{objectes a repartir} entre  el professorat, cada possible assignació s'anomenarà \textbf{pla docent} o \textbf{solució} de forma anàloga en funció del context.\\
 \item[{ \color{blue!60} \underline{\underline{\normalcolor (02)}}}] Acceptem que el \textit{Model actual} genera solucions \textbf{subòptimes} i ho  justificarem amb els mateixos arguments de l'enunciat.\\
@@ -237,7 +241,7 @@ Fem  l'anàlisi o interpretació per blocs, mantenint el mateix codi d'indexaci�
 \item[{ \color{purple!60} \underline{\underline{\normalcolor (04)}}}] Es proposa com a \textbf{alternativa}  desenvolupar un  { \color{purple!60} \underline{\normalcolor mètode basat en subhasta}}.
 \item[{ \color{violet!60} \underline{\underline{\normalcolor (05)}}}] S'expressa anticipadament que el \textbf{model/mètode} ha de tenir \textbf{restriccions}  i se n'expliciten dues de necessàries: el volum del treball ha de ser \textit{homogeni}\footnote{Entesa com la qualitat de quantitat de docències semblants entre el professorat} i el mètode ha de contemplar la possibilitat de restriccions pròpies del departament. 
 \end{itemize}
-Analitzat i desglossat el enunciat, passem a concretar o tipificar els objectius del treball.
+Analitzat i desglossat l'enunciat, passem a concretar o tipificar els objectius del treball.
 \begin{tcolorbox}[colback=black!1,title=\textbf{0bjectius},coltitle=black,colbacktitle=black!10]
 	\begin{enumerate}
 	\item Elaborar \textbf{Mètode} per generar plans docents universitaris{\color{cyan!80} $^{(01)}$}. Aquest estarà basat en un repartiment de les tasques docents multivariable (dependrà de més d'una \textbf{variable decidible}) per a mesurar l'esforç{\color{blue!80} $^{(02)}$}{\color{green!80} $^{(03)}$} de cada tasca. El mètode haurà d'evitar desequilibris tipificats{\color{blue!80} $^{(02)}$}(documentats o previsibles) i estarà subjecte a un volum de \textbf{restriccions}{\color{violet!60} $^{(05)}$} variables. El mètode serà estructurat en base a la demanada del professorat com és requereix.
@@ -316,7 +320,7 @@ Donat que les dades públiques de la web són limitades i insuficients, per tal 
 	\textbf{Actualment s'intenta minimitzar}
 	\begin{itemize}
 		\item Dispersió: \# assignatures / professor. (\#1)
-		\item Deute personal (saldo de hores). (\#2)
+		\item Deute personal (saldo en hores). (\#2)
 	\end{itemize}
 	\end{tcolorbox}
 
@@ -330,14 +334,14 @@ Donat que les dades públiques de la web són limitades i insuficients, per tal 
 			\item Aquestes estratègies busquen minimitzar (\#1) i (\#2) i a més tenir el personal \textit{content}, que és una cosa molt difícil de modelitzar, però també és important.
 			\item S'intenta que els alumnes de doctorat puguin fer unes poques hores d'alguna matèria que estigui relacionada amb el seu treball.
 		\end{enumerate} 
-		\item Hi ha normes prou bones que no s'han escrit. Pel que fa les assignatures de 3r i 4rt  també tenen un filtre:
+		\item Hi ha normes prou bones que queden \textit{implícites} en el mateix model. Pel que fa a les assignatures de 3r i 4rt  també tenen un filtre:
 		\begin{enumerate}
 	\item  Cada subdepartament només pot fer assignatures del bloc que li pertoca. En el cas que es vulgués impartir alguna matèria d'una altra \textit{branca de coneixement}, hauria de ser convidat pel subdepartament responsable.
-	\item És a dir cada subdepartament té un \textit{mercat d'assignatures associat} que s'han de repartir en una \textit{Reunió}. (Això dóna una bona idea, ja que així si més gent està implicada en el repartiment és pot considerar un model gran format de petits models \textit{més tractables} que interactuen \textit{poc} entre si).
+	\item És a dir, cada subdepartament té un \textit{mercat d'assignatures associat} que s'han de repartir en una \textit{Reunió}. (Això dóna una bona idea, ja que així si més gent està implicada en el repartiment és pot considerar un model gran format de petits models \textit{més tractables} que interactuen \textit{poc} entre si).
 			\end{enumerate}
 		\end{enumerate}
 \subsection{Estat del model actual}
-Des del propi Departament de matemàtiques se'ns han facilitat dades anònimes\footnote{Per consultar-les vegeu el document \cod{pla\_docent.ods.}} que ens permeten calcular el saldo actual dels professors. 
+Des del propi Departament de matemàtiques se'ns han facilitat dades anònimes\footnote{Per consultar-les vegeu el document \cod{pla\_docent.ods}.} que ens permeten calcular el saldo actual dels professors respecte aquest curs (2018/2019). 
 \begin{itemize}
 	\item Nombre d'hores que ha de fer cada professor del departament en un any.$\quad(p_i, \esp i \in I)$
 	\item Nombre d'hores que fa realment un professor per a cada assignatura que se li ha assignat en el repartiment. $\quad (p'_i, \esp i \in I)$
@@ -372,8 +376,8 @@ Es fa evident doncs que el model és propens a reduir el nombre d'hores que s'ha
 		    \item La variància del \textit{Saldo} sembla ser \textit{millorable}.
 			\item El model actual funciona prou bé, fixa normes generals i fa un tractament diferent per cada cas, aconseguint més satisfacció en les assignacions. Per tant podem aprofitar molt del model actual. 
 			\item Les particularitats \textit{bones} del model, entre altres, són el tractament prou adaptable a la \textit{diversitat} del professorat.
-			\item Els aspectes negatius del model no són clars llevat de la \textit{alta} dedicació que requereix. La necessitat d' un temps de dedicació considerable per fer quadrar totes les assignacions satisfactòriament potser sembla ser un preu. \textit{massa alt}
-			\item No analitzem la satisfacció del professorat amb el model actual, però la considerem la \textit{millor} fins el moment. 
+			\item Els aspectes negatius del model no són clars llevat de la \textit{alta} dedicació que requereix. La necessitat d' un temps de dedicació considerable per fer quadrar totes les assignacions satisfactòriament potser sembla ser un preu \textit{massa alt}.
+			\item No analitzem la satisfacció del professorat amb el model actual, però la considerem \textit{ la millor} fins el moment. 
 		\end{enumerate}
 \newpage
 $\esp$
