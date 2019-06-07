@@ -3,7 +3,7 @@
 %\pagestyle{fancy}
 %\rhead{\textbf{ CDVO  \\ 2n. Grau en  Matemàtiques}}
 %\lhead{\textbf{Nom: }Marc G******* Ricardo \\ \textbf{NIU: }*****471}
-%Perquè capiguen les coses a la capçalera 
+%Perquè càpiguen les coses a la capçalera 
 %\setlength{\headheight}{25pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,7 +43,7 @@
 
 %Canviem el símbol de demostració final  de un quadrat en blanc a QED 
 \renewcommand\qedsymbol{QED} 
-%Serveix per recordar alguna cosa que s'ha de fer però en el moment fa mandrà
+%Serveix per recordar alguna cosa que s'ha de fer però en el moment fa mandra
 \newcommand{\nehh}[1]{\color{magenta} (* {#1} *) \normalcolor }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -82,7 +82,7 @@
 %Serveix per ficar colors a les taules
 \usepackage{colortbl} 
 
-%Serveix per fer el estil de capselera
+%Serveix per fer el estil de capçalera
 \usepackage{fancyhdr}
 
 %Serveix per fotre coses a dalt i a baix
@@ -95,7 +95,7 @@
 \usepackage{tcolorbox}
 \usepackage{wasysym}
 
-% Serveix per ficar lletres d'un alfafet 
+% Serveix per ficar lletres d'un alfabet 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                                              %%%
@@ -103,7 +103,7 @@
 %%%                                                              %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%Dades pael títol del nostre document
+%Dades pel títol del nostre document
 \title{\emph{\color{redviolet!75!black}Pla Docent {(PD)}}}
 \author{ Taller de modelització \\ 2n. Grau en  Matemàtiques \\ Universitat Autònoma de Barcelona \\ Equip 15 \\ { \color{gray!3} Albert Acebrón i Marc Graells} }
 \date{Versió: \today}
@@ -191,7 +191,7 @@ $$
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
-%    #00        Introdució/comentari/\cdots       %%
+%    #00        Introducció/comentari/\cdots       %%
 %                                                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colframe=white,colback=redviolet!20,sharp corners=all,size=minimal,halign=center,valign=center]
@@ -326,17 +326,17 @@ Donat que les dades públiques de la web són limitades i insuficients, per tal 
 
 	\subsection{Altres notes del \textit{Model actual}}
 	\begin{enumerate}
-		\item Primer es fa una ronda de repartiment amb el professorat que té preferència (perquè repeteixen una assignatura). Després es fa una segona ronda amb les matèries restants, tot i que sovint hi ha canvis d'ultim moment. En aquesta segona ronda  és on es fa un tractament més personal i més precís. 
+		\item Primer es fa una ronda de repartiment amb el professorat que té preferència (perquè repeteixen una assignatura). Després es fa una segona ronda amb les matèries restants, tot i que sovint hi ha canvis d'últim moment. En aquesta segona ronda  és on es fa un tractament més personal i més precís. 
 		\item En aquesta segona \textit{ronda} hi ha una llista d' \textit{argument} que ajuden a seleccionar el millor repartiment, vegem-ne alguns exemples:
 		\begin{enumerate}
 			\item Que tots els professors puguin fer almenys alguna hora de teoria (en general compten més i són més valorades).
-			\item Suposant que hi ha una assignatura molt desitjada de teoria, probablement s'assignarà a algú que tingui un saldo d'hores negatiu abans que a algú que tingui un saldo positiu (que tingui acumulades més hores de les que ha de fer). Però també pot passar que entre dos sol·licitants s'assigni a qui fagi quadrar més els saldos, per exemple, si dos professors pugen per una matèria de 20 hores, i el saldo d'un és $S(p_1)=-30$ i el de l'altre  $S(p_2)=-5$, s'assignaria preferentment al primer.
+			\item Suposant que hi ha una assignatura molt desitjada de teoria, probablement s'assignarà a algú que tingui un saldo d'hores negatiu abans que a algú que tingui un saldo positiu (que tingui acumulades més hores de les que ha de fer). Però també pot passar que entre dos sol·licitants s'assigni a qui faci quadrar més els saldos, per exemple, si dos professors pugen per una matèria de 20 hores, i el saldo d'un és $S(p_1)=-30$ i el de l'altre  $S(p_2)=-5$, s'assignaria preferentment al primer.
 			\item Aquestes estratègies busquen minimitzar (\#1) i (\#2) i a més tenir el personal \textit{content}, que és una cosa molt difícil de modelitzar, però també és important.
 			\item S'intenta que els alumnes de doctorat puguin fer unes poques hores d'alguna matèria que estigui relacionada amb el seu treball.
 		\end{enumerate} 
 		\item Hi ha normes prou bones que queden \textit{implícites} en el mateix model. Pel que fa a les assignatures de 3r i 4rt  també tenen un filtre:
 		\begin{enumerate}
-	\item  Cada subdepartament només pot fer assignatures del bloc que li pertoca. En el cas que es vulgués impartir alguna matèria d'una altra \textit{branca de coneixement}, hauria de ser convidat pel subdepartament responsable.
+	\item  Cada subdepartament només pot fer assignatures del bloc que li pertoca. En el cas que es volgués impartir alguna matèria d'una altra \textit{branca de coneixement}, hauria de ser convidat pel subdepartament responsable.
 	\item És a dir, cada subdepartament té un \textit{mercat d'assignatures associat} que s'han de repartir en una \textit{Reunió}. (Això dóna una bona idea, ja que així si més gent està implicada en el repartiment és pot considerar un model gran format de petits models \textit{més tractables} que interactuen \textit{poc} entre si).
 			\end{enumerate}
 		\end{enumerate}
@@ -423,7 +423,7 @@ Determinar la \textbf{funció objectiu} resulta inevitablement difícil, ja que 
 \begin{figure}
 	\centering
 	\includegraphics[width=9cm]{algor_bl}
-	\caption{ \footnotesize Esquema que il·lustra les diferents \textit{vies} que és podrien considerar a l'hora de concretar aquesta funció $F$ que valores \textit{com de bona}  és una assignació d'assignatures entre el professorat. El \textit{hexàgon irregular}   (en un color més clar) representa un algoritme d'optimització concret. Simulated annealing, o de forma abreujada (SA), té origen en l'industria metal·lúrgica i està pensat per buscar \textbf{solucions optimes} en \textit{espais de cerca} grans. La seva presencia és \textit{oportunista} però no compromet la idea general ja que podríem encaixar, en el mateix esquema, qualsevol altre algorisme d'optimització, cosa que farem en la subsecció 3.5 ( resultats del model).}
+	\caption{ \footnotesize Esquema que il·lustra les diferents \textit{vies} que és podrien considerar a l'hora de concretar aquesta funció $F$ que valores \textit{com de bona}  és una assignació d'assignatures entre el professorat. El \textit{hexàgon irregular}   (en un color més clar) representa un algoritme d'optimització concret. Simulated Annealing, o de forma abreujada (SA), té origen en l'industria metal·lúrgica i està pensat per buscar \textbf{solucions optimes} en \textit{espais de cerca} grans. La seva presencia és \textit{oportunista} però no compromet la idea general ja que podríem encaixar, en el mateix esquema, qualsevol altre algorisme d'optimització, cosa que farem en la subsecció 3.5 ( resultats del model).}
 	\label{fig:4}
 \end{figure}
 A la figura \ref{fig:4} observem un esquema que il·lustra la problemàtica i els tres punts esmentats on  l'\textit{idea clau} és respondre la pregunta.
@@ -541,12 +541,12 @@ La pregunta ara doncs és: \textit{Quina mena de funcions podem donar ?} De fet 
 Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100^{500}$ \textbf{alternatives} \footnote{Altrament $ \approx 10^{1000}$.} Inicialment vam utilitzar \textit{Simulated Annealing} (Algorisme d'Optimització apropiat per a grans \textbf{espais de cerca} ) amb control de mínims locals per tal d'optimitzar  la funció $F$ en un temps \textit{raonable}. Però, donada la \textit{filosofia} del treball, vam voler  optimitzar la \textbf{funció objectiu} de forma pròpia mitjançant \textbf{selecció d'algoritmes genètics}.   
 \begin{enumerate}
 	\item \textbf{Simulated Annealing:} Algorisme basat en el mètode de Montecarlo \textit{refinat}, és apropiat per \textbf{espais de cerca} grans. Té origen en una tècnica de l'industria metal·lúrgica i es sol aplicar en \textit{optimització} per cercar mínims i màxims d'una funció donada.
-	\item \textbf{Algorisme genètic:} Els algoritmes genètics, els quals es basen en el procés evolutiu, de forma molt simplificada consisteixen en generar solucions per a un problema mitjançant la recombinació de solucions anteriors i l'aplicació de mutacions aleatories sobre la solució, per després evaluar les solucions obtingudes i elegir les millors, millorant respecte les \textit{solucions anteriors} i imitant així la \textit{selecció natural biològica}.
+	\item \textbf{Algorisme genètic:} Els algoritmes genètics, els quals es basen en el procés evolutiu, de forma molt simplificada consisteixen en generar solucions per a un problema mitjançant la recombinació de solucions anteriors i l'aplicació de mutacions aleatòries sobre la solució, per després avaluar les solucions obtingudes i elegir les millors, millorant respecte les \textit{solucions anteriors} i imitant així la \textit{selecció natural biològica}.
 	\item \textbf{Altres algorismes meta-heurístics d'optimització de funcions no lineals:} També és podrien haver fet servir algorismes com:  
 	\begin{enumerate}
 		\item Optimització d'eixam de partícules
 		\item Cerca de cucut
-		\item Cerca de tabus
+		\item Cerca de tabús
 		\item Algorisme de cerca gravitativa
 		\item Túnels estocàstics
 		\item Optimització de colònies d’abelles artificials
@@ -555,7 +555,7 @@ Optimitzar $F$ resulta un problema molt difícil, ja que tenim unes $\approx 100
 	\end{enumerate}
 \end{enumerate}
 \subsection{Limitacions del model}
-És clar que en primera instancia una estratègia prou pràctica com els \textit{algorismes} per optimitzar el model es podria tirar per terra argumentant que cap d'aquest mètodes (\textit{simulated annealing} i \textit{Algorismes genètics}) podran trobar el mínim absolut de la funció a optimitzar $F$. 
+És clar que en primera instancia una estratègia prou pràctica com els \textit{algorismes} per optimitzar el model es podria tirar per terra argumentant que cap d'aquest mètodes (\textit{Simulated Annealing} i \textit{Algorismes genètics}) podran trobar el mínim absolut de la funció a optimitzar $F$. 
 
 Un argument així no \textit{correspon} amb la \textit{filosofia del treball}. Això no ens resulta problemàtic, ja que només ens cal que la \textbf{solució} sigui \textit{bona}, entenent com a bon que sigui: \textbf{factible} , que consumeixi un temps \textit{raonable} en ser trobada i que sigui \textit{substancialment millor} que la del \textbf{model actual}. I això és pot comprovar fàcilment com farem en la subsecció 3.5 Resultats.
 
@@ -629,9 +629,9 @@ Com hem explicat a l'apartat 3.3, els algoritmes genètics generen possibles \te
 
 A més a més, el nostre algoritme utilitza \textbf{elitisme}, de manera que les millors solucions són conservades entre iteracions de l'algorisme, portant a que noves generacions sempre \textit{millorin} la funció de cost.
 
-En la nostra implementació dels algoritmes genètics, hem optat per representar el \textbf{fenotip} (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a cada assignatura diferent. La \textbf{mutació} es implementada com una assignació d'una assignatura aleatòria a un professor aleatori; per altra part la recombinació crea noves solucions a partir de dos solucions triades aleatoriameant entre les millors (la \textbf{élit}), generant una nova solució que tingui part de les assignacions d'assigatures d'una i part de l'altra. Altres paràmetres, com la mida de la població, la probabilitat de recombinació o la de mutació, s'han triat de forme empírica a base d'executar l'algorisme i buscar les constants que donaven els millors resultats.
+En la nostra implementació dels algoritmes genètics, hem optat per representar el \textbf{fenotip} (la codificació de cada solució generada) com una matriu de professors, on cada posició defineix quin professor es assignat a cada assignatura diferent. La \textbf{mutació} es implementada com una assignació d'una assignatura aleatòria a un professor aleatori; per altra part la recombinació crea noves solucions a partir de dos solucions triades aleatòriament entre les millors (la \textbf{elit}), generant una nova solució que tingui part de les assignacions d'assignatures d'una i part de l'altra. Altres paràmetres, com la mida de la població, la probabilitat de recombinació o la de mutació, s'han triat de forme empírica a base d'executar l'algorisme i buscar les constants que donaven els millors resultats.
 
-Comparant els resultats obtinguts en l'optimització en que hem utilitzat \textit{Simulated Annealing} i en la d'Algoritmes Genètics, és trivial veure que els resultats de SA són molt millors, ja que s'assoleixen assignacions amb diferències d'hores més ben distribuïdes. Aixó és així perquè hem executat els algoritmes durant poc temps (menys de 20 minuts) i el fet que les iteracions en GA són molt més lentes ha portat a que no s'aconseguís arribar a un mínim local.
+Comparant els resultats obtinguts en l'optimització en que hem utilitzat \textit{Simulated Annealing} i en la d'Algoritmes Genètics, és trivial veure que els resultats de SA són molt millors, ja que s'assoleixen assignacions amb diferències d'hores més ben distribuïdes. Això és així perquè hem executat els algoritmes durant poc temps (menys de 20 minuts) i el fet que les iteracions en GA són molt més lentes ha portat a que no s'aconseguís arribar a un mínim local.
 
 Creiem que en executar l'algoritme durant períodes de temps més llargs, les capacitats per evitar mínims locals dels GAs mitjançant l'\textbf{especiació} portaran a una millora de resultats respecte al SA, ja que l'exploració realitzada pel GA cobrirà molt més \textbf{espai}.
 
@@ -654,7 +654,7 @@ No obstant, ens interessa obtenir una valorització \textit{explícita}, ja que 
 
 Per tal d'obtenir aquesta \textbf{valoració}, intentarem extreure'n aquesta de forma intrínseca quan es realitza l'optimització, basant-nos en una comparació entre l'avaluació de l'estat actual d'un professor i el de la resta de professors.
 
-Així doncs, començarem separant l'avaluació de l'estat d'un professor del de la resta en la funció d'avaluació d'una assignació. Això ho podem fer perque totes les funcions que formen part d'aquesta funció d'avaluació, que realment és un sumatori de les primeres funcions, són independents entre elles i s'apliquen sobre només un professor. D'aquesta manera, dividim la funció d'avaluació:
+Així doncs, començarem separant l'avaluació de l'estat d'un professor del de la resta en la funció d'avaluació d'una assignació. Això ho podem fer perquè totes les funcions que formen part d'aquesta funció d'avaluació, que realment és un sumatori de les primeres funcions, són independents entre elles i s'apliquen sobre només un professor. D'aquesta manera, dividim la funció d'avaluació:
 $$F(a)= \displaystyle \sum_{p\in professors} \sum_{f_i\in funcions} f_i(p) = $$
 $$= \displaystyle \sum_{p\in professors} f(p)$$
 On és fàcil observar que:
@@ -662,7 +662,7 @@ $$f(p)=\sum_{i\in funcions} f_i(p)$$
 
 A partir d'aquí podem aplicar $f$ sobre l'estat de tots els professors i obtenir la mitja $\mu$ i la desviació típica $\sigma$ de la distribució d'aquests valors. 
 
-A continuació calculem els següents valors, que ens permeten obtenir una aproximació de com de bo és l'estat d'un professor respecte la resta. A més, al dividir per sigma, obtenim un \textbf{valor adimensional} que rectifica les unitats que estiguem utilitzant (de manera que utilitzar unitats amb valors molt grans o molt petits no afectarà funcionalment el resultat final) i ens normalitza el resultat respecte a la variancia de les dades, de manera que un resultat podrà ser molt alt només si es \textit{extremadament} diferent a la resta de dades.
+A continuació calculem els següents valors, que ens permeten obtenir una aproximació de com de bo és l'estat d'un professor respecte la resta. A més, al dividir per sigma, obtenim un \textbf{valor adimensional} que rectifica les unitats que estiguem utilitzant (de manera que utilitzar unitats amb valors molt grans o molt petits no afectarà funcionalment el resultat final) i ens normalitza el resultat respecte a la variància de les dades, de manera que un resultat podrà ser molt alt només si es \textit{extremadament} diferent a la resta de dades.
 
 $$\phi(p)=\dfrac{f(p)-\mu}{\sigma}$$
 
@@ -685,7 +685,7 @@ f_j(a) &\text{ si } f_j(a)\leq K \text{ i}\\
 K &\text{ si } K<f_j(a)\\
 \end{cases}
 $$
-Llavors considerant $f_j'$ en comptes de $f_j$ ja tindríem el problema solucionat, ja que llavors tota \textbf{subfunció personalitzable} està fitada superiorment i el cas anterior no és pot donar. A més dòna incentius per no fer servir aquest tipus d'estrategies, ja que llavors molt probablement la optimització de $F$ acabi donant una \textbf{alternativa} $a$ prou dolenta pel \textit{picaresc docent}.
+Llavors considerant $f_j'$ en comptes de $f_j$ ja tindríem el problema solucionat, ja que llavors tota \textbf{subfunció personalitzable} està fitada superiorment i el cas anterior no és pot donar. A més dóna incentius per no fer servir aquest tipus d'estratègies, ja que llavors molt probablement la optimització de $F$ acabi donant una \textbf{alternativa} $a$ prou dolenta pel \textit{picaresc docent}.
 \newpage
 $$
 \esp
@@ -701,7 +701,7 @@ $$
 \end{tcolorbox}
 \lettrine{E}n aquesta secció abordarem la problemàtica d'assignacions mitjançant l'estructura de subhasta, pensant, com en les seccions anteriors, en la seva aplicació final. La intenció  és \textit{construir} un \textbf{mètode} sobre l'estructura de subhasta que permeti  donar solució al problema dels repartiments.
 \subsection{Problemàtiques i beneficis de les subhastes}
-Tots tenim una idea intuïtiva de subhasta. Més enllà de les conegudes subhastes d'\textit{eBay}\footnote{Aquest tipus s'anomenen subhastes angleses, que són subhastes on totes les puges són públiques i la puja més alta guanya, pagant el preu d'aquesta mateixa puja. }  ni'ha de molts altres tipus, que no només poden ser classificades per un únic criteri sinó per molts. Explicitem algunes d'aquestes classificacions.
+Tots tenim una idea intuïtiva de subhasta. Més enllà de les conegudes subhastes d'\textit{eBay}\footnote{Aquest tipus s'anomenen subhastes angleses, que són subhastes on totes les puges són públiques i la puja més alta guanya, pagant el preu d'aquesta mateixa puja. }  n'hi ha de molts altres tipus, que no només poden ser classificades per un únic criteri sinó per molts. Explicitem algunes d'aquestes classificacions.
 
 Les \textbf{subhastes simultànies o paral·leles} són aquelles que és \textit{resolen} a la vegada, és a dir, només cal un \textit{instant} per determinar els guanyadors. Per conta les \textbf{subhastes seqüencials } són aquelles en que és decideixen \textit{una per una}. 
 
@@ -711,7 +711,7 @@ Les \textbf{subhastes a l'alça} són aquelles en les qui guanya el participant 
 
 L'objectiu principal de la majoria de \textbf{subhastes} és vendre \textit{objectes} al preu més alt possible (suposant que fossin subhastes a l'alça),és a dir, maximitzen el \textit{guany} del \textit{venedor}. En un cas com en el de repartir les assignatures entre el professorat del departament d'una facultat això no té sentit, ni és un bon plantejament, ja que no hi ha objectiu de guany, sinó únicament de repartiment.
 
-Per tant una subhasta típica no seria pas una bona solució al problema de repartiment. No obstant hi ha un tipus de subhasta que no maximitza el benefici del \textit{venedor} sinó el dels \textit{participants}, és a dir, en maximitza \textbf{l'utilitat} d'aquests últims. 
+Per tant una subhasta típica no seria pas una bona solució al problema de repartiment. No obstant hi ha un tipus de subhasta que no maximitza el benefici del \textit{venedor} sinó el dels \textit{participants}, és a dir, en maximitza \textbf{la utilitat} d'aquests últims. 
 
 Aquest tipus de subhasta, que de fet és l'única que farem servir tot i donar \textbf{quatre} models completament diferents basats en subhastes, es coneixen com a subhastes de \textbf{Vickrey}. Les \textbf{subhastes de Vickrey} són subhastes  seqüencials (per evitar \textit{bloqueig de moneda}) a a cegues on el guanyador d'una subhasta és qui ofereix el preu més alt (suposant subhastes a l'alça) pagant el preu de la segona puja més alta.
 
@@ -739,20 +739,20 @@ No obstant una implementació \textit{a priori} de subhastes de Vickrey, per obt
 Per a tal de fer més justa la repartició d'assignatures i de premiar l'esforç del professorat i la qualitat de la seva fefirefoxina, proposem un model de subhastes on la moneda de canvi, els kiwis, siguin repartits entre els pujadors de la següent manera:
 
 Cada professor parteix de 10 Kiwis.
-Si el professor té acumulat un saldo positiu (ha fet més hores del que li pertoquen en els ultims 3 anys) se li sumen 5 Kiwis per cada 10 hores que tingui en el saldo : 
+Si el professor té acumulat un saldo positiu (ha fet més hores del que li pertoquen en els últims 3 anys) se li sumen 5 Kiwis per cada 10 hores que tingui en el saldo : 
 \begin{itemize}
 	\item 5 Kiwis per un saldo de 0 a 10h
 	\item 10 Kiwis per un saldo de 11 a 20h
 	\item  Etc.
 \end{itemize}
-A partir del segon any de l'instauració d'aquest model, si el professor va haver de impartir $x$ matèries que no va triar (assignades mitjançant la funció després de fer totes les subhastes) se li sumaran $x$ Kiwis. A aquells professors que vagin aconseguir més d'un 4.5 de mitjana en les enquestes realitzades per l'alumnat l'any anterior,  se li sumaran 30 kiwis. 
+A partir del segon any de la instauració d'aquest model, si el professor va haver de impartir $x$ matèries que no va triar (assignades mitjançant la funció després de fer totes les subhastes) se li sumaran $x$ Kiwis. A aquells professors que vagin aconseguir més d'un 4.5 de mitjana en les enquestes realitzades per l'alumnat l'any anterior,  se li sumaran 30 kiwis. 
 
 \subsubsection{Funcionament subhasta}
-Realitzarem una subhasta per blocs de matèries, cada professor omplirà les caselles de les matèries per les que vulgui pujar d'un pdf amb el valor en kiwis que està disposat  a pagar. El preu inicial de cada matèria és de 0 Kiwis, la puja mínima és de 1 Kiwi, i a partir d'aquí es pot augmentar el preu de 0.5 Kiwis en 0.5 Kiwis (és a dir, les pujes vàlides per a una assignatura són: 1K, 1.5K, 2K, 2.5K, 3K,3.5K, etc.)
+Realitzarem una subhasta per blocs de matèries, cada professor omplirà les caselles de les matèries per les que vulgui pujar d'un pdf amb el valor en kiwis que està disposat  a pagar. El preu inicial de cada matèria és de 0 Kiwis, la puja mínima és de 1 Kiwi, i a partir d'aquí es pot augmentar el preu de 0.5 Kiwis en 0.5 Kiwis (és a dir, les puges vàlides per a una assignatura són: 1K, 1.5K, 2K, 2.5K, 3K,3.5K, etc.)
 
-Un programa recullirà els resultats i otorgarà cada matèria al major pujador. En cas d'empat, es quedarà la matèria aquell professor qui partís de més kiwis al començament. En cas de tornar a haver empat, la assignatura quedarà lliure amb el valor obtingut com a valor inicial per a la següent subhasta.
+Un programa recollira els resultats i atorgarà cada matèria al major pujador. En cas d'empat, es quedarà la matèria aquell professor qui partís de més kiwis al començament. En cas de tornar a haver empat, la assignatura quedarà lliure amb el valor obtingut com a valor inicial per a la següent subhasta.
 
-D'aquesta manera es realitzaran tres subhastes. (En la última hi haurà la possibilitat de pujar amb Kiwis negatius: els pofessors poden oferir-se a fer una assignatura a canvi de rebre fins a 5 kiwis a canvi (pujant per -5 Kiwis)).
+D'aquesta manera es realitzaran tres subhastes. (En la última hi haurà la possibilitat de pujar amb Kiwis negatius: els professors poden oferir-se a fer una assignatura a canvi de rebre fins a 5 kiwis a canvi (pujant per -5 Kiwis)).
 
 \subsubsection{Revalorització hores}
 
@@ -767,7 +767,7 @@ On $h_0$ és el nombre d'hores inicial en que està valorada una assignatura. Le
 $$
 c_1+c_2=1
 $$
-Cal triar doncs unes constants que reflecteixin la importància de cada una de les variables en la funció. Tenimen compte els següents fets per fer la tria:
+Cal triar doncs unes constants que reflecteixin la importància de cada una de les variables en la funció. Tenim en compte els següents fets per fer la tria:
 \begin{itemize}
 \item Que $y$ sigui gran no implica necessàriament que $x$ ho sigui. És a dir, que una assignatura es vengui per un valor elevat no implica que hi hagin molts professors interessats en ella. 
 \item Contràriament, una $x$ gran sí que, per norma general, implicaria un valor de $y$ elevat.
@@ -820,20 +820,20 @@ Aquí tenim un resum de les problemàtiques que ha de soluciona el model de subh
 \end{tcolorbox}
 \subsubsection{Construcció primer model}
 
-Molts d'aquests problemes es poden solucionar utilitzant un concepte ja molt desenvolupat en la matemàtica, les \textbf{subhastes combinatorials}\cite{CA}, aquest tipus de subhastes es basen en la idea de que les pujes es realitzen sobre \textbf{blocs d'objectes}, així es realitzen pujes sobre un conjunt d'objectes de manera que si el participant aconsegueix guanyar tots els objectes la puja s'executa però si hi ha algun dels objectes del bloc que el participant no pot obtenir tota la puja queda invalidada.
+Molts d'aquests problemes es poden solucionar utilitzant un concepte ja molt desenvolupat en la matemàtica, les \textbf{subhastes combinatorials}\cite{CA}, aquest tipus de subhastes es basen en la idea de que les puges es realitzen sobre \textbf{blocs d'objectes}, així es realitzen puges sobre un conjunt d'objectes de manera que si el participant aconsegueix guanyar tots els objectes la puja s'executa però si hi ha algun dels objectes del bloc que el participant no pot obtenir tota la puja queda invalidada.
 
 És clar veure que una realització en paral·lel d'aquestes puges soluciona tots els nostres problemes, ja que eliminem la necessitat de \textbf{bloquejar moneda}, acomoda la possibilitat de que els participants tinguin dependències entre objectes a subhasta (ex: només els interessa el objecte A si poden obtenir el B), generen assignacions \textbf{òptimes}, i aplicant \textbf{subhastes de Vickrey} també resoldríem el problema d'evitar \textbf{l'especulació}, ja que incentivaríem als participants als  que pugessin el preu que creuen que val l'objecte (Això està demostrat\footnote{https://en.wikipedia.org/wiki/Vickrey\_auction \\
 	\#Proof\_of\_dominance\_of\_truthful\_bidding}).
 
-No obstant, el problema d'aquestes subhastes és que, donades les puges, determinar els guanyadors de cada objecte subhastat tal que l'assignació sigui òptima requereix l'aplicació d'un \textbf{algoritme NP-complet}, concretament un algorisme que creix de forma factorial respecte el nombre de pujes. Aquesta complexitat fa que l'aplicació de l'algoritme sigui totalment inviable per al nostre problema, ja que requeriria un temps de comput superior a la vida de l'univers.
+No obstant, el problema d'aquestes subhastes és que, donades les puges, determinar els guanyadors de cada objecte subhastat tal que l'assignació sigui òptima requereix l'aplicació d'un \textbf{algoritme NP-complet}, concretament un algorisme que creix de forma factorial respecte el nombre de puges. Aquesta complexitat fa que l'aplicació de l'algoritme sigui totalment inviable per al nostre problema, ja que requeriria un temps de comput superior a la vida de l'univers.
 
 Per solucionar aquest problema, hem dissenyat un nou tipus de subhasta, la \textbf{subhasta condicional}, a partir de la qual podem crear un sistema que ens permeti aconseguir els beneficis de les \textbf{subhastes combinatorials} a la vegada que evitem el problema de la \textit{explosió en complexitat}.
 
-Definim una \textbf{subhasta condicional} com una subhasta on les pujes poden dependre dels resultats d'altres pujes. En aquest sistema podem crear pujes que només siguin valides si $n$ altres pujes diferents acaben guanyant les seves subhastes corresponents. \textit{Un exemple d'aquest tipus de puja seria una, que anomenarem $P$ que només seria considerada pel sistema si dos altres pujes $A$ i $B$ acaben sent pujes guanyadores, això significa que si una altra puja que no fos $A$ acabés guanyant la subhasta de la que $A$ és part, $P$ quedaria invalidada i seria com si mai hagués existit, menters que si $A$ i $B$ ambdós guanyessin $P$ actuaria com una puja normal en altres sistemes}.
+Definim una \textbf{subhasta condicional} com una subhasta on les puges poden dependre dels resultats d'altres puges. En aquest sistema podem crear pudes que només siguin valides si $n$ altres puges diferents acaben guanyant les seves subhastes corresponents. \textit{Un exemple d'aquest tipus de puja seria una, que anomenarem $P$ que només seria considerada pel sistema si dos altres puges $A$ i $B$ acaben sent puges guanyadores, això significa que si una altra puja que no fos $A$ acabés guanyant la subhasta de la que $A$ és part, $P$ quedaria invalidada i seria com si mai hagués existit, menters que si $A$ i $B$ ambdós guanyessin $P$ actuaria com una puja normal en altres sistemes}.
 
-Una de les propietats \textit{interessants} d'aquest sistema és que es pot demostrar que aquest tipus de subhastes són equivalent al problema del guanyador en les pujes de les \textbf{subhastes combinatorials}. En altres paraules, existeix un \textbf{algorisme polinomial} que permet transformar qualsevol dels dos problemes l'un en l'altre i també permet transformar una solució correcta de un en el seu problema equivalent \footnote{Estem en procés d'escriure un \textit{paper} amb la demostració d'aquest fet i la majoria de les altres afirmacions que realitzarem sobre les \textbf{subhastes condicionals}, quan estigui acabat el paper també serviria com a extensió d'aquest treball, però no hem sigut capaços d'acabar-lo a temps. No és cap peu de nota del estil \textit{Pierre de Fermat}.}. 
+Una de les propietats \textit{interessants} d'aquest sistema és que es pot demostrar que aquest tipus de subhastes són equivalent al problema del guanyador en les puges de les \textbf{subhastes combinatorials}. En altres paraules, existeix un \textbf{algorisme polinomial} que permet transformar qualsevol dels dos problemes l'un en l'altre i també permet transformar una solució correcta de un en el seu problema equivalent \footnote{Estem en procés d'escriure un \textit{paper} amb la demostració d'aquest fet i la majoria de les altres afirmacions que realitzarem sobre les \textbf{subhastes condicionals}, quan estigui acabat el paper també serviria com a extensió d'aquest treball, però no hem sigut capaços d'acabar-lo a temps. No és cap peu de nota del estil \textit{Pierre de Fermat}.}. 
 
-Això és molt important, ja que com els dos problemes són \textit{intercanviables}, si aconseguim trobar una forma de solucionar el problema del gunayador en subhastes condicionals haurem aconseguit, per extensió, resoldre el mateix problema en subhastes combinatorials. I en cas de haver-ho resolt en temps polinomial directament tindríem una demostració de que $P=NP$ \footnote{S'ha revisat el text i s'ha mantingut la \textit{forma} però caldria advertir que dispenses la prepotència fruit de la \textit{il·lusió} pels \textit{possibles} resultats.}. La part més \textit{emocionant} és que efectivament la idea de plantejar puges condicionals és nova en la \textit{literatura}, de manera que estem pensant el problema com mai ningú l'ha pensat abans \footnote{Almenys que haguem descobert nosaltres amb les nostres eines de cerca relativament \textit{limitades}}, de forma que és possible que trobem algun \textit{camí} no explorat.
+Això és molt important, ja que com els dos problemes són \textit{intercanviables}, si aconseguim trobar una forma de solucionar el problema del guanyador en subhastes condicionals haurem aconseguit, per extensió, resoldre el mateix problema en subhastes combinatorials. I en cas de haver-ho resolt en temps polinomial directament tindríem una demostració de que $P=NP$ \footnote{S'ha revisat el text i s'ha mantingut la \textit{forma} però caldria advertir que dispenses la prepotència fruit de la \textit{il·lusió} pels \textit{possibles} resultats.}. La part més \textit{emocionant} és que efectivament la idea de plantejar puges condicionals és nova en la \textit{literatura}, de manera que estem pensant el problema com mai ningú l'ha pensat abans \footnote{Almenys que haguem descobert nosaltres amb les nostres eines de cerca relativament \textit{limitades}}, de forma que és possible que trobem algun \textit{camí} no explorat.
 
 A partir del concepte de \textbf{subhastes condicionals} desenvolupem el següent algoritme, el qual tot i no arribar a poder demostrar $P=NP$ ens permet ficar unes restriccions sobre el problema, en base a les quals podem resoldre el problema en temps polinomial:
 
@@ -843,11 +843,11 @@ De forma constructiva, i aprofitant la subsecció prèvia, construirem un model 
 L'algoritme proposat opera utilitzant subhastes a la baixa per hores (el professor que estigui disposat a fer una assignatura per menys hores se la queda), però seria trivial modificar-lo per utilitzar subhastes a l'alta amb $kiwis$ o algun altre tipus de moneda.
 
 \begin{enumerate}
-	\item Els professors \textit{entren totes les seves pujes} (que poden estar condicionades sobre altres puges). No s'aplica \textbf{bloqueig de moneda} sobre les puges que pot realitzar un participant.
+	\item Els professors \textit{entren totes les seves puges} (que poden estar condicionades sobre altres puges). No s'aplica \textbf{bloqueig de moneda} sobre les puges que pot realitzar un participant.
 	\item Es calcula el guanyador (puja mínima per subhastes a la baixa) de totes les subhastes \textit{una rere l'altra}. En cas de trobar una \textbf{puja} \textbf{condicionada} sobre una subhasta que no s'ha executat es considera la puja com a \textit{bona} i s'executa la subhasta com si fos una puja \textit{normal}, a la vegada que es fa una \textit{anotació} marcant que aquesta puja depèn dels resultats futurs d'una altra subhasta futura. Quan l'altra subhasta s'executi, i obtinguem els resultats de qui ha sigut el guanyador d'aquesta, es revisita la \textbf{subhasta depenent} i, en cas que la \textbf{puja condicional} ja no sigui vàlida, aquesta subhasta és tornar a executar ignorant la puja invalidada. Aquestes invalidacions es propaguen sobre totes les subhastes deprenents.
 	\item Seleccionar el professor al que la suma d'hores de les assignatures que se li han assignat sigui màxima entre tots els professors restants.
 	\item Decidir mitjançant un algorisme de \textbf{complexitat polinomial}, el qual podria ser definit per cada professor, o estar basat en una \textit{llista de preferències} o simplement ser \textit{arbitrari}, quin subconjunt del conjunt d'assignatures assignades al professor seleccionat es vol quedar (el subconjunt amb el que es quedi ha de complir que la suma total de hores de les assignatures amb les que es quedi ha de ser \textit{semblant} al nombre de hores que hauria de realitzar \footnote{en cas d'estar en un sistema de puges a l'alça, ha de complir que la suma total de valors de les puges ha de ser inferior o igual al total de \textit{diners en possessió}}), per després \textit{desassignar-li} totes les altres assignatures que no ha seleccionat, de forma que el nombre d'hores totals de les assignatures assignades a ell sigui semblant al nombre d'hores que ha de fer. A continuació, aquest professor, les seves puges i les assignatures que se li han assignat són eliminats del sistema.
-	\item Si enacara queden professors sense assignar assignatures, tornar al pas \textbf{2.} . En cas contrari, ja hem acabat i l'assignació final ja està feta (queda assignar les assignatures que no ha volgut ningú i \textit{vigilar} que no hi hagi professors que hagin quedat amb molt poques assignatures assignades), és a dir, obtenim la nostra \textbf{solució}.
+	\item Si encara queden professors sense assignar assignatures, tornar al pas \textbf{2.} . En cas contrari, ja hem acabat i l'assignació final ja està feta (queda assignar les assignatures que no ha volgut ningú i \textit{vigilar} que no hi hagi professors que hagin quedat amb molt poques assignatures assignades), és a dir, obtenim la nostra \textbf{solució}.
 \end{enumerate}
 
 Podem veure que aquest algorisme \textbf{convergirà} \footnote{A la pràctica és que acabara en un nombre finit de passos.} (ja que en cada iteració eliminem elements del problema de manera que eventualment ens quedarem sense elements) i que serà \textbf{polinòmic} respecte al nombre de professors.
@@ -855,7 +855,7 @@ Podem veure que aquest algorisme \textbf{convergirà} \footnote{A la pràctica �
 Respecte a la \textbf{optimalitat} de l'algorisme, es pot demostrar que no ho és, ja que es poden donar \textbf{contraexemples} on hi hagi ineficiències en l'assignació entre diferents iteracions del \textbf{procés iteratiu} (per exemple: si un participant guanya una subhasta però després no es queda amb l'objecte estarà privant altres participants que ja estan fora del sistema de la possibilitat d'obtenir l'objecte en qüestió que potser també desitjaven). 
 
 A més, aquest \textbf{sistema} o \textbf{mètode} no resol correctament casos en que les assignatures dependents tinguin puges amb valors molt superiors als valors de les assignatures de les que depenen.
-\textit{Per exemple: si un participant puja 10 per un item, fent la puja dependent en una altra puja de valor 1, serà possible eliminar les dos pujes amb una única puja de 2 de manera que observem ineficiecies ja que el sistema podia haver obtingut 11 monedes o 2 i ha triat 2.}
+\textit{Per exemple: si un participant puja 10 per un item, fent la puja dependent en una altra puja de valor 1, serà possible eliminar les dos puges amb una única puja de 2 de manera que observem ineficiències ja que el sistema podia haver obtingut 11 monedes o 2 i ha triat 2.}
 
 El primer cas d'\textbf{ineficiència} resulta bastant més difícil de tractar, però es pot argumentar que \textbf{passarà poc sovint} ja que el sistema desincentiva \textit{fortament} aquest tipus de comportament. Això és així perquè si un participant envia puges molt baixes (altes) en un sistema a la baixa (alta), llavors serà inevitable que guanyi moltes d'aquestes i acabi sent un dels primers en haver de seleccionar assignatures. En aquest cas es veurà forçat a agafar moltes assignatures a un valor d'hores molt baix i a no tenir disponible per a seleccionar assignatures que li interessaven i podria haver obtingut (ja que els guanyadors d'aquestes subhastes podrien haver acabat refusant aquestes assignatures). 
 
@@ -866,7 +866,7 @@ Respecte a la segona \textbf{ineficiència} descrita, podem deduir que els casos
 Tot això ens permet concloure que, si bé és cert que el algoritme proposats no arriba a ser òptims, on la \textbf{pèrdua d'optimalitat} que causarà serà \textit{baixa} de forma que la seva aplicació acabarà generant assignacions que estaran \textit{molt a prop de l'òptim}, de forma que, per definició, seran assignacions \textit{molt bones}.
 
 \subsubsection{Algoritme 2}
-Un altra possible solució al problema de les subhastes combinatorials (\textit{Combinatorial auction}) és la realització de \textbf{subhastes angleses} (totes les pujes són públiques i la puja més alta guanya, pagant el preu d'aquesta mateixa puja) utilitzant el concepte de \textbf{puges condicionals explicat anteriorment}.
+Un altra possible solució al problema de les subhastes combinatorials (\textit{Combinatorial auction}) és la realització de \textbf{subhastes angleses} (totes les puges són públiques i la puja més alta guanya, pagant el preu d'aquesta mateixa puja) utilitzant el concepte de \textbf{puges condicionals explicat anteriorment}.
 
 Es pot demostrar que aquest sistema genera una assignació \textbf{òptima}, definint òptim com a maximització del guany del venedor, però el problema sorgeix en que també es pot demostrar que ès possible que aquestes subhastes mai \textbf{convergeixin}, donat que aquest sistema fa possible \textbf{l'existència de bucles} en les puges.
 
