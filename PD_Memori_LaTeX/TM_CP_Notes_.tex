@@ -102,10 +102,10 @@
 %%%                   %Utilitats visuals%                        %%%
 %%%                                                              %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%{ \color{gray!3} Albert Acebrón i Marc Graells}
 %Dades pel títol del nostre document
 \title{\emph{\color{redviolet!75!black}Pla Docent {(PD)}}}
-\author{ Taller de modelització \\ 2n. Grau en  Matemàtiques \\ Universitat Autònoma de Barcelona \\ Equip 15 \\ { \color{gray!3} Albert Acebrón i Marc Graells} }
+\author{ Taller de modelització \\ 2n. Grau en  Matemàtiques \\ Universitat Autònoma de Barcelona \\ Equip 15 \\ }
 \date{Versió: \today}
 
 %Serveix per peus de pàgina i més
@@ -134,7 +134,7 @@
 \usepackage{listings}
 \usepackage{yhmath}
 \renewcommand{\abstractname}{\textbf{A}bstract}
-\renewcommand{\abstract}{\textbf{A}bstract}
+\renewcommand{\abstract}{  \large \textbf{Abstract:}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
@@ -166,21 +166,23 @@
 }
 \usepackage[nameinlink, capitalise, noabbrev]{cleveref}
 \begin{document}
-	
+\onecolumn
 \maketitle
-{
-\centering
-\begin{abstract}
-	
-\end{abstract}
-}
-\newpage
-$$
-\esp
-$$
-\\ 
+\thispagestyle{empty}
+\begin{center}
+\begin{tabular}{m{14cm}}
+\hline
+\\
+\title{ \Large \textbf{Abstrac}}\\
+\\
+			\textit{Es parteix del cas concret de crear un model, que solucioni la problemàtica adjacent a l'assignació  de tasques docents entre el professorat del Departament de Matemàtiques de la Universitat. Comencem amb un primer anàlisis del problema abstracte. Seguidament fem un recull de tota la informació disponible sobre les particularitats del cas concret a resoldre. Elaborem i implementem un model basat en  la filosofia d'investigacions d'operacions que dóna solucions factibles que milloren les actuals. De forma recreativa s'apliquen algoritmes genètics per demostrar-ne la viabilitat. S'aborda la problemàtica des de l'òptica de les subhastes i és fan ambicioses construccions de nous tipus de subhasta elaborats per donar solució a la insatisfacció dels models de subhastes trobats en la literatura actual. S'ha fet un esforç destacable en facilitar la pedagogia darrere de les idees tractades, amb l'ús de tots els recursos visuals que hem tingut a l'abast i hem considerat oportuns.}	\\
+			
+\hline
+\end{tabular}
+\end{center}
 \newpage
 
+\twocolumn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %%
 %    #-1        Portada TickZ i Abstract          %%
